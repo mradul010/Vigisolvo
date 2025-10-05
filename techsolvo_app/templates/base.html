@@ -14,6 +14,16 @@
     });
   </script>
 
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-7FBKNHZ78J"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-7FBKNHZ78J');
+</script>
+
   {% block head %}
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -30,7 +40,7 @@
     <title>{{ page_title }}</title>
   {% endblock %}
 
-  <link rel="icon" type="image/x-icon" href="{% static 'assets/images/favi1.png' %}">
+  <link rel="icon" type="image/x-icon" href="{% static 'assets/images/vigisolvo-favicon.png' %}">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css" integrity="sha512-jnSuA4Ss2PkkikSOLtYs8BlYIeeIK1h99ty4YfvRPAlzr377vr3CXDb7sb7eEEBYjDtcYj+AjBH3FLv5uSJuXg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
   <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -41,16 +51,7 @@
   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
 <body>
-  <!-- Google Tag Manager (noscript) -->
-  <noscript>
-    <iframe
-      src="https://www.googletagmanager.com/ns.html?id=GTM-THLB4FX"
-      height="0"
-      width="0"
-      style="display:none;visibility:hidden"
-    ></iframe>
-  </noscript>
-  <!-- End Google Tag Manager (noscript) -->
+
   <div id="preloader">
     <div class="col-md-2 loader5">
       <div class="loader-wrapper d-flex justify-content-center align-items-center">
@@ -71,7 +72,7 @@
         <a id="wsnavtoggle" class="wsanimated-arrow"><span></span></a>
         <span class="smllogo">
           <a href="{% url 'index'%}">
-            <img src="{% static 'assets/images/techsolvoNew3.webp' %}" width="130" alt="techsolvo logo" loading="lazy"/>
+            <img src="{% static 'assets/images/vigisolvo-logo-f-1.png' %}" width="130" alt="vigisolvo logo" loading="lazy"/>
           </a>
         </span>
       </div>
@@ -119,7 +120,7 @@
 
       <div class="headerfull">
         <div class="wsmain clearfix">
-          <div class="smllogo"><a href="{% url 'index'%}"><img src="{% static 'assets/images/techsolvoNew3.webp' %}" alt="techsolvo small logo" width="100%" loading="lazy"></a></div>
+          <div class="smllogo"><a href="{% url 'index'%}"><img src="{% static 'assets/images/vigisolvo-logo-f-1.png' %}" alt="vigisolvo small logo" width="100%" loading="lazy"></a></div>
           <nav class="wsmenu clearfix">
             <div class="overlapblackbg"></div>
             <ul class="wsmenu-list" id="hide-ul">
