@@ -1,0 +1,67 @@
+<form id="contactForm" class="tab-pane  col-12 p-a0  inquiry-form wow fadeInUp" action="/contact-us" method="POST" enctype="multipart/form-data">
+   <div class="dzFormMsg"></div>
+   
+          <h2 class="box-title m-t0 m-b10">Let's Convert Your Idea into Reality <span class="bg-primary"></span></h2>
+          <div id="commitSucccessmsg"></div>
+   <div class="row">
+      <div class="col-lg-6">
+         <div class="form-group">
+            <div class="input-group">
+               <span class="input-group-text"><i class="fa fa-user" aria-hidden="true"></i></span>
+               <input name="dzName" id="firstnameid" type="text" onblur="this.value=removeSpaces(this.value);" class="form-control" placeholder="First Name" required>
+            </div>
+         </div>
+      </div>
+      <div class="col-lg-6">
+         <div class="form-group">
+            <div class="input-group">
+               <span class="input-group-text"><i class="fa fa-user" aria-hidden="true"></i></span>
+               <input name="dzLName" id="lastnameid" type="text" onblur="this.value=removeSpaces(this.value);" class="form-control" placeholder="Last Name" required>
+            </div>
+         </div>
+      </div>
+      <div class="col-lg-12">
+         <div class="form-group">
+            <div class="input-group">
+               <span class="input-group-text"><i class="fa fa-envelope-o" aria-hidden="true"></i></span>
+               <input name="dzEmail" id="emailid" type="email" class="form-control" placeholder="Your Email Id" required>
+            </div>
+         </div>
+      </div>
+      <div class="col-lg-6">
+         <div class="form-group">
+            <div class="input-group">
+               <span class="input-group-text"><i class="fa fa-share-square-o text-primary"></i></span>
+               <input name="dzSid" id="skypeid" type="text"onblur="this.value=removeSpaces(this.value);" class="form-control" placeholder="Skype Id/Whatsapp No" required>
+            </div>
+         </div>
+      </div>
+      <div class="col-lg-6">
+         <div class="form-group">
+            <div class="input-group">
+               <span class="input-group-text"><i class="fa fa-mobile" aria-hidden="true"></i></span>
+               <input name="Phone" id="phoneid" pattern="[0-9]{10-15}"  type="text"  class="form-control" oninvalid="this.setCustomValidity('Please enter valid phone number')" oninput="this.setCustomValidity('')" placeholder="Phone" required>
+            </div>
+         </div>
+      </div>
+      <input type="text" name="city" style="display:none;">
+      <div class="col-lg-12">
+         <div class="form-group">
+            <div class="input-group">
+               <span class="input-group-text"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></span>
+               <textarea name="dzMessage" id="messageid" rows="2"  class="form-control"  placeholder="Tell us about your project or idea" required></textarea>
+            </div>
+         </div>
+      </div>
+      <div class="col-lg-12">
+         <div class="form-group">
+            <div class="input-group">
+               <div class="g-recaptcha" data-sitekey="6LfF8NUqAAAAAIlII_bmEg2UzNCCuC_mp1Kkij7n"></div>
+            </div>
+         </div>
+      </div>
+      <div class="col-lg-12">
+      <button class="site-button m-r5 button-lg radius-no contactSubmit" id="contactFormSubmit" type="submit">Submit</button>
+   </div>
+</div>
+</form>

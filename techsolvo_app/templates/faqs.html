@@ -1,0 +1,192 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block head %}
+  <meta charset="utf-8">
+  <meta name="description" content="{{page_meta_description}}">
+  <meta name="keywords" content= "{{page_meta_keyword}}">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel='stylesheet' href="{% static 'assets/css/owl.carousel.min.css' %}" type='text/css' media='all'/>
+{% endblock %}
+
+{% block title %}
+      <title>{{page_content.page_title}}</title>
+{% endblock %}
+
+<body id="bg">
+  <div class="page-wraper">
+    <div id="loading-area"><div class="la-anim-10"></div></div>
+    {% block content %}
+      <div class="page-content bg-white">
+        <div class="dlab-bnr-inr overlay-primary">
+          <div class="container">
+            <div class="dlab-bnr-inr-entry">
+              <h1 class="text-white">FAQs</h1>
+            </div>
+          </div>
+        </div>
+        <div class="content-block">
+          <div class="section-full" style="background-image:url(images/pattern/pic1.jpg);">
+            <div class="container">
+              <div class="section-head text-black text-center">
+                {% if page_content %}
+                  <div class="section-heading center-holder text-center mt-5">
+                    <h2>{{page_content.name}}</h2>
+                  </div>
+                  <div class="dlab-separator bg-primary"></div>
+                  <p>{{ page_content.description | safe }}</p>
+                {% endif %}
+              </div>
+              <div class="row">
+                <div class="col-lg-6 col-md-12 m-b30 wow fadeIn" data-wow-delay="0.2s">
+                  <div class="faq-video">
+                    <a class="play-btn popup-youtube" href="https://www.youtube.com/embed/6lt2JfJdGSY">
+                      <i class="flaticon-play-button text-white"></i>
+                    </a>
+                    <img src="{% static 'assets/images/team/mission3.jfif' %}" class="object-cover radius-sm" alt=""/>
+                  </div>
+                </div>
+                <div class="col-lg-6 col-md-12 m-b30">
+                  <div class="dlab-accordion faq-1 box-sort-in m-b30" id="accordion1">
+                    {% for faq in frequently_asked_question%}
+                      <div class="panel">
+                        <div class="acod-head">
+                          <h6 class="acod-title">
+                            <a data-bs-toggle="collapse" href="#faq{{faq.id}}" class="collapsed" data-parent="#faq{{faq.id}}">
+                              {{faq.question}}
+                            </a>
+                          </h6>
+                        </div>
+                        <div id="faq{{faq.id}}" class="acod-body collapse">
+                          <div class="acod-content">{{faq.answers | safe}}</div>
+                        </div>
+                      </div>
+                    {% endfor %}
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          {% include 'insight.html' %}
+          {% include 'testimonials1.html' %}
+          {% include 'our-clients.html' %}
+          <div class="section-full overlay-primary-dark bg-img-fix letstouch">
+            <div class="container">
+              <div class="let-top">
+                <h2 class="box-title m-b15" >Let's get in touch<span class="bg-primary"></span></h2>
+                <p class="font-16 op8">Give us a call or drop by anytime, we endeavour to answer all enquiries within 24 hours on business days.</p>
+              </div>
+              <div class="row">
+                <div class="col-lg-5 col-md-5 chosesus-content text-white bx-style-1 extraPadding">
+                  <div class="col-lg-12 col-md-12  col-sm-12 m-b30 wow fadeIn" data-wow-delay="0.4s">
+                    <div class="icon-bx-wraper bx-style-1 radius-sm">
+                      <div class="icon-content">
+                        <h5 class="dlab-tilte">
+                          <span class="icon-sm text-primary text-left"><i class="fa fa-envelope-o" aria-hidden="true"></i></span>
+                          E-mail
+                        </h5>
+                        <p class="m-b0"><a href="mailto:info@vigisolvo.com">info@vigisolvo.com</a></p>
+                        <p class="m-b0"><a href="mailto:hr@vigisolvo.com">hr@vigisolvo.com</a></p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-12 col-md-12  col-sm-12 m-b30 wow fadeIn" data-wow-delay="0.8s" style="visibility: visible; animation-delay: 0.8s; animation-name: fadeIn;">
+                    <div class="icon-bx-wraper bx-style-1 radius-sm">
+                      <div class="icon-content mt-3">
+                        <h5 class="dlab-tilte">
+                          <span class="icon-sm text-primary text-left"><i class="fa fa-volume-control-phone" aria-hidden="true"></i></span>
+                          Phone Number
+                        </h5>
+                        <p><a href="tel:+917987768061">+91 798-776-8061</a></p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-12 col-md-12  col-sm-12 m-b30 wow fadeIn" data-wow-delay="0.8s" style="visibility: visible; animation-delay: 0.8s; animation-name: fadeIn;">
+                    <div class="icon-bx-wraper bx-style-1 radius-sm">
+                      <div class="icon-content mt-3">
+                        <h5 class="dlab-tilte">
+                          <span class="icon-sm text-primary text-left"><i class="fa fa-telegram" aria-hidden="true"></i></span>
+                          Telegram
+                        </h5>
+                        <p><a href="https://t.me/mradul010" target ="_blank">+91 8859994143</a></p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-12 col-md-12  col-sm-12 m-b30 wow fadeIn" data-wow-delay="0.8s" style="visibility: visible; animation-delay: 0.8s; animation-name: fadeIn;">
+                    <div class="icon-bx-wraper bx-style-1 radius-sm">
+                      <div class="icon-content mt-3">
+                        <h5 class="dlab-tilte">
+                          <span class="icon-sm text-primary text-left"><i class="fa fa-telegram" aria-hidden="true"></i></span>
+                          Skype
+                        </h5>
+                        <p><a href="skype:techsolvo05?chat" target ="_blank">techsolvo05</a></p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-7 col-md-7  m-b30">
+                  {% include 'pagecontact.html' %}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    {% endblock content %}
+  </div>
+  </div>
+  {% block scripts %}
+    <script src="{% static 'assets/js/jquery-min.js' %}"></script>
+    <script src="{% static 'assets/js/owl.carousel.min.js' %}"></script>
+    <script type="text/javascript">
+      jQuery(document).ready(function(){
+      $('#Bestseller-slider2').owlCarousel({
+        loop:false,
+        nav:false,
+        autoplay:false,
+        dots:true,
+        margin:20,
+        smartSpeed: 1000,
+        responsive:{
+            0:{
+                items:1
+            },
+            600:{
+                items:1
+            },
+            1000:{
+                items:1
+            }
+        },navText: ["<i class='fa fa-angle-left' aria-hidden='true'></i>","<i class='fa fa-angle-right' aria-hidden='true'></i>"]
+      });
+    });
+    </script>
+    <script>
+      var pageform = $('#contactForm');
+      pageform.submit(function (e) {
+        e.preventDefault();
+        $('#contactFormSubmit').html("<div class='quoteloader'></div>");
+        $.ajax({
+          type: pageform.attr('method'),
+          url: pageform.attr('action'),
+          data: $(pageform).serialize(),
+          success: function(res) {
+            if (res.status == 1){
+              swal("Thank You!", "for reaching out to us! We appreciate your interest and will get back to you as soon as possible.", "success");
+              $('#contactForm').trigger("reset");
+              $('#contactFormSubmit').html("Submit");
+            } else {
+              swal("Error","Please complete the reCAPTCHA","error")
+              $('#contactFormSubmit').html("Submit");
+            };
+          },
+          error: function(error) {
+            swal("Error","Enter the correct value","error")
+            $('#contactFormSubmit').html("Submit");
+            console.log(error);
+          }
+        });
+      });
+    </script>
+  {% endblock scripts %}
+</body>

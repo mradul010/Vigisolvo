@@ -1,0 +1,16 @@
+<svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 125 125" width="125" height="125">
+	<title>New Project</title>
+	<defs>
+		<image  width="30" height="30" id="img1" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAMAAAAM7l6QAAAAAXNSR0IB2cksfwAAAHVQTFRFAAAAFxcXFxcXFxcXFxcXFxcXOjo61NTU3t7eSUlJQEBA8/Pz////UVFRODg4y8vLRkZGGBgYHh4eHx8fGRkZKysrg4ODiIiIXV1dp6encnJyRUVFNDQ0Tk5Oenp6Kioq8vLy7u7uY2NjMTExpaWlra2tSEhIhERRHwAAACd0Uk5TAFrU/f/6////////////////////////////////////////////l8zRLgAAAJtJREFUeJxjZGAEAgZs4D8QMDKy/McqCQKMfxiZmHDKMjD8Y2TGbjLUfEYWPLJA46kkzYTwH+NvTGk2JOnvmNJcjD9gTM4vmNK8SLo/UNvlgnDDGX9+xudy3t9Y7CZCmg+sgvEFFrtB0oLPcTqNCGmh92Cm0FPs0iIQ131/g8/lDGKPMKXlkcL8HqY0VkChNIGETCAbEMhE+LMgAE3/JIO2u4m9AAAAAElFTkSuQmCC"/>
+	</defs>
+	<style>
+		tspan { white-space:pre } 
+		.t0 { font-size: 24px;text-transform: uppercase;fill: #000000;font-weight: 700;font-family: "Poppins-Bold", "Poppins" } 
+		.t1 { font-size: 24px;fill: #000000;font-weight: 700;font-family: "Poppins-Bold", "Poppins" } 
+	</style>
+	<use id="Layer 6" href="#img1" x="6" y="47"/>
+	<text id="erpnext " style="transform: matrix(.706,0,0,.706,42.902,68)" >
+		<tspan x="0" y="0" class="t0">ERPN</tspan><tspan  y="0" class="t1">ext 
+</tspan>
+	</text>
+</svg>

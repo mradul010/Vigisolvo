@@ -1,0 +1,92 @@
+/*==========================
+	Custom css
+==========================*/
+
+@media only screen and (max-width: 767px) {
+    .dlab-social-icon li a{
+		line-height: 30px;
+	    height: 52px;
+	    width: 162px;
+	    padding: 1px;
+	}
+	.marginl {
+     margin-left: 0; 
+}
+	.social-icon .dlab-social-icon{
+		width:auto;
+		height:auto;
+	}
+	.social-icon{
+		position:unset;
+	}
+	h2.text-white.font-30 {
+    font-size: 17px;
+    line-height: 38px;
+}
+.modal-header{
+	padding: 26px 16px 3px 16px;
+}
+}
+.modal-dialog{
+	max-width: 605px !important;
+}
+.newBgcolor{
+	background: linear-gradient(315deg, #09c6f9  0%, #045de9 74%) !important;
+	color: #ffffff !important;
+}
+.buttoncbg{
+	background: linear-gradient(315deg, #09c6f9  0%, #045de9 74%);
+	border: 0;
+    font-size: 20px;
+    color: #ffffff;
+    width: 30px;
+}
+div#home-banner {
+    height: 108vh;
+}
+
+/* Social Links */
+.social-icon {
+    right: -98px;
+    position: fixed;
+    top: 50%;
+    transform: rotate(-90deg);
+    z-index: 10;
+}
+.dlab-coming-bx .dlab-social-icon li a{
+	width:40px;
+	height:40px;
+	font-size:15px;
+	color:#fff;
+	padding:0;
+	line-height:38px;
+	border-radius:0;
+}
+.social-icon .dlab-social-icon{
+	width:22px;
+	height:170px;
+	margin-top:-85px;
+}
+
+@media only screen and (max-width: 767px) {
+	.social-icon .dlab-social-icon{
+		width:auto;
+		height:auto;
+	}
+	.social-icon{
+		margin-top: 20px;
+    	left: 85% !important;
+    	z-index: 10;
+	}
+	
+}
+div#myModal {
+    padding-right: 0px !important;
+}
+
+@media only screen and (max-width: 360px){
+
+h2.text-white.font-30 {
+    font-size: 16px !important;
+    line-height: 40px !important;
+}

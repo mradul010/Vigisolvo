@@ -1,0 +1,210 @@
+{% load static %}
+
+<section class="service-area12 overflow-hidden space arrow-wrap" id="service-sec">
+  <div class="container th-container4">
+      <div class="row justify-content-center">
+          <div class="col-xl-6">
+              <div class="title-area text-center me-xl-7 ms-xl-7">
+                  <span class="sub-title sub-title2">ERP Solutions</span>
+                  <h2 class="sec-title">We provide <span class="key-highlight">ERPNext</span> Solutions for Different Industries</h2>
+              </div>
+          </div>
+      </div>
+      <div class="slider-area">
+          <div class="swiper-container" id="serviceSlider12">
+              <div class="swiper-wrapper">
+                  <div class="slide">
+                      <div class="service-item2 th-ani" style="background-image: url({% static 'assets/images/industry/manufacturing.png' %})">
+                          <div class="service-item2_content">
+                              <h3 class="box-title"><a href="{% url 'erp-manufacturing' %}">Manufacturing Industry</a></h3>
+                              <p class="service-item2_text">ERPNext helps manage production flow, materials, and quality for
+                                efficient manufacturing.</p>
+                              <a href="{% url 'erp-manufacturing' %}" class="line-btn">Learn More <i class="fas fa-arrow-right ms-2"></i></a>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="slide">
+                      <div class="service-item2 th-ani" style="background-image: url({% static 'assets/images/industry/Healthcare.png' %})" style="background-image: url({% static 'assets/images/industry/Healthcare.png' %})">
+                          <div class="service-item2_content">
+                              <h3 class="box-title"><a href="{% url 'erp-healthcare' %}">Healthcare Industry</a></h3>
+                              <p class="service-item2_text">Manages patients, appointments, prescriptions, and billing for
+                                organized healthcare operations.</p>
+                              <a href="{% url 'erp-healthcare' %}" class="line-btn">Learn More <i class="fas fa-arrow-right ms-2"></i></a>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="slide">
+                      <div class="service-item2 th-ani" style="background-image: url({% static 'assets/images/industry/distribution.png' %})">
+                          <div class="service-item2_content">
+                              <h3 class="box-title"><a href="{% url 'erp-dist' %}">Distribution Industry</a></h3>
+                              <p class="service-item2_text">Streamlines purchasing, warehousing, and deliveries for optimal
+                                supply chain management.</p>
+                              <a href="{% url 'erp-dist' %}" class="line-btn">Learn More <i class="fas fa-arrow-right ms-2"></i></a>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="slide">
+                      <div class="service-item2 th-ani" style="background-image: url({% static 'assets/images/industry/education.png' %})">
+                          <div class="service-item2_content">
+                              <h3 class="box-title"><a href="{% url 'erp-education' %}">Education Industry</a></h3>
+                              <p class="service-item2_text">Manages students, faculty, courses, and records for efficient
+                                educational administration.</p>
+                              <a href="{% url 'erp-education' %}" class="line-btn">Learn More <i class="fas fa-arrow-right ms-2"></i></a>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="slide">
+                    <div class="service-item2 th-ani" style="background-image: url({% static 'assets/images/industry/retail.png' %})">
+                        <div class="service-item2_content">
+                            <h3 class="box-title"><a href="{% url 'erp-retail' %}">Retail Industry</a></h3>
+                            <p class="service-item2_text">Provides POS systems, inventory control, and loyalty programs to
+                                enhance customer experience.</p>
+                            <a href="{% url 'erp-retail' %}" class="line-btn">Learn More <i class="fas fa-arrow-right ms-2"></i></a>
+                        </div>
+                    </div>
+                  </div>
+                  <div class="slide">
+                    <div class="service-item2 th-ani" style="background-image: url({% static 'assets/images/industry/services.png' %})">
+                        <div class="service-item2_content">
+                            <h3 class="box-title"><a href="{% url 'erp-services' %}">Services Industry</a></h3>
+                            <p class="service-item2_text">Manages projects, client interactions, resource allocation, and
+                                resources for smooth service delivery.</p>
+                            <a href="{% url 'erp-services' %}" class="line-btn">Learn More <i class="fas fa-arrow-right ms-2"></i></a>
+                        </div>
+                    </div>
+                   </div>
+              </div>
+
+              <!-- Swiper Navigation Buttons
+              <button class="slider-arrow slider-next"><i class="fas fa-arrow-right"></i></button>
+              <button class="slider-arrow slider-prev"><i class="fas fa-arrow-left"></i></button> -->
+          </div>
+      </div>
+  </div>
+</section>
+<!--
+<section class="section sec-industries" style="margin-top: 2%; margin-bottom: 5%">
+  <div class="container">
+    <div class="section-heading center-holder text-center">
+      <h2>ERPNext Solutions for Different Industries</h2>
+      <p>
+        ERPNext Solutions for Different Industries" explores how the versatile
+        ERPNext platform can be tailored to meet the unique needs of various
+        sectors, enhancing operational efficiency and business management across
+        industries.
+      </p>
+    </div>
+    <div class="all-industry">
+      <div
+        class="content industry-items"
+        onclick="location.href=`{% url 'erp-manufacturing' %}`"
+      >
+        <div class="content-overlay"></div>
+        <div class="ind-img-text ind-edu">
+          <div class="img-container">
+            <img src="{% static 'assets/images/industry/manufacturing.png' %}" alt="manufacturing"/>
+          </div>
+          <div class="content-details fadeIn-bottom">
+            <h4 class="content-title">Manufacturing Industry</h4>
+            <p class="content-text">
+              ERPNext helps manage production flow, materials, and quality for
+              efficient manufacturing.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div
+        class="content industry-items"
+        onclick="location.href=`{% url 'erp-healthcare' %}`"
+      >
+        <div class="content-overlay"></div>
+        <div class="ind-img-text">
+          <div class="img-container">
+            <img src="{% static 'assets/images/industry/Healthcare.png' %}" alt="Healthcare"/>
+          </div>
+          <div class="content-details fadeIn-bottom">
+            <h4 class="content-title">Healthcare Industry</h4>
+            <p class="content-text">
+              Manages patients, appointments, prescriptions, and billing for
+              organized healthcare operations.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div
+        class="content industry-items"
+        onclick="location.href=`{% url 'erp-dist' %}`"
+      >
+        <div class="content-overlay"></div>
+        <div class="ind-img-text">
+          <div class="img-container">
+            <img src="{% static 'assets/images/industry/distribution.png' %}" alt="distribution"/>
+          </div>
+          <div class="content-details fadeIn-bottom">
+            <h4 class="content-title">Distribution Industry</h4>
+            <p class="content-text">
+              Streamlines purchasing, warehousing, and deliveries for optimal
+              supply chain management.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div
+        class="content industry-items"
+        onclick="location.href=`{% url 'erp-education' %}`"
+      >
+        <div class="content-overlay"></div>
+        <div class="ind-img-text ind-edu">
+          <div class="img-container">
+            <img src="{% static 'assets/images/industry/education.png' %}" alt="education"/>
+          </div>
+          <div class="content-details fadeIn-bottom">
+            <h4 class="content-title">Education Industry</h4>
+            <p class="content-text">
+              Manages students, faculty, courses, and records for efficient
+              educational administration.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="content industry-items"
+        onclick="location.href=`{% url 'erp-retail' %}`"
+      >
+        <div class="content-overlay"></div>
+        <div class="ind-img-text ind-edu">
+          <div class="img-container">
+            <img src="{% static 'assets/images/industry/retail.png' %}" alt="retail"/>
+          </div>
+          <div class="content-details fadeIn-bottom">
+            <h4 class="content-title">Retail Industry</h4>
+            <p class="content-text">
+              Provides POS systems, inventory control, and loyalty programs to
+              enhance customer experience.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div
+        class="content industry-items"
+        onclick="location.href=`{% url 'erp-services' %}`"
+      >
+        <div class="content-overlay"></div>
+        <div class="ind-img-text ind-edu">
+          <div class="img-container">
+            <img src="{% static 'assets/images/industry/services.png' %}" alt="services"/>
+          </div>
+          <div class="content-details fadeIn-bottom">
+            <h4 class="content-title">Services Industry</h4>
+            <p class="content-text">
+              Manages projects, client interactions, resource allocation, and
+              resources for smooth service delivery.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+-->

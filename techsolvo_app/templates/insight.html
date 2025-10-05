@@ -1,0 +1,41 @@
+<section id="Insights">
+    <div class="container">
+        <div class="section-heading center-holder text-center">
+            <h2>Insights</h2>
+            <p>To properly understand the things that are prevalent in the industries, keeping up-to-date with the news is crucial. Take a look at some of our expertly created blogs, based on full-scale research and statistics on current market conditions.</p>
+        </div>
+        <div class="row mt-5 whole-blog-box">
+            {%for each in insights%}
+                <div class="col-md-4 blog-box">
+                    {% comment %} {% for cat in categories %}
+                        {% if each.category == cat %} {% endcomment %}
+                            <div class="blog-entry">
+                                <a href="{% url 'singleblog' each.category.slug each.slug %}" class="block-20 d-flex align-items-end" >
+                                    <div class="blog-images">
+                                        <img src="{{each.heading_image.url}}" alt="blog-image" width="100%" loading="lazy">
+                                    </div>
+                                </a>
+                                <div class="bg-white2 bg-box card-box">
+                                    <div class="card-label" style="background-color: #0063ff;">{{each.category}}</div>
+                                    <h2 class="heading" style="margin-left:10px"><a href="{% url 'singleblog' each.category.slug each.slug %}">{{each.title}}</a></h2>
+                                    <p style="margin-left:10px">{{each.short_desc | truncatechars:90}}</p>
+                                </div>
+                            </div>
+                            <div class="card author">
+                                <div class="row g-0">
+                                    <div class="col-md-7 card-col">
+                                        <img src="{{each.author.image.url}}" class="img-fluid rounded-start" alt="author" width="100%" loading="lazy">
+                                        <div class="card-body md-body">
+                                            <h5 class="card-title card-md">{{each.author.name}}</h5>
+                                            <p class="card-text"><small class="text-body-secondary">{{each.date_of_modification}}</small></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        {% comment %} {% endif%}
+                    {%endfor%} {% endcomment %}
+                </div>
+            {%endfor%}
+        </div>
+    </div>
+</section>

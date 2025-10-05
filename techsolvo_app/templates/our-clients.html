@@ -1,0 +1,76 @@
+<section class="our-clients">
+  <div class="row justify-content-center">
+    <div class="col-lg-5">
+      <div class="text-center">
+          <span class="sub-title sub-title2">Our Clients</span>
+      </div>
+    </div>
+  </div>
+  <div class="partner-area py-5 bg-gray">
+    <div class="container">
+      <div class="row">
+          <div class="col-12">
+            <div class="tns-outer" id="tns2-ow">
+                <div class="tns-liveregion tns-visually-hidden" aria-live="polite" aria-atomic="true">slide <span class="current">19 to 24</span>  of 8</div>
+                <div id="tns2-mw" class="tns-ovh">
+                  <div class="tns-inner" id="tns2-iw">
+                      <div class="partner-slides  tns-slider tns-carousel tns-subpixel tns-calc tns-horizontal" id="tns2">
+                        {% for each in clients %}
+                        <div class="tns-item">
+                          <div class="partner-logo"><img src={{each.client_image.url}} alt=""></div>
+                        </div>
+                        {% endfor %}
+
+                      </div>
+                  </div>
+                </div>
+            </div>
+          </div>
+      </div>
+    </div>
+  </div>
+</section>
+{% block script %}
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+      if (document.querySelectorAll('.partner-slides').length > 0) {
+          tns({
+              container: '.partner-slides',
+              items: 5,
+              gutter: 50,
+              slideBy: 1,
+              autoplay: true,
+              autoplayButtonOutput: false,
+              autoplayTimeout: 5000,
+              speed: 750,
+              loop: true,
+              mouseDrag: true,
+              controls: false,
+              nav: false,
+              responsive: {
+                  320: {
+                      items: 3,
+                      gutter: 20
+                  },
+                  576: {
+                      items: 4,
+                      gutter: 24
+                  },
+                  768: {
+                      items: 5,
+                      gutter: 28
+                  },
+                  992: {
+                      items: 5,
+                      gutter: 32
+                  },
+                  1200: {
+                      items: 5,
+                      gutter: 50
+                  }
+              }
+          });
+      }
+  });
+</script>
+{% endblock script %}

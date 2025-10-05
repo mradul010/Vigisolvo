@@ -1,0 +1,2048 @@
+{% extends "base.html" %} {% load static %} {% block head %}
+<link
+  rel="stylesheet"
+  href="{% static 'assets/css/owl.carousel.min.css' %}"
+  type="text/css"
+  media="all"
+/>
+<link
+  rel="stylesheet"
+  type="text/css"
+  href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+/>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+{% endblock %}
+
+<body id="bg">
+  {% block content %}
+  <section class="section dash-section dash-sec-1">
+    <div class="container dash-container">
+      <div>
+        <div id="dashHeading">
+          <h1>
+            <span class="dash-manufacture">ERPNext</span> Implementation for
+            Manufacturing SMEs
+          </h1>
+        </div>
+        <div>
+          <hr class="dash-hr-line" />
+        </div>
+        <div class="dash-content">
+          <div class="dash-head-heading">
+            <span>
+              Grow your business with ERPNext which is 10X more powerful than
+              any ERP.
+            </span>
+          </div>
+          <div>
+            <i
+              class="fa fa-check-circle"
+              aria-hidden="true"
+              style="color: #045de9; font-size: 25px"
+            ></i>
+            <p>
+              <b>Integrated Modules:</b> Manage all aspects of your business –
+              Accounting, Manufacturing, CRM, Sales & Purchase – in one unified
+              platform.
+            </p>
+          </div>
+          <div>
+            <i
+              class="fa fa-check-circle"
+              aria-hidden="true"
+              style="color: #045de9; font-size: 25px"
+            ></i>
+            <p>
+              <b> Cost-Effective: </b> Open-source solution with flexible
+              pricing options to suit your budget.
+            </p>
+          </div>
+          <div>
+            <i
+              class="fa fa-check-circle"
+              aria-hidden="true"
+              style="color: #045de9; font-size: 25px"
+            ></i>
+            <p><b>Scalability:</b> Grow seamlessly as your business expands.</p>
+          </div>
+          <div>
+            <i
+              class="fa fa-check-circle"
+              aria-hidden="true"
+              style="color: #045de9; font-size: 25px"
+            ></i>
+            <p>
+              <b>Customization:</b>Tailor ERPNext to your specific needs and
+              workflows.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="overlay-form">{% include 'Modal2.html' %}</div>
+    </div>
+  </section>
+  <section class="dash-section">
+    <div class="container dash-sec2 dash-sec4">
+      <h4>Trusted by over 10,000+ MSME Manufacturers</h4>
+      <!-- <div class="dash-sec4-img"> -->
+      <!-- <div>
+          <img src="{% static 'assets/images/erpclients/allCust.png' %}" />
+        </div> -->
+      <!-- <div>
+          <img src="{% static 'assets/images/team/atomberg.webp' %}" />
+        </div>
+        <div style="padding-top: 14%">
+          <img src="{% static 'assets/images/team/mesco.webp' %}" />
+        </div>
+        <div>
+          <img src="{% static 'assets/images/team/zouk.webp' %}" />
+        </div>
+        <div style="padding-top: 14%">
+          <img src="{% static 'assets/images/team/indrones.webp' %}" />
+        </div>
+        <div>
+          <img src="{% static 'assets/images/team/taurus.webp' %}" />
+        </div> -->
+      <!-- </div> -->
+      <div class="slider">
+        <div class="slider-inner">
+          <div class="slide">
+            <img src="{% static 'assets/images/erpclients/apnaklub.svg' %}" />
+          </div>
+          <div class="slide">
+            <img src="{% static 'assets/images/erpclients/blinkit.svg' %}" />
+          </div>
+          <div class="slide">
+            <img src="{% static 'assets/images/erpclients/chopserve.svg' %}" />
+          </div>
+          <div class="slide">
+            <img src="{% static 'assets/images/erpclients/cloudextel.svg' %}" />
+          </div>
+          <div class="slide">
+            <img src="{% static 'assets/images/erpclients/crisp.svg' %}" />
+          </div>
+          <div class="slide">
+            <img src="{% static 'assets/images/erpclients/dfm.svg' %}" />
+          </div>
+          <div class="slide">
+            <img src="{% static 'assets/images/erpclients/elasticrun.svg' %}" />
+          </div>
+          <div class="slide">
+            <img src="{% static 'assets/images/erpclients/gurukrupa.svg' %}" />
+          </div>
+          <div class="slide">
+            <img src="{% static 'assets/images/erpclients/hotset.svg' %}" />
+          </div>
+          <div class="slide">
+            <img src="{% static 'assets/images/erpclients/iftas.svg' %}" />
+          </div>
+          <div class="slide">
+            <img src="{% static 'assets/images/erpclients/innoterra.svg' %}" />
+          </div>
+          <div class="slide">
+            <img src="{% static 'assets/images/erpclients/iskcon.svg' %}" />
+          </div>
+          <div class="slide">
+            <img src="{% static 'assets/images/erpclients/jiva.svg' %}" />
+          </div>
+          <div class="slide">
+            <img src="{% static 'assets/images/erpclients/lifelong.svg' %}" />
+          </div>
+          <div class="slide">
+            <img src="{% static 'assets/images/erpclients/magic.svg' %}" />
+          </div>
+          <div class="slide">
+            <img src="{% static 'assets/images/erpclients/micro.svg' %}" />
+          </div>
+          <div class="slide">
+            <img src="{% static 'assets/images/erpclients/strategic.svg' %}" />
+          </div>
+          <div class="slide">
+            <img src="{% static 'assets/images/erpclients/vikram.svg' %}" />
+          </div>
+          <div class="slide">
+            <img src="{% static 'assets/images/erpclients/zerodha.svg' %}" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="section dash-section">
+    <div class="container dash-sec2">
+      <div class="dash-sec2-head">
+        <h2>Why Our Customers Use <span>ERPNext ?</span></h2>
+      </div>
+      <div class="dash-sec2-content">
+        <div class="dash-sec2-items">
+          <img src="{% static 'assets/images/team/comprehensive.svg' %}" />
+          <h4>Comprehensive Solution</h4>
+          <p>
+            ERPNext's comprehensive platform manages finance, inventory,
+            manufacturing, sales, and more.
+          </p>
+        </div>
+        <div class="dash-sec2-items">
+          <img src="{% static 'assets/images/team/customization.svg' %}" />
+          <h4>Customization</h4>
+          <p>
+            It's highly customizable, allowing businesses to tailor the system
+            to their specific needs and workflows.
+          </p>
+        </div>
+        <div class="dash-sec2-items">
+          <!-- <i class="fa fa-shield" aria-hidden="true" style="color: #b006f3; background-color: #cf77f18f;"></i> -->
+          <img src="{% static 'assets/images/team/affordability.svg' %}" />
+          <h4>Affordability</h4>
+          <p>
+            ERPNext tends to be more affordable, making it accessible to SMEs
+            with limited budgets.
+          </p>
+        </div>
+        <div class="dash-sec2-items">
+          <!-- <i class="fa fa-diamond dash-icon" aria-hidden="true"></i> -->
+          <img src="{% static 'assets/images/team/opensource.svg' %}" />
+          <h4>Open Source</h4>
+          <p>
+            Open-source offers businesses source code access, enhancing software
+            control and reducing vendor lock-in.
+          </p>
+        </div>
+        <div class="dash-sec2-items">
+          <!-- <i class="fa fa-diamond dash-icon" aria-hidden="true"></i> -->
+          <img src="{% static 'assets/images/team/easeofuse.svg' %}" />
+          <h4>Ease of Use</h4>
+          <p>
+            Its user-friendly interface makes it easy for employees to learn and
+            use, minimizing training time and increasing adoption rates.
+          </p>
+        </div>
+        <div class="dash-sec2-items">
+          <!-- <i class="fa fa-diamond dash-icon" aria-hidden="true" ></i> -->
+          <img src="{% static 'assets/images/team/cloudbasedoption.svg' %}" />
+          <h4>Cloud-based Option</h4>
+          <p>
+            ERPNext enables flexible remote work through cloud-based deployment,
+            facilitating access to data from anywhere.
+          </p>
+        </div>
+        <div class="dash-sec2-items">
+          <!-- <i class="fa fa-diamond dash-icon" aria-hidden="true" ></i> -->
+          <img src="{% static 'assets/images/team/CommunitySupport.svg' %}" />
+          <h4>Community Support</h4>
+          <p>
+            ERPNext's community enhances it through valuable support and
+            resources from users and developers, fostering improvement.
+          </p>
+        </div>
+        <div class="dash-sec2-items">
+          <!-- <i class="fa fa-diamond dash-icon" aria-hidden="true" ></i> -->
+          <img src="{% static 'assets/images/team/Scalability.svg' %}" />
+          <h4>Scalability</h4>
+          <p>
+            ERPNext scales with growing businesses, handling higher data volumes
+            and complexity.
+          </p>
+        </div>
+      </div>
+      <div class="dash-sec2-signup">
+        <span aria-haspopup="true" class="wsshopmyaccount">
+          <span class="wsmenu-click"></span>
+          <a href="" class="gettouch">Signup For Free!</a>
+        </span>
+      </div>
+    </div>
+  </section>
+
+  <section class="dash-sec-3 dash-section">
+    <div class="container dash-sec2">
+      <div class="dash-sec2-head dash-sec3-head">
+        <h2>Explore the <span> ERPNext </span> Software Suite</h2>
+      </div>
+      <div class="dash-sec3-head-p">
+        <p>
+          ERPNext is full of features that help you manage inventory, create and
+          track documents and streamline production.
+        </p>
+      </div>
+      <div class="dash-sec3-items">
+        <div class="das-sub-item-container dash-manufacturing">
+          <div>
+            <img loading="lazy" src="{% static 'assets/images/industry/manufacturer/manuf.png' %}" />
+          </div>
+          <div>
+            <span>Manufacturing</span>
+            <p>
+              Efficiently plan and track production processes with ERPNext.
+              Maximize productivity and minimize costs.
+            </p>
+            <div class="dash-sec3-sub-items">
+              <div>
+                <i
+                  class="fa fa-check-circle"
+                  aria-hidden="true"
+                  style="color: #045de9; font-size: 25px"
+                ></i>
+                <p>
+                  <b>Bill of Materials (BOM)</b>
+                </p>
+              </div>
+              <div>
+                <i
+                  class="fa fa-check-circle"
+                  aria-hidden="true"
+                  style="color: #045de9; font-size: 25px"
+                ></i>
+                <p>
+                  <b>Work Orders</b>
+                </p>
+              </div>
+              <div>
+                <i
+                  class="fa fa-check-circle"
+                  aria-hidden="true"
+                  style="color: #045de9; font-size: 25px"
+                ></i>
+                <p>
+                  <b>Capacity Planning</b>
+                </p>
+              </div>
+              <div>
+                <i
+                  class="fa fa-check-circle"
+                  aria-hidden="true"
+                  style="color: #045de9; font-size: 25px"
+                ></i>
+                <p>
+                  <b>Integration</b>
+                </p>
+              </div>
+              <div>
+                <i
+                  class="fa fa-check-circle"
+                  aria-hidden="true"
+                  style="color: #045de9; font-size: 25px"
+                ></i>
+                <p>
+                  <b>Shop Floor Control</b>
+                </p>
+              </div>
+              <div>
+                <i
+                  class="fa fa-check-circle"
+                  aria-hidden="true"
+                  style="color: #045de9; font-size: 25px"
+                ></i>
+                <p>
+                  <b>Quality Control</b>
+                </p>
+              </div>
+              <div>
+                <i
+                  class="fa fa-check-circle"
+                  aria-hidden="true"
+                  style="color: #045de9; font-size: 25px"
+                ></i>
+                <p>
+                  <b>Traceability</b>
+                </p>
+              </div>
+              <div>
+                <i
+                  class="fa fa-check-circle"
+                  aria-hidden="true"
+                  style="color: #045de9; font-size: 25px"
+                ></i>
+                <p>
+                  <b>Costing and Analysis</b>
+                </p>
+              </div>
+              <div>
+                <i
+                  class="fa fa-check-circle"
+                  aria-hidden="true"
+                  style="color: #045de9; font-size: 25px"
+                ></i>
+                <p>
+                  <b>Material Requirement Planning (MRP)</b>
+                </p>
+              </div>
+              <div>
+                <i
+                  class="fa fa-check-circle"
+                  aria-hidden="true"
+                  style="color: #045de9; font-size: 25px"
+                ></i>
+                <p>
+                  <b>Customization and Flexibility</b>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="das-sub-item-container dash-account">
+          <div>
+            <span>Accounting</span>
+            <p>
+              Manage finances effectively with ERPNext. Track transactions,
+              ensure compliance, and optimize financial operations.
+            </p>
+            <div class="dash-sec3-sub-items">
+              <div>
+                <i
+                  class="fa fa-check-circle"
+                  aria-hidden="true"
+                  style="color: #045de9; font-size: 25px"
+                ></i>
+                <p>
+                  <b>Chart of Accounts</b>
+                </p>
+              </div>
+              <div>
+                <i
+                  class="fa fa-check-circle"
+                  aria-hidden="true"
+                  style="color: #045de9; font-size: 25px"
+                ></i>
+                <p>
+                  <b>General Ledger </b>
+                </p>
+              </div>
+              <div>
+                <i
+                  class="fa fa-check-circle"
+                  aria-hidden="true"
+                  style="color: #045de9; font-size: 25px"
+                ></i>
+                <p>
+                  <b>Accounts Receivable</b>
+                </p>
+              </div>
+              <div>
+                <i
+                  class="fa fa-check-circle"
+                  aria-hidden="true"
+                  style="color: #045de9; font-size: 25px"
+                ></i>
+                <p>
+                  <b>Accounts Payable</b>
+                </p>
+              </div>
+              <div>
+                <i
+                  class="fa fa-check-circle"
+                  aria-hidden="true"
+                  style="color: #045de9; font-size: 25px"
+                ></i>
+                <p>
+                  <b>Taxation</b>
+                </p>
+              </div>
+              <div>
+                <i
+                  class="fa fa-check-circle"
+                  aria-hidden="true"
+                  style="color: #045de9; font-size: 25px"
+                ></i>
+                <p>
+                  <b>Asset Management</b>
+                </p>
+              </div>
+              <div>
+                <i
+                  class="fa fa-check-circle"
+                  aria-hidden="true"
+                  style="color: #045de9; font-size: 25px"
+                ></i>
+                <p>
+                  <b>Budgeting and Forecasting</b>
+                </p>
+              </div>
+              <div>
+                <i
+                  class="fa fa-check-circle"
+                  aria-hidden="true"
+                  style="color: #045de9; font-size: 25px"
+                ></i>
+                <p>
+                  <b>Financial Reporting</b>
+                </p>
+              </div>
+              <div>
+                <i
+                  class="fa fa-check-circle"
+                  aria-hidden="true"
+                  style="color: #045de9; font-size: 25px"
+                ></i>
+                <p>
+                  <b>Bank and Cash Management</b>
+                </p>
+              </div>
+              <div>
+                <i
+                  class="fa fa-check-circle"
+                  aria-hidden="true"
+                  style="color: #045de9; font-size: 25px"
+                ></i>
+                <p>
+                  <b>Integration and Customization</b>
+                </p>
+              </div>
+            </div>
+          </div>
+          <div>
+            <img loading="lazy" src="{% static 'assets/images/industry/manufacturer/account.png' %}" />
+          </div>
+        </div>
+        <div class="das-sub-item-container dash-sale">
+          <div>
+            <img loading="lazy" src="{% static 'assets/images/industry/manufacturer/sell.png' %}" />
+          </div>
+          <div>
+            <span>Sales</span>
+            <p>
+              Streamline sales processes and boost revenue generation with
+              ERPNext. Manage leads, track opportunities, and close deals
+              efficiently.
+            </p>
+            <div class="dash-sec3-sub-items">
+              <div>
+                <i
+                  class="fa fa-check-circle"
+                  aria-hidden="true"
+                  style="color: #045de9; font-size: 25px"
+                ></i>
+                <p>
+                  <b>Lead Management</b>
+                </p>
+              </div>
+              <div>
+                <i
+                  class="fa fa-check-circle"
+                  aria-hidden="true"
+                  style="color: #045de9; font-size: 25px"
+                ></i>
+                <p>
+                  <b>Opportunity Tracking</b>
+                </p>
+              </div>
+              <div>
+                <i
+                  class="fa fa-check-circle"
+                  aria-hidden="true"
+                  style="color: #045de9; font-size: 25px"
+                ></i>
+                <p>
+                  <b>Sales Invoicing</b>
+                </p>
+              </div>
+              <div>
+                <i
+                  class="fa fa-check-circle"
+                  aria-hidden="true"
+                  style="color: #045de9; font-size: 25px"
+                ></i>
+                <p>
+                  <b>Sales Analytics</b>
+                </p>
+              </div>
+              <div>
+                <i
+                  class="fa fa-check-circle"
+                  aria-hidden="true"
+                  style="color: #045de9; font-size: 25px"
+                ></i>
+                <p>
+                  <b>Quotation Management</b>
+                </p>
+              </div>
+              <div>
+                <i
+                  class="fa fa-check-circle"
+                  aria-hidden="true"
+                  style="color: #045de9; font-size: 25px"
+                ></i>
+                <p>
+                  <b>Sales Order Processing</b>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="das-sub-item-container dash-purchase">
+          <div>
+            <span>Purchase</span>
+            <p>
+              Optimize procurement processes and control costs with ERPNext.
+              Streamline purchase requisitions, manage supplier relationships,
+              and track orders seamlessly.
+            </p>
+            <div class="dash-sec3-sub-items">
+              <div>
+                <i
+                  class="fa fa-check-circle"
+                  aria-hidden="true"
+                  style="color: #045de9; font-size: 25px"
+                ></i>
+                <p>
+                  <b>Purchase Requisitions</b>
+                </p>
+              </div>
+              <div>
+                <i
+                  class="fa fa-check-circle"
+                  aria-hidden="true"
+                  style="color: #045de9; font-size: 25px"
+                ></i>
+                <p>
+                  <b>Supplier Management</b>
+                </p>
+              </div>
+              <div>
+                <i
+                  class="fa fa-check-circle"
+                  aria-hidden="true"
+                  style="color: #045de9; font-size: 25px"
+                ></i>
+                <p>
+                  <b>Purchase Invoicing</b>
+                </p>
+              </div>
+              <div>
+                <i
+                  class="fa fa-check-circle"
+                  aria-hidden="true"
+                  style="color: #045de9; font-size: 25px"
+                ></i>
+                <p>
+                  <b>Purchase Analytics</b>
+                </p>
+              </div>
+              <div>
+                <i
+                  class="fa fa-check-circle"
+                  aria-hidden="true"
+                  style="color: #045de9; font-size: 25px"
+                ></i>
+                <p>
+                  <b>Purchase Order Processing</b>
+                </p>
+              </div>
+              <div>
+                <i
+                  class="fa fa-check-circle"
+                  aria-hidden="true"
+                  style="color: #045de9; font-size: 25px"
+                ></i>
+                <p>
+                  <b>Goods Receipt Notes (GRN)</b>
+                </p>
+              </div>
+            </div>
+          </div>
+          <div>
+            <img loading="lazy" src="{% static 'assets/images/industry/manufacturer/buy.png' %}" />
+          </div>
+        </div>
+        <div class="das-sub-item-container dash-inventory">
+          <div>
+            <img loading="lazy" src="{% static 'assets/images/industry/manufacturer/stock.png' %}" />
+          </div>
+          <div>
+            <span>Inventory</span>
+            <p>
+              Efficiently manage inventory levels and ensure availability with
+              ERPNext. Track stock movements, optimize warehouse operations, and
+              prevent stockouts.
+            </p>
+            <div class="dash-sec3-sub-items">
+              <div>
+                <i
+                  class="fa fa-check-circle"
+                  aria-hidden="true"
+                  style="color: #045de9; font-size: 25px"
+                ></i>
+                <p>
+                  <b>Stock Management</b>
+                </p>
+              </div>
+              <div>
+                <i
+                  class="fa fa-check-circle"
+                  aria-hidden="true"
+                  style="color: #045de9; font-size: 25px"
+                ></i>
+                <p>
+                  <b>Item Master</b>
+                </p>
+              </div>
+              <div>
+                <i
+                  class="fa fa-check-circle"
+                  aria-hidden="true"
+                  style="color: #045de9; font-size: 25px"
+                ></i>
+                <p>
+                  <b>Stock Reconciliation</b>
+                </p>
+              </div>
+              <div>
+                <i
+                  class="fa fa-check-circle"
+                  aria-hidden="true"
+                  style="color: #045de9; font-size: 25px"
+                ></i>
+                <p>
+                  <b>Inventory Valuation</b>
+                </p>
+              </div>
+              <div>
+                <i
+                  class="fa fa-check-circle"
+                  aria-hidden="true"
+                  style="color: #045de9; font-size: 25px"
+                ></i>
+                <p>
+                  <b>Warehouse Management</b>
+                </p>
+              </div>
+              <div>
+                <i
+                  class="fa fa-check-circle"
+                  aria-hidden="true"
+                  style="color: #045de9; font-size: 25px"
+                ></i>
+                <p>
+                  <b>Batch and Serial Number Tracking</b>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="das-sub-item-container dash-payroll">
+          <div>
+            <span>HR & Payroll</span>
+            <p>
+              Effectively manage human resources and payroll processes with
+              ERPNext. Streamline employee management, track attendance, and
+              automate payroll calculations.
+            </p>
+            <div class="dash-sec3-sub-items">
+              <div>
+                <i
+                  class="fa fa-check-circle"
+                  aria-hidden="true"
+                  style="color: #045de9; font-size: 25px"
+                ></i>
+                <p>
+                  <b>Employee Directory</b>
+                </p>
+              </div>
+              <div>
+                <i
+                  class="fa fa-check-circle"
+                  aria-hidden="true"
+                  style="color: #045de9; font-size: 25px"
+                ></i>
+                <p>
+                  <b>Leave Management</b>
+                </p>
+              </div>
+              <div>
+                <i
+                  class="fa fa-check-circle"
+                  aria-hidden="true"
+                  style="color: #045de9; font-size: 25px"
+                ></i>
+                <p>
+                  <b>Payroll Processing</b>
+                </p>
+              </div>
+              <div>
+                <i
+                  class="fa fa-check-circle"
+                  aria-hidden="true"
+                  style="color: #045de9; font-size: 25px"
+                ></i>
+                <p>
+                  <b>HR Analytics</b>
+                </p>
+              </div>
+              <div>
+                <i
+                  class="fa fa-check-circle"
+                  aria-hidden="true"
+                  style="color: #045de9; font-size: 25px"
+                ></i>
+                <p>
+                  <b>Attendance Management</b>
+                </p>
+              </div>
+              <div>
+                <i
+                  class="fa fa-check-circle"
+                  aria-hidden="true"
+                  style="color: #045de9; font-size: 25px"
+                ></i>
+                <p>
+                  <b>Employee Self-Service</b>
+                </p>
+              </div>
+            </div>
+          </div>
+          <div>
+            <img loading="lazy" src="{% static 'assets/images/industry/manufacturer/payroll.png' %}" />
+          </div>
+        </div>
+        <div class="das-sub-item-container dash-crm">
+          <div>
+            <img loading="lazy" src="{% static 'assets/images/industry/manufacturer/crm.png' %}" />
+          </div>
+          <div>
+            <span>CRM</span>
+            <p>
+              Enhance customer relationships and drive sales growth with
+              ERPNext's CRM module. Track interactions, manage contacts, and
+              nurture leads effectively.
+            </p>
+            <div class="dash-sec3-sub-items">
+              <div>
+                <i
+                  class="fa fa-check-circle"
+                  aria-hidden="true"
+                  style="color: #045de9; font-size: 25px"
+                ></i>
+                <p>
+                  <b>Contact Management</b>
+                </p>
+              </div>
+              <div>
+                <i
+                  class="fa fa-check-circle"
+                  aria-hidden="true"
+                  style="color: #045de9; font-size: 25px"
+                ></i>
+                <p>
+                  <b>Opportunity Management</b>
+                </p>
+              </div>
+              <div>
+                <i
+                  class="fa fa-check-circle"
+                  aria-hidden="true"
+                  style="color: #045de9; font-size: 25px"
+                ></i>
+                <p>
+                  <b>Activity Tracking</b>
+                </p>
+              </div>
+              <div>
+                <i
+                  class="fa fa-check-circle"
+                  aria-hidden="true"
+                  style="color: #045de9; font-size: 25px"
+                ></i>
+                <p>
+                  <b>CRM Analytics</b>
+                </p>
+              </div>
+              <div>
+                <i
+                  class="fa fa-check-circle"
+                  aria-hidden="true"
+                  style="color: #045de9; font-size: 25px"
+                ></i>
+                <p>
+                  <b>Sales Pipeline Management</b>
+                </p>
+              </div>
+              <div>
+                <i
+                  class="fa fa-check-circle"
+                  aria-hidden="true"
+                  style="color: #045de9; font-size: 25px"
+                ></i>
+                <p>
+                  <b>Customer Communication</b>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="das-sub-item-container dash-project">
+          <div>
+            <span>Project Management</span>
+            <p>
+              Simplify project planning and execution with ERPNext. Manage
+              tasks, allocate resources, and track project progress seamlessly.
+            </p>
+            <div class="dash-sec3-sub-items">
+              <div>
+                <i
+                  class="fa fa-check-circle"
+                  aria-hidden="true"
+                  style="color: #045de9; font-size: 25px"
+                ></i>
+                <p>
+                  <b>Task Management</b>
+                </p>
+              </div>
+              <div>
+                <i
+                  class="fa fa-check-circle"
+                  aria-hidden="true"
+                  style="color: #045de9; font-size: 25px"
+                ></i>
+                <p>
+                  <b>Project Planning</b>
+                </p>
+              </div>
+              <div>
+                <i
+                  class="fa fa-check-circle"
+                  aria-hidden="true"
+                  style="color: #045de9; font-size: 25px"
+                ></i>
+                <p>
+                  <b>Resource Allocation</b>
+                </p>
+              </div>
+              <div>
+                <i
+                  class="fa fa-check-circle"
+                  aria-hidden="true"
+                  style="color: #045de9; font-size: 25px"
+                ></i>
+                <p>
+                  <b>Gantt Charts</b>
+                </p>
+              </div>
+              <div>
+                <i
+                  class="fa fa-check-circle"
+                  aria-hidden="true"
+                  style="color: #045de9; font-size: 25px"
+                ></i>
+                <p>
+                  <b>Timesheets</b>
+                </p>
+              </div>
+              <div>
+                <i
+                  class="fa fa-check-circle"
+                  aria-hidden="true"
+                  style="color: #045de9; font-size: 25px"
+                ></i>
+                <p>
+                  <b>Project Analytics</b>
+                </p>
+              </div>
+            </div>
+          </div>
+          <div>
+            <img loading="lazy" src="{% static 'assets/images/industry/manufacturer/projects.png' %}" />
+          </div>
+        </div>
+      </div>
+
+      <!-- Explore section for mobile view -->
+      <div class="dash-sec3-items-mobile">
+        <div>
+          <img loading="lazy" src="{% static 'assets/images/industry/manufacturer/manuf.png' %}" />
+        </div>
+        <div>
+          <span>Manufacturing</span>
+          <p>
+            Efficiently plan and track production processes with ERPNext.
+            Maximize productivity and minimize costs.
+          </p>
+          <div class="dash-sec3-sub-items">
+            <div>
+              <i
+                class="fa fa-check-circle"
+                aria-hidden="true"
+                style="color: #045de9; font-size: 25px"
+              ></i>
+              <p>
+                <b>Bill of Materials (BOM)</b>
+              </p>
+            </div>
+            <div>
+              <i
+                class="fa fa-check-circle"
+                aria-hidden="true"
+                style="color: #045de9; font-size: 25px"
+              ></i>
+              <p>
+                <b>Work Orders</b>
+              </p>
+            </div>
+            <div>
+              <i
+                class="fa fa-check-circle"
+                aria-hidden="true"
+                style="color: #045de9; font-size: 25px"
+              ></i>
+              <p>
+                <b>Capacity Planning</b>
+              </p>
+            </div>
+            <div>
+              <i
+                class="fa fa-check-circle"
+                aria-hidden="true"
+                style="color: #045de9; font-size: 25px"
+              ></i>
+              <p>
+                <b>Integration</b>
+              </p>
+            </div>
+            <div>
+              <i
+                class="fa fa-check-circle"
+                aria-hidden="true"
+                style="color: #045de9; font-size: 25px"
+              ></i>
+              <p>
+                <b>Shop Floor Control</b>
+              </p>
+            </div>
+            <div>
+              <i
+                class="fa fa-check-circle"
+                aria-hidden="true"
+                style="color: #045de9; font-size: 25px"
+              ></i>
+              <p>
+                <b>Quality Control</b>
+              </p>
+            </div>
+            <div>
+              <i
+                class="fa fa-check-circle"
+                aria-hidden="true"
+                style="color: #045de9; font-size: 25px"
+              ></i>
+              <p>
+                <b>Traceability</b>
+              </p>
+            </div>
+            <div>
+              <i
+                class="fa fa-check-circle"
+                aria-hidden="true"
+                style="color: #045de9; font-size: 25px"
+              ></i>
+              <p>
+                <b>Costing and Analysis</b>
+              </p>
+            </div>
+            <div>
+              <i
+                class="fa fa-check-circle"
+                aria-hidden="true"
+                style="color: #045de9; font-size: 25px"
+              ></i>
+              <p>
+                <b>Material Requirement Planning (MRP)</b>
+              </p>
+            </div>
+            <div>
+              <i
+                class="fa fa-check-circle"
+                aria-hidden="true"
+                style="color: #045de9; font-size: 25px"
+              ></i>
+              <p>
+                <b>Customization and Flexibility</b>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div>
+          <img loading="lazy" src="{% static 'assets/images/industry/manufacturer/account.png' %}" />
+        </div>
+        <div>
+          <span>Accounting</span>
+          <p>
+            Manage finances effectively with ERPNext. Track transactions, ensure
+            compliance, and optimize financial operations.
+          </p>
+          <div class="dash-sec3-sub-items">
+            <div>
+              <i
+                class="fa fa-check-circle"
+                aria-hidden="true"
+                style="color: #045de9; font-size: 25px"
+              ></i>
+              <p>
+                <b>Chart of Accounts</b>
+              </p>
+            </div>
+            <div>
+              <i
+                class="fa fa-check-circle"
+                aria-hidden="true"
+                style="color: #045de9; font-size: 25px"
+              ></i>
+              <p>
+                <b>General Ledger </b>
+              </p>
+            </div>
+            <div>
+              <i
+                class="fa fa-check-circle"
+                aria-hidden="true"
+                style="color: #045de9; font-size: 25px"
+              ></i>
+              <p>
+                <b>Accounts Receivable</b>
+              </p>
+            </div>
+            <div>
+              <i
+                class="fa fa-check-circle"
+                aria-hidden="true"
+                style="color: #045de9; font-size: 25px"
+              ></i>
+              <p>
+                <b>Accounts Payable</b>
+              </p>
+            </div>
+            <div>
+              <i
+                class="fa fa-check-circle"
+                aria-hidden="true"
+                style="color: #045de9; font-size: 25px"
+              ></i>
+              <p>
+                <b>Taxation</b>
+              </p>
+            </div>
+            <div>
+              <i
+                class="fa fa-check-circle"
+                aria-hidden="true"
+                style="color: #045de9; font-size: 25px"
+              ></i>
+              <p>
+                <b>Asset Management</b>
+              </p>
+            </div>
+            <div>
+              <i
+                class="fa fa-check-circle"
+                aria-hidden="true"
+                style="color: #045de9; font-size: 25px"
+              ></i>
+              <p>
+                <b>Budgeting and Forecasting</b>
+              </p>
+            </div>
+            <div>
+              <i
+                class="fa fa-check-circle"
+                aria-hidden="true"
+                style="color: #045de9; font-size: 25px"
+              ></i>
+              <p>
+                <b>Financial Reporting</b>
+              </p>
+            </div>
+            <div>
+              <i
+                class="fa fa-check-circle"
+                aria-hidden="true"
+                style="color: #045de9; font-size: 25px"
+              ></i>
+              <p>
+                <b>Bank and Cash Management</b>
+              </p>
+            </div>
+            <div>
+              <i
+                class="fa fa-check-circle"
+                aria-hidden="true"
+                style="color: #045de9; font-size: 25px"
+              ></i>
+              <p>
+                <b>Integration and Customization</b>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div>
+          <img loading="lazy" src="{% static 'assets/images/industry/manufacturer/sell.png' %}" />
+        </div>
+        <div>
+          <span>Sales</span>
+          <p>
+            Streamline sales processes and boost revenue generation with
+            ERPNext. Manage leads, track opportunities, and close deals
+            efficiently.
+          </p>
+          <div class="dash-sec3-sub-items">
+            <div>
+              <i
+                class="fa fa-check-circle"
+                aria-hidden="true"
+                style="color: #045de9; font-size: 25px"
+              ></i>
+              <p>
+                <b>Lead Management</b>
+              </p>
+            </div>
+            <div>
+              <i
+                class="fa fa-check-circle"
+                aria-hidden="true"
+                style="color: #045de9; font-size: 25px"
+              ></i>
+              <p>
+                <b>Opportunity Tracking</b>
+              </p>
+            </div>
+            <div>
+              <i
+                class="fa fa-check-circle"
+                aria-hidden="true"
+                style="color: #045de9; font-size: 25px"
+              ></i>
+              <p>
+                <b>Sales Invoicing</b>
+              </p>
+            </div>
+            <div>
+              <i
+                class="fa fa-check-circle"
+                aria-hidden="true"
+                style="color: #045de9; font-size: 25px"
+              ></i>
+              <p>
+                <b>Sales Analytics</b>
+              </p>
+            </div>
+            <div>
+              <i
+                class="fa fa-check-circle"
+                aria-hidden="true"
+                style="color: #045de9; font-size: 25px"
+              ></i>
+              <p>
+                <b>Quotation Management</b>
+              </p>
+            </div>
+            <div>
+              <i
+                class="fa fa-check-circle"
+                aria-hidden="true"
+                style="color: #045de9; font-size: 25px"
+              ></i>
+              <p>
+                <b>Sales Order Processing</b>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div>
+          <img loading="lazy" src="{% static 'assets/images/industry/manufacturer/buy.png' %}" />
+        </div>
+        <div>
+          <span>Purchase</span>
+          <p>
+            Optimize procurement processes and control costs with ERPNext.
+            Streamline purchase requisitions, manage supplier relationships, and
+            track orders seamlessly.
+          </p>
+          <div class="dash-sec3-sub-items">
+            <div>
+              <i
+                class="fa fa-check-circle"
+                aria-hidden="true"
+                style="color: #045de9; font-size: 25px"
+              ></i>
+              <p>
+                <b>Purchase Requisitions</b>
+              </p>
+            </div>
+            <div>
+              <i
+                class="fa fa-check-circle"
+                aria-hidden="true"
+                style="color: #045de9; font-size: 25px"
+              ></i>
+              <p>
+                <b>Supplier Management</b>
+              </p>
+            </div>
+            <div>
+              <i
+                class="fa fa-check-circle"
+                aria-hidden="true"
+                style="color: #045de9; font-size: 25px"
+              ></i>
+              <p>
+                <b>Purchase Invoicing</b>
+              </p>
+            </div>
+            <div>
+              <i
+                class="fa fa-check-circle"
+                aria-hidden="true"
+                style="color: #045de9; font-size: 25px"
+              ></i>
+              <p>
+                <b>Purchase Analytics</b>
+              </p>
+            </div>
+            <div>
+              <i
+                class="fa fa-check-circle"
+                aria-hidden="true"
+                style="color: #045de9; font-size: 25px"
+              ></i>
+              <p>
+                <b>Purchase Order Processing</b>
+              </p>
+            </div>
+            <div>
+              <i
+                class="fa fa-check-circle"
+                aria-hidden="true"
+                style="color: #045de9; font-size: 25px"
+              ></i>
+              <p>
+                <b>Goods Receipt Notes (GRN)</b>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div>
+          <img loading="lazy" src="{% static 'assets/images/industry/manufacturer/stock.png' %}" />
+        </div>
+        <div>
+          <span>Inventory</span>
+          <p>
+            Efficiently manage inventory levels and ensure availability with
+            ERPNext. Track stock movements, optimize warehouse operations, and
+            prevent stockouts.
+          </p>
+          <div class="dash-sec3-sub-items">
+            <div>
+              <i
+                class="fa fa-check-circle"
+                aria-hidden="true"
+                style="color: #045de9; font-size: 25px"
+              ></i>
+              <p>
+                <b>Stock Management</b>
+              </p>
+            </div>
+            <div>
+              <i
+                class="fa fa-check-circle"
+                aria-hidden="true"
+                style="color: #045de9; font-size: 25px"
+              ></i>
+              <p>
+                <b>Item Master</b>
+              </p>
+            </div>
+            <div>
+              <i
+                class="fa fa-check-circle"
+                aria-hidden="true"
+                style="color: #045de9; font-size: 25px"
+              ></i>
+              <p>
+                <b>Stock Reconciliation</b>
+              </p>
+            </div>
+            <div>
+              <i
+                class="fa fa-check-circle"
+                aria-hidden="true"
+                style="color: #045de9; font-size: 25px"
+              ></i>
+              <p>
+                <b>Inventory Valuation</b>
+              </p>
+            </div>
+            <div>
+              <i
+                class="fa fa-check-circle"
+                aria-hidden="true"
+                style="color: #045de9; font-size: 25px"
+              ></i>
+              <p>
+                <b>Warehouse Management</b>
+              </p>
+            </div>
+            <div>
+              <i
+                class="fa fa-check-circle"
+                aria-hidden="true"
+                style="color: #045de9; font-size: 25px"
+              ></i>
+              <p>
+                <b>Batch and Serial Number Tracking</b>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div>
+          <img loading="lazy" src="{% static 'assets/images/industry/manufacturer/payroll.png' %}" />
+        </div>
+        <div>
+          <span>HR & Payroll</span>
+          <p>
+            Effectively manage human resources and payroll processes with
+            ERPNext. Streamline employee management, track attendance, and
+            automate payroll calculations.
+          </p>
+          <div class="dash-sec3-sub-items">
+            <div>
+              <i
+                class="fa fa-check-circle"
+                aria-hidden="true"
+                style="color: #045de9; font-size: 25px"
+              ></i>
+              <p>
+                <b>Employee Directory</b>
+              </p>
+            </div>
+            <div>
+              <i
+                class="fa fa-check-circle"
+                aria-hidden="true"
+                style="color: #045de9; font-size: 25px"
+              ></i>
+              <p>
+                <b>Leave Management</b>
+              </p>
+            </div>
+            <div>
+              <i
+                class="fa fa-check-circle"
+                aria-hidden="true"
+                style="color: #045de9; font-size: 25px"
+              ></i>
+              <p>
+                <b>Payroll Processing</b>
+              </p>
+            </div>
+            <div>
+              <i
+                class="fa fa-check-circle"
+                aria-hidden="true"
+                style="color: #045de9; font-size: 25px"
+              ></i>
+              <p>
+                <b>HR Analytics</b>
+              </p>
+            </div>
+            <div>
+              <i
+                class="fa fa-check-circle"
+                aria-hidden="true"
+                style="color: #045de9; font-size: 25px"
+              ></i>
+              <p>
+                <b>Attendance Management</b>
+              </p>
+            </div>
+            <div>
+              <i
+                class="fa fa-check-circle"
+                aria-hidden="true"
+                style="color: #045de9; font-size: 25px"
+              ></i>
+              <p>
+                <b>Employee Self-Service</b>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div>
+          <img loading="lazy" src="{% static 'assets/images/industry/manufacturer/crm.png' %}" />
+        </div>
+        <div>
+          <span>CRM</span>
+          <p>
+            Enhance customer relationships and drive sales growth with ERPNext's
+            CRM module. Track interactions, manage contacts, and nurture leads
+            effectively.
+          </p>
+          <div class="dash-sec3-sub-items">
+            <div>
+              <i
+                class="fa fa-check-circle"
+                aria-hidden="true"
+                style="color: #045de9; font-size: 25px"
+              ></i>
+              <p>
+                <b>Contact Management</b>
+              </p>
+            </div>
+            <div>
+              <i
+                class="fa fa-check-circle"
+                aria-hidden="true"
+                style="color: #045de9; font-size: 25px"
+              ></i>
+              <p>
+                <b>Opportunity Management</b>
+              </p>
+            </div>
+            <div>
+              <i
+                class="fa fa-check-circle"
+                aria-hidden="true"
+                style="color: #045de9; font-size: 25px"
+              ></i>
+              <p>
+                <b>Activity Tracking</b>
+              </p>
+            </div>
+            <div>
+              <i
+                class="fa fa-check-circle"
+                aria-hidden="true"
+                style="color: #045de9; font-size: 25px"
+              ></i>
+              <p>
+                <b>CRM Analytics</b>
+              </p>
+            </div>
+            <div>
+              <i
+                class="fa fa-check-circle"
+                aria-hidden="true"
+                style="color: #045de9; font-size: 25px"
+              ></i>
+              <p>
+                <b>Sales Pipeline Management</b>
+              </p>
+            </div>
+            <div>
+              <i
+                class="fa fa-check-circle"
+                aria-hidden="true"
+                style="color: #045de9; font-size: 25px"
+              ></i>
+              <p>
+                <b>Customer Communication</b>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div>
+          <img loading="lazy" src="{% static 'assets/images/industry/manufacturer/projects.png' %}" />
+        </div>
+        <div>
+          <span>Project Management</span>
+          <p>
+            Simplify project planning and execution with ERPNext. Manage tasks,
+            allocate resources, and track project progress seamlessly.
+          </p>
+          <div class="dash-sec3-sub-items">
+            <div>
+              <i
+                class="fa fa-check-circle"
+                aria-hidden="true"
+                style="color: #045de9; font-size: 25px"
+              ></i>
+              <p>
+                <b>Task Management</b>
+              </p>
+            </div>
+            <div>
+              <i
+                class="fa fa-check-circle"
+                aria-hidden="true"
+                style="color: #045de9; font-size: 25px"
+              ></i>
+              <p>
+                <b>Project Planning</b>
+              </p>
+            </div>
+            <div>
+              <i
+                class="fa fa-check-circle"
+                aria-hidden="true"
+                style="color: #045de9; font-size: 25px"
+              ></i>
+              <p>
+                <b>Resource Allocation</b>
+              </p>
+            </div>
+            <div>
+              <i
+                class="fa fa-check-circle"
+                aria-hidden="true"
+                style="color: #045de9; font-size: 25px"
+              ></i>
+              <p>
+                <b>Gantt Charts</b>
+              </p>
+            </div>
+            <div>
+              <i
+                class="fa fa-check-circle"
+                aria-hidden="true"
+                style="color: #045de9; font-size: 25px"
+              ></i>
+              <p>
+                <b>Timesheets</b>
+              </p>
+            </div>
+            <div>
+              <i
+                class="fa fa-check-circle"
+                aria-hidden="true"
+                style="color: #045de9; font-size: 25px"
+              ></i>
+              <p>
+                <b>Project Analytics</b>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="dash-sec2-signup">
+        <span aria-haspopup="true" class="wsshopmyaccount">
+          <span class="wsmenu-click"></span>
+          <a href="" class="gettouch">Signup For Free!</a>
+        </span>
+      </div>
+    </div>
+  </section>
+  <section class="dash-section" id="sec-last">
+    <div class="container dash-sec2">
+      <div class="dash-sec2-head dash-sec3-head">
+        <h2><span>Do More</span> With ERPNext</h2>
+      </div>
+      <div class="dash-sec3-head-p">
+        <p>
+          ERPNext seamlessly connects with Tally, Busy and Zoho so all your
+          accounting needs stay unaffected!
+        </p>
+      </div>
+      <div class="dash-item-container">
+        <ul class="dash-ul">
+          <li class="dash-center">
+            <img src="{% static 'assets/images/team/ERPNext.svg' %}" />
+          </li>
+          <li><img src="{% static 'assets/images/team/tally.svg' %}" /></li>
+          <li>
+            <img src="{% static 'assets/images/team/googlesheet.svg' %}" />
+          </li>
+          <li><img src="{% static 'assets/images/team/easyecom.svg' %}" /></li>
+          <li><img src="{% static 'assets/images/team/gmail.svg' %}" /></li>
+          <li><img src="{% static 'assets/images/team/busy.svg' %}" /></li>
+          <li><img src="{% static 'assets/images/team/aftership.svg' %}" /></li>
+          <li><img src="{% static 'assets/images/team/zoho.svg' %}" /></li>
+          <li><img src="{% static 'assets/images/team/watsapp.svg' %}" /></li>
+        </ul>
+      </div>
+      <div class="dash-sec2-signup">
+        <span aria-haspopup="true" class="wsshopmyaccount">
+          <span class="wsmenu-click"></span>
+          <a href="" class="gettouch">Signup For Free!</a>
+        </span>
+      </div>
+    </div>
+  </section>
+  {% include 'dashboard-faqs.html' %} {% include 'insight.html' %} {% endblock%}
+</body>
+
+{% block scripts %}
+<script src="{% static 'assets/js/owl.carousel.min.js' %}"></script>
+<script type="text/javascript">
+  jQuery(document).ready(function () {
+    $("#Bestseller-slider2").owlCarousel({
+      loop: false,
+      nav: false,
+      autoplay: false,
+      dots: true,
+      margin: 20,
+      smartSpeed: 1000,
+      responsive: {
+        0: {
+          items: 1,
+        },
+        600: {
+          items: 1,
+        },
+        1000: {
+          items: 1,
+        },
+      },
+      navText: [
+        "<i class='fa fa-angle-left' aria-hidden='true'></i>",
+        "<i class='fa fa-angle-right' aria-hidden='true'></i>",
+      ],
+    });
+  });
+</script>
+<script type="text/javascript">
+  $(".Email_To_Vlidate").keyup(function () {
+    var regex =
+      /^([a-zA-Z0-9_\.\-\+])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+    var email = $(this).val();
+    console.log("email", email);
+    if (!regex.test(email)) {
+      $(".email_validate").html("Enter Valid Email Id!");
+    } else {
+      $(".email_validate").fadeOut(1000);
+    }
+  });
+</script>
+<script>
+  var pageform = $("#contactForm");
+  pageform.submit(function (e) {
+    e.preventDefault();
+    $("#contactFormSubmit").html("<div class='quoteloader'></div>");
+    $.ajax({
+      type: pageform.attr("method"),
+      url: pageform.attr("action"),
+      data: $(pageform).serialize(),
+      success: function (res) {
+        if (res.status == 1) {
+          swal(
+            "Thank You!",
+            "for reaching out to us! We appreciate your interest and will get back to you as soon as possible.",
+            "success"
+          );
+          $("#contactForm").trigger("reset");
+          $("#contactFormSubmit").html("Submit");
+        } else {
+          swal("Error", "Please complete the reCAPTCHA", "error");
+          $("#contactFormSubmit").html("Submit");
+        }
+      },
+      error: function (error) {
+        swal("Error", "Enter the correct value", "error");
+        $("#contactFormSubmit").html("Submit");
+        console.log(error);
+      },
+    });
+  });
+</script>
+<script>
+  var type = 1; //circle type - 1 whole, 0.5 half, 0.25 quarter
+  var innerWidth = window.innerWidth;
+  (radius = innerWidth <= 480 ? "10em" : "14em"), //distance from center
+    (start = -90), //shift start from 0
+    (reverseOrder = false), //reverse order of items
+    ($list = $(".dash-ul")),
+    ($items = reverseOrder
+      ? $($list.children("li:not(:first-child)").get().reverse())
+      : $list.children("li:not(:first-child)")),
+    (numberOfItems = type === 1 ? $items.length : $items.length - 1), //adj for even distro of elements when not full circle
+    (slice = (360 * type) / numberOfItems),
+    innerWidth > 768 ? timeLine = gsap.timeline({ paused: true }) :timeLine = gsap.timeline() ;
+
+ if(innerWidth > 768){
+  $items.each(function (i) {
+    var $self = $(this),
+      rotate = slice * i + start,
+      rotateReverse = rotate * -1;
+
+    timeLine.to(
+      $self,
+      0.2,
+      {
+        opacity: 1,
+        transform:
+          "rotate(" +
+          rotate +
+          "deg) translate(" +
+          radius +
+          ") rotate(" +
+          rotateReverse +
+          "deg)",
+        ease: "Power1.in",
+      },
+      "+=0.1"
+    );
+  });
+  ScrollTrigger.create({
+    trigger: ".dash-center",
+    start: "top 80%",
+    scrub: 1,
+    onEnter: function () {
+      timeLine.play();
+    },
+  });
+ }else{
+  $items.each(function (i) {
+    var $self = $(this),
+      rotate = slice * i + start,
+      rotateReverse = rotate * -1;
+
+    timeLine.to(
+      $self,
+      0.2,
+      {
+        opacity: 1,
+        transform:
+          "rotate(" +
+          rotate +
+          "deg) translate(" +
+          radius +
+          ") rotate(" +
+          rotateReverse +
+          "deg)",
+        ease: "Power1.in",
+      },
+      "+=0.1"
+    );
+  });
+ }
+</script>
+
+<script>
+  const slider = document.querySelector(".slider-inner");
+  const slides = document.querySelectorAll(".slide");
+  const slideWidth = slides[0].clientWidth;
+  var innerWidth = window.innerWidth;
+  const numVisibleSlides = innerWidth > 768 ? 4 : 3;
+  let currentIndex = 0;
+
+  function nextSlide() {
+    currentIndex += numVisibleSlides;
+
+    if (currentIndex >= slides.length) {
+      currentIndex = 0;
+    }
+
+    gsap.to(slider, 3, {
+      x: -slideWidth * currentIndex,
+      delay: 0.2,
+      onComplete: nextSlide,
+    });
+  }
+  nextSlide();
+  // ScrollTrigger.create({
+  //   trigger: '.dash-sec4',
+  //   start: 'top center',
+  //   onEnter: () => {
+  //     // Start the initial slide transition when trigger area is entered
+  //     nextSlide();
+  //   }
+  // });
+</script>
+<!-- Heading animation -->
+<script>
+  let headTL = gsap.timeline();
+
+</script>
+<!-- explore section animation -->
+<script>
+  /*let exploreTL1 = gsap.timeline({ paused: true });
+  exploreTL1
+    .fromTo(
+      ".dash-manufacturing > div:nth-child(1)",
+      { opacity: 0, x: -100 },
+      { opacity: 1, x: 0 }
+    )
+    .fromTo(
+      [
+        ".dash-manufacturing > div:nth-child(2) > p",
+        ".dash-manufacturing > div:nth-child(2) .dash-sec3-sub-items > div",
+      ],
+      { opacity: 0, x: 100 },
+      { opacity: 1, x: 0, stagger: 0.2 },
+      0
+    );
+  // Using ScrollTrigger to trigger animation when .dash-center comes into view
+  ScrollTrigger.create({
+    trigger: ".dash-manufacturing",
+    start: "top 50%",
+    scrub: 1,
+    onEnter: function () {
+      exploreTL1.play();
+    },
+  });
+
+  let exploreTL2 = gsap.timeline({ paused: true });
+  exploreTL2
+    .fromTo(
+      ".dash-account > div:nth-child(2)",
+      { opacity: 0, x: 100 },
+      { opacity: 1, x: 0 }
+    )
+    .fromTo(
+      [
+        ".dash-account > div:nth-child(1) > p",
+        ".dash-account > div:nth-child(1) .dash-sec3-sub-items > div",
+      ],
+      { opacity: 0, x: -100 },
+      { opacity: 1, x: 0, stagger: 0.2 },
+      0
+    );
+  // Using ScrollTrigger to trigger animation when .dash-center comes into view
+  ScrollTrigger.create({
+    trigger: ".dash-account",
+    start: "top 80%",
+    scrub: 1,
+    onEnter: function () {
+      exploreTL2.play();
+    },
+  });
+  let exploreTL3 = gsap.timeline({ paused: true });
+  exploreTL3
+    .fromTo(
+      ".dash-sale > div:nth-child(1)",
+      { opacity: 0, x: -100 },
+      { opacity: 1, x: 0 }
+    )
+    .fromTo(
+      [
+        ".dash-sale > div:nth-child(2) > p",
+        ".dash-sale > div:nth-child(2) .dash-sec3-sub-items > div",
+      ],
+      { opacity: 0, x: 100 },
+      { opacity: 1, x: 0, stagger: 0.2 },
+      0
+    );
+  // Using ScrollTrigger to trigger animation when .dash-center comes into view
+  ScrollTrigger.create({
+    trigger: ".dash-sale",
+    start: "top 80%",
+    scrub: 1,
+    onEnter: function () {
+      exploreTL3.play();
+    },
+  });
+
+  let exploreTL4 = gsap.timeline({ paused: true });
+  exploreTL4
+    .fromTo(
+      ".dash-purchase > div:nth-child(2)",
+      { opacity: 0, x: 100 },
+      { opacity: 1, x: 0 }
+    )
+    .fromTo(
+      [
+        ".dash-purchase > div:nth-child(1) > p",
+        ".dash-purchase > div:nth-child(1) .dash-sec3-sub-items > div",
+      ],
+      { opacity: 0, x: -100 },
+      { opacity: 1, x: 0, stagger: 0.2 },
+      0
+    );
+  // Using ScrollTrigger to trigger animation when .dash-center comes into view
+  ScrollTrigger.create({
+    trigger: ".dash-purchase",
+    start: "top 80%",
+    scrub: 1,
+    onEnter: function () {
+      exploreTL4.play();
+    },
+  });
+  let exploreTL5 = gsap.timeline({ paused: true });
+  exploreTL5
+    .fromTo(
+      ".dash-inventory > div:nth-child(1)",
+      { opacity: 0, x: -100 },
+      { opacity: 1, x: 0 }
+    )
+    .fromTo(
+      [
+        ".dash-inventory > div:nth-child(2) > p",
+        ".dash-inventory > div:nth-child(2) .dash-sec3-sub-items > div",
+      ],
+      { opacity: 0, x: 100 },
+      { opacity: 1, x: 0, stagger: 0.2 },
+      0
+    );
+  // Using ScrollTrigger to trigger animation when .dash-center comes into view
+  ScrollTrigger.create({
+    trigger: ".dash-inventory",
+    start: "top 80%",
+    scrub: 1,
+    onEnter: function () {
+      exploreTL5.play();
+    },
+  });
+
+  let exploreTL6 = gsap.timeline({ paused: true });
+  exploreTL6
+    .fromTo(
+      ".dash-payroll > div:nth-child(2)",
+      { opacity: 0, x: 100 },
+      { opacity: 1, x: 0 }
+    )
+    .fromTo(
+      [
+        ".dash-payroll > div:nth-child(1) > p",
+        ".dash-payroll > div:nth-child(1) .dash-sec3-sub-items > div",
+      ],
+      { opacity: 0, x: -100 },
+      { opacity: 1, x: 0, stagger: 0.2 },
+      0
+    );
+  // Using ScrollTrigger to trigger animation when .dash-center comes into view
+  ScrollTrigger.create({
+    trigger: ".dash-payroll",
+    start: "top 80%",
+    scrub: 1,
+    onEnter: function () {
+      exploreTL6.play();
+    },
+  });
+  let exploreTL7 = gsap.timeline({ paused: true });
+  exploreTL7
+    .fromTo(
+      ".dash-crm > div:nth-child(1)",
+      { opacity: 0, x: -100 },
+      { opacity: 1, x: 0 }
+    )
+    .fromTo(
+      [
+        ".dash-crm > div:nth-child(2) > p",
+        ".dash-crm > div:nth-child(2) .dash-sec3-sub-items > div",
+      ],
+      { opacity: 0, x: 100 },
+      { opacity: 1, x: 0, stagger: 0.2 },
+      0
+    );
+  // Using ScrollTrigger to trigger animation when .dash-center comes into view
+  ScrollTrigger.create({
+    trigger: ".dash-crm",
+    start: "top 80%",
+    scrub: 1,
+    onEnter: function () {
+      exploreTL7.play();
+    },
+  });
+
+  let exploreTL8 = gsap.timeline({ paused: true });
+  exploreTL8
+    .fromTo(
+      ".dash-project > div:nth-child(2)",
+      { opacity: 0, x: 100 },
+      { opacity: 1, x: 0 }
+    )
+    .fromTo(
+      [
+        ".dash-project > div:nth-child(1) > p",
+        ".dash-project > div:nth-child(1) .dash-sec3-sub-items > div",
+      ],
+      { opacity: 0, x: -100 },
+      { opacity: 1, x: 0, stagger: 0.2 },
+      0
+    );
+  // Using ScrollTrigger to trigger animation when .dash-center comes into view
+  ScrollTrigger.create({
+    trigger: ".dash-project",
+    start: "top 80%",
+    scrub: 1,
+    onEnter: function () {
+      exploreTL8.play();
+    },
+  });*/
+</script>
+{% endblock scripts %}

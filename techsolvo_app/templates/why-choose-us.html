@@ -1,0 +1,132 @@
+{% load static %} {% block head %}
+<link
+  rel="stylesheet"
+  href="{% static 'assets/css/owl.carousel.min.css' %}"
+  type="text/css"
+  media="all"
+/>
+<link
+  rel="stylesheet"
+  type="text/css"
+  href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+/>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+{% endblock %}
+<body>
+  {% block content %}
+  <section class="section sec6 Business_counter" id="why_chose">
+    <div class="container">
+      <!-- <div class="section-heading center-holder text-center wow choose-us">
+        <h2>Why Choose Us</h2>
+        <p>
+          From the services we offer to our personalized guidance throughout
+          your digital journey, you can expect a great many advantages from us.
+        </p>
+      </div> -->
+      <div class="chose-container">
+        <div class="chose-left">
+          <div class="chose-img">
+            <img
+              src="{% static 'assets/images/why_chose.svg' %}"
+              alt=""
+              loading="lazy"
+            />
+          </div>
+          <div class="chose-text">
+            <h2>Why Choose Us ?</h2>
+            <p>
+              Vigisolvo offers seamless ERPNext integrations, cutting-edge AI &
+              ML solutions, efficient data scraping, and high-quality web &
+              mobile app development. We provide customized solutions, leverage
+              the latest technologies, and prioritize client satisfaction,
+              ensuring your business stays ahead with innovative, reliable, and
+              user-friendly tech solutions. Partner with us for proven success
+              and exceptional service.
+            </p>
+          </div>
+        </div>
+        <div class="chose-right">
+          <div class="chose-point-container">
+            <div class="chose-one">
+              <div class="chose-point-box">
+                <h4>Proven Success</h4>
+                <p>
+                  A portfolio of successful projects and satisfied clients
+                  across various industries.
+                </p>
+              </div>
+              <div class="chose-point-box chose-right-point">
+                <h4>Technical Expertise</h4>
+                <p>
+                  Our team consists of highly skilled professionals with
+                  extensive industry experience.
+                </p>
+              </div>
+              <div class="chose-point-box">
+                <h4>Innovative Approach</h4>
+                <p>
+                  We leverage the latest technologies to provide
+                  forward-thinking solutions.
+                </p>
+              </div>
+            </div>
+            <div class="chose-two">
+              <div class="chose-point-box chose-right-point">
+                <h4>Customer-Centric</h4>
+                <p>
+                  We prioritize client satisfaction and long-term partnerships.
+                </p>
+              </div>
+              <div class="chose-point-box">
+                <h4>Customized Solutions</h4>
+                <p>
+                  We tailor our services to meet the unique needs of each
+                  client.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  {% endblock%}
+</body>
+
+{% block scripts %}
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+
+<script>
+  let viewport11 = window.innerWidth;
+  let tl = gsap.timeline({ paused: true });
+  if (viewport11 > 768) {
+    tl.fromTo(
+      ".chose-left",
+      { opacity: 0, x: -100 },
+      { opacity: 1, x: 0, duration: 1.5 },
+      0
+    );
+    tl.fromTo(
+      ".chose-point-box",
+      { opacity: 0, x: 50 },
+      { opacity: 1, x: 0, stagger: 0.3 },
+      0
+    );
+  }
+
+  // Using ScrollTrigger to trigger animation when .dash-center comes into view
+  ScrollTrigger.create({
+    trigger: ".chose-container",
+    start: "top 50%", // Adjust this value based on when you want the animation to start relative to the top of the viewport
+    scrub: 1,
+    onEnter: function () {
+      tl.play();
+    },
+    onLeaveBack: function () {
+      tl.reverse();
+    },
+  });
+</script>
+
+{% endblock scripts %}

@@ -1,0 +1,468 @@
+{% extends "base.html" %} {% load static %}
+{% block title %} <title>Hiring | {{ job.position|title }} | {{job.experience}} | {{job.location}}</title> {% endblock %}
+
+{% block head %}
+    <meta name="description" content="{{ job.job_description }}">
+    <meta name="keywords" content="{{ job.skills|title }}, job, hiring, python developer">
+    <link rel='stylesheet' href="{% static 'assets/css/owl.carousel.min.css' %}" type='text/css' media='all'/>
+{% endblock %}
+
+<body id="bg">
+  <div class="page-wraper">
+    <div id="loading-area">
+      <div class="la-anim-10"></div>
+    </div>
+    {% block content %}
+    <!-- Content -->
+    <div class="page-content bg-white">
+      <!-- inner page banner -->
+      <div class="dlab-bnr-inr overlay-primary">
+        <div class="container">
+          <div class="dlab-bnr-inr-entry">
+            <h1 class="text-white">Apply Now</h1>
+          </div>
+        </div>
+      </div>
+      <!-- inner page banner END -->
+    </div>
+    <!-- Our Stories Blog -->
+    <div class="content-block">
+      <!-- About Us -->
+      <div class="section-full content-inner">
+        <div class="container">
+          <div class="section-heading center-holder text-center">
+            <h2>{{job.position}}</h2>
+          </div>
+          <div class="row m-b50">
+
+            <div class="col-md-7 col-sm-12 m-b30 applyDetailCard">
+              <div class="apply2 p-a30 border-1 seth">
+                <div class="tab-content nav">
+                  <!-- apply form -->
+                  <form id="apply" class="tab-pane active col-12 p-a0 " action="{% url 'apply' job.slug %}" method="POST" enctype="multipart/form-data"> {% csrf_token %} <h4 class="font-weight-700 text-center">Fill this form to apply:</h4>
+                    <input type="hidden" id="applyid" value={{id}}>
+                    <div class="form-group">
+                      <label class="font-weight-700">Name *</label>
+                      <input name="dzName" required class="form-control" id="ApplyfullName" placeholder="Full Name" type="text">
+                    </div>
+                    <div class="form-group">
+                      <label class="font-weight-700">Email *</label>
+                      <input name="dzEmail" required class="form-control" id="Email" placeholder="Your Email Id" type="email">
+                    </div>
+                    <div class="form-group">
+                      <label class="font-weight-700">Phone Number *</label>
+                      <input name="Phone" required class="form-control" id="ContactNo" pattern="[0-9]{10-15}" title="Fill valid number and  length should be 10" placeholder="Phone Number" type="text">
+                    </div>
+                    <div class="form-group">
+                      <label class="font-weight-700">Experience*</label>
+                      <select class="form-control " name="dzex" id="Experience" required>
+                        <option value="Fresher" required>Fresher</option>
+                        <option value="0 to 6 Month">0 - 6 Month</option>
+                        <option value="6 Month to 1 yr">6 Month - 1 yr</option>
+                        <option value="1 yr">1 yr</option>
+                        <option value="2 to 3 yr">2 - 3 yr</option>
+                        <option value="3 to 5 yr">3 - 5 yr</option>
+                      </select>
+                    </div>
+                    <div class="form-group">
+                      <label class="font-weight-700">Position*</label>
+                      <input name="dzposition" value="{{job.position}}" type="hidden">
+                      <p class="django-wap">{{job.position}}</p>
+                    </div>
+                    <div class="form-group">
+                      <label class="font-weight-700">Referred By</label>
+                      <input name="referred" class="form-control" id="referred" placeholder="Referred by" type="text" required>
+                    </div>
+                    <div class="form-group">
+                      <label class="font-weight-700">Upload Resume*</label>
+                      <div class="input-group ">
+                       <div class="custom-file mb-3">
+                         <input type="file" accept="application/pdf" id="Resume" class="custom-file-input" name="myfile" required>
+                         <label class="custom-file-label font-weight-normal borderstyle">
+                         <i class="fa fa-upload text-primary MtoL"></i>&nbsp;&nbsp;&nbsp;&nbsp;Choose file </label>
+                       </div>
+                      </div>
+                    </div>
+                    <div class="text-left new-sbt-btn">
+                      <button class="site-button m-r5 button-lg radius-no applySubmit" id="applyformbtn" type="submit">Submit</button>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        </form>
+      </div>
+    </div>
+    <!-- ==========Our Culture start=========== -->
+		<div class="section-full content-inner onlyPb">
+			<div class="container">
+
+				 <div class="section-heading center-holder text-center">
+				<h2>Why Join Us</h2>
+			  </div>
+			</div>
+		</div>
+		{% include 'why-join-us.html' %}
+		<!-- ==========Our Culture start=========== -->
+    <!-- ==========Insights start=========== -->
+    <div class="section-full content-inner onlyPb">
+			<div class="container">
+
+				 <div class="section-heading center-holder text-center">
+				<h2>Our Culture & Celebration</h2>
+			  </div>
+			</div>
+		</div>
+		<!-- Our Services -->
+		<!-- Tabs Start -->
+		<section class="team-wap">
+			<div class="container">
+				<div class="row mt-5">
+					<div class="col-md-12">
+					  <div class="gal">
+						  <div class="row">
+							  <div class="col-md-4">
+								  <div class="main-iamg">
+									  <a href="/static/assets/images/team/team5.jpg" data-fancybox="gallery">
+										  <div class="container5">
+											<img src="/static/assets/images/team/team5.jpg" alt="Avatar" class="image6" style="width:100%">
+											  <div class="overlay">
+												<div class="text"><i class="fa fa-eye" aria-hidden="true"></i></div>
+											  </div>
+										</div>
+									 </a>
+								  </div>
+							  </div>
+							  <div class="col-md-4">
+								  <div class="main-iamg">
+									  <a href="/static/assets/images/team/team15.jpg" data-fancybox="gallery">
+										  <div class="container5">
+											<img src="/static/assets/images/team/team15.jpg" alt="Avatar" class="image6" style="width:100%">
+											  <div class="overlay">
+												<div class="text"><i class="fa fa-eye" aria-hidden="true"></i></div>
+											  </div>
+										</div>
+									 </a>
+								  </div>
+							  </div>
+							  <div class="col-md-4">
+								  <div class="main-iamg">
+									  <a href="/static/assets/images/team/team16.jpg" data-fancybox="gallery">
+										  <div class="container5">
+											<img src="/static/assets/images/team/team16.jpg" alt="Avatar" class="image6" style="width:100%">
+											  <div class="overlay">
+												<div class="text"><i class="fa fa-eye" aria-hidden="true"></i></div>
+											  </div>
+										</div>
+									 </a>
+								  </div>
+							  </div>
+							  <div class="col-md-4">
+								  <div class="main-iamg">
+									  <a href="/static/assets/images/team/team14.jpg" data-fancybox="gallery">
+										  <div class="container5">
+											<img src="/static/assets/images/team/team14.jpg" alt="Avatar" class="image6" style="width:100%">
+											  <div class="overlay">
+												<div class="text"><i class="fa fa-eye" aria-hidden="true"></i></div>
+											  </div>
+										</div>
+									 </a>
+								  </div>
+							  </div>
+							  <div class="col-md-4">
+								  <div class="main-iamg">
+									  <a href="/static/assets/images/team/team12.jpg" data-fancybox="gallery">
+										  <div class="container5">
+											<img src="/static/assets/images/team/team12.jpg" alt="Avatar" class="image6" style="width:100%">
+											  <div class="overlay">
+												<div class="text"><i class="fa fa-eye" aria-hidden="true"></i></div>
+											  </div>
+										</div>
+									 </a>
+								  </div>
+							  </div>
+							  <div class="col-md-4">
+								  <div class="main-iamg">
+									  <a href="/static/assets/images/team/team13.jpg" data-fancybox="gallery">
+										  <div class="container5">
+											<img src="/static/assets/images/team/team13.jpg" alt="Avatar" class="image6" style="width:100%">
+											  <div class="overlay">
+												<div class="text"><i class="fa fa-eye" aria-hidden="true"></i></div>
+											  </div>
+										</div>
+									 </a>
+								  </div>
+							  </div>
+							  <div class="col-md-4">
+								  <div class="main-iamg">
+									  <a href="/static/assets/images/team/team11.jpg" data-fancybox="gallery">
+										  <div class="container5">
+											<img src="/static/assets/images/team/team11.jpg" alt="Avatar" class="image6" style="width:100%">
+											  <div class="overlay">
+												<div class="text"><i class="fa fa-eye" aria-hidden="true"></i></div>
+											  </div>
+										</div>
+									 </a>
+								  </div>
+							  </div>
+							  <div class="col-md-4">
+								  <div class="main-iamg">
+									  <a href="/static/assets/images/team/team7.jpg" data-fancybox="gallery">
+										  <div class="container5">
+											<img src="/static/assets/images/team/team7.jpg" alt="Avatar" class="image6" style="width:100%">
+											  <div class="overlay">
+												<div class="text"><i class="fa fa-eye" aria-hidden="true"></i></div>
+											  </div>
+										</div>
+									 </a>
+								  </div>
+							  </div>
+							  <div class="col-md-4">
+								  <div class="main-iamg">
+									  <a href="/static/assets/images/team/team6.jpg" data-fancybox="gallery">
+										  <div class="container5">
+											<img src="/static/assets/images/team/team6.jpg" alt="Avatar" class="image6" style="width:100%">
+											  <div class="overlay">
+												<div class="text"><i class="fa fa-eye" aria-hidden="true"></i></div>
+											  </div>
+										</div>
+									 </a>
+								  </div>
+							  </div>
+						  </div>
+
+
+					  </div>
+					</div>
+				  </div>
+
+			</div>
+		</section>
+
+    {% include 'insight.html' %}
+    {% include 'testimonials1.html' %}
+    <!-- ==========testimonials end=========== -->
+    <div class="section-full overlay-primary-dark bg-img-fix letstouch">
+     <div class="container">
+       <div class="let-top">
+           <h2 class="box-title m-b15" >Let's get in touch<span class="bg-primary"></span></h2>
+           <p class="font-16 op8">Give us a call or drop by anytime, we endeavour to answer all enquiries within 24 hours on business days.</p>
+       </div>
+       <div class="row">
+         <div class="col-lg-5 col-md-5 chosesus-content text-white bx-style-1 extraPadding">
+
+           <div class="col-lg-12 col-md-12  col-sm-12 m-b30 wow fadeIn" data-wow-delay="0.4s">
+             <div class="icon-bx-wraper bx-style-1 radius-sm">
+               <div class="icon-content">
+                 <h5 class="dlab-tilte">
+                   <span class="icon-sm text-primary text-left"><i class="fa fa-envelope-o" aria-hidden="true"></i></span>
+                   E-mail
+                 </h5>
+                 <p class="m-b0"><a href="mailto:info@vigisolvo.com">info@vigisolvo.com</a></p>
+                 <p class="m-b0"><a href="mailto:hr@vigisolvo.com">hr@vigisolvo.com</a></p>
+               </div>
+             </div>
+           </div>
+           <div class="col-lg-12 col-md-12  col-sm-12 m-b30 wow fadeIn" data-wow-delay="0.8s" style="visibility: visible; animation-delay: 0.8s; animation-name: fadeIn;">
+             <div class="icon-bx-wraper bx-style-1 radius-sm">
+               <div class="icon-content mt-3">
+                 <h5 class="dlab-tilte">
+                   <span class="icon-sm text-primary text-left"><i class="fa fa-volume-control-phone" aria-hidden="true"></i></span>
+                   Phone Number
+                 </h5>
+                 <p><a href="tel:+917987768061">+91 798-776-8061</a></p>
+               </div>
+             </div>
+           </div>
+           <div class="col-lg-12 col-md-12  col-sm-12 m-b30 wow fadeIn" data-wow-delay="0.8s" style="visibility: visible; animation-delay: 0.8s; animation-name: fadeIn;">
+             <div class="icon-bx-wraper bx-style-1 radius-sm">
+               <div class="icon-content mt-3">
+                 <h5 class="dlab-tilte">
+                   <span class="icon-sm text-primary text-left"><i class="fa fa-telegram" aria-hidden="true"></i></span>
+                   Telegram
+                 </h5>
+                 <p><a href="https://t.me/mradul010" target ="_blank">+91 8859994143</a></p>
+               </div>
+             </div>
+           </div>
+           <div class="col-lg-12 col-md-12  col-sm-12 m-b30 wow fadeIn" data-wow-delay="0.8s" style="visibility: visible; animation-delay: 0.8s; animation-name: fadeIn;">
+             <div class="icon-bx-wraper bx-style-1 radius-sm">
+               <div class="icon-content mt-3">
+                 <h5 class="dlab-tilte">
+                   <span class="icon-sm text-primary text-left"><i class="fa fa-telegram" aria-hidden="true"></i></span>
+                   Skype
+                 </h5>
+                 <p><a href="skype:vigisolvo05?chat" target ="_blank">vigisolvo05</a></p>
+               </div>
+             </div>
+           </div>
+
+         </div>
+         <div class="col-lg-7 col-md-7  m-b30">
+           {% include 'pagecontact.html' %}
+
+
+                         </div>
+                       </div>
+                     </div>
+                   </div>
+                 </div>
+       </div>
+     </div>
+   </diV>
+      <!-- contact area END -->
+    </div>
+    <!-- Content END-->
+    <!-- Footer -->
+    <!-- Footer END-->
+  </div>
+</body>
+{% endblock content %}
+{% block scripts %}
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
+  <script src="{% static 'assets/js/jquery-min.js' %}"></script>
+  <script src="{% static 'assets/js/owl.carousel.min.js' %}"></script>
+  <script type="text/javascript">
+    jQuery(document).ready(function(){
+    $('#Bestseller-slider2').owlCarousel({
+      loop:false,
+      nav:false,
+      autoplay:false,
+      dots:true,
+      margin:20,
+      smartSpeed: 1000,
+      responsive:{
+          0:{
+              items:1
+          },
+          600:{
+              items:1
+          },
+          1000:{
+              items:1
+          }
+      },navText: ["<i class='fa fa-angle-left' aria-hidden='true'></i>","<i class='fa fa-angle-right' aria-hidden='true'></i>"]
+    });
+  });
+  </script>
+  <script type="text/javascript">
+    $(".Email_To_Vlidate").keyup(function() {
+      var regex = /^([a-zA-Z0-9_\.\-\+])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+      var email = $(this).val();
+      console.log('email', email)
+      if (!regex.test(email)) {
+        $(".email_validate").html("Enter Valid Email Id!")
+      } else {
+        $(".email_validate").fadeOut(1000)
+      }
+    });
+  </script>
+  <script>
+    var applyform = $('#apply');
+    applyform.submit(function(e) {
+        $('#applyformbtn').prop('disabled', true);
+        $('#applyformbtn').html("<div class='quoteloader'></div>");
+        e.preventDefault();
+        var form_inputs = $(applyform).get(0);
+        var data = new FormData();
+        data.append('dzposition', form_inputs['dzposition'].value);
+        data.append('dzex', form_inputs['dzex'].value);
+        data.append('Phone', form_inputs['Phone'].value);
+        data.append('dzEmail', form_inputs['dzEmail'].value);
+        data.append('dzName', form_inputs['dzName'].value);
+        data.append('referred', form_inputs['referred'].value);
+        data.append('csrfmiddlewaretoken', form_inputs['csrfmiddlewaretoken'].value);
+        data.append('file', $('#Resume').get(0).files[0]);
+
+        $.ajax({
+            type: applyform.attr('method'),
+            url: applyform.attr('action'),
+            cache: false,
+            processData: false,
+            contentType: false,
+            data: data,
+            success: function(res) {
+                $('#applyformbtn').prop('disabled', false);
+                if (res.status == 1) {
+                    $('#apply').trigger("reset");
+                    $('#applyformbtn').html("Submit");
+                    Swal.fire({
+                        title: 'Thank You!',
+                        text: 'For applying, we appreciate your interest and will be in touch soon.',
+                        icon: 'success',
+                        confirmButtonText: 'OK'
+                    });
+                } else if (res.error != null) {
+                    Swal.fire({
+                        title: 'ERROR!',
+                        text: res.error,
+                        icon: 'error',
+                        confirmButtonText: 'OK'
+                    });
+                    $('#applyformbtn').html("Submit");
+                }
+            },
+            error: function(error) {
+                $('#applyformbtn').prop('disabled', false);
+                Swal.fire({
+                    title: 'ERROR!',
+                    text: 'An unexpected error occurred. Please try again later.',
+                    icon: 'error',
+                    confirmButtonText: 'OK'
+                });
+                $('#applyformbtn').html("Submit");
+            },
+        });
+    });
+  </script>
+  <script>
+    var pageform = $('#contactForm');
+    pageform.submit(function (e) {
+        e.preventDefault();
+        $('#contactFormSubmit').html("<div class='quoteloader'></div>");
+        $.ajax({
+            type: pageform.attr('method'),
+            url: pageform.attr('action'),
+            data: $(pageform).serialize(),
+            success: function(res) {
+                if (res.status == 1) {
+                    Swal.fire({
+                        title: 'Thank You!',
+                        text: 'For reaching out to us! We appreciate your interest and will get back to you as soon as possible.',
+                        icon: 'success',
+                        confirmButtonText: 'OK'
+                    });
+                    $('#contactForm').trigger("reset");
+                    $('#contactFormSubmit').html("Submit");
+                } else {
+                    Swal.fire({
+                        title: 'Error',
+                        text: 'Please complete the reCAPTCHA',
+                        icon: 'error',
+                        confirmButtonText: 'OK'
+                    });
+                    $('#contactFormSubmit').html("Submit");
+                }
+            },
+            error: function(error) {
+                Swal.fire({
+                    title: 'Error',
+                    text: 'Enter the correct value',
+                    icon: 'error',
+                    confirmButtonText: 'OK'
+                });
+                $('#contactFormSubmit').html("Submit");
+                console.log(error);
+            }
+        });
+    });
+  </script>
+  <script>
+    // Add the following code if you want the name of the file appear on select
+    $(".custom-file-input").on("change", function() {
+    var fileName = $(this).val().split("\\").pop();
+    $(this).siblings(".custom-file-label").addClass("selected").html(fileName);
+    });
+  </script>
+{% endblock scripts %}

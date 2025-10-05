@@ -1,0 +1,2297 @@
+{% extends "base.html" %} {% load static %} {% block head %}
+<link
+  rel="stylesheet"
+  href="{% static 'assets/css/owl.carousel.min.css' %}"
+  type="text/css"
+  media="all"
+/>
+<link
+  rel="stylesheet"
+  type="text/css"
+  href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+/>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta
+  name="title"
+  content="ERPNext for Distribution | Vigisolvo ERP Solutions"
+/>
+<meta
+  name="description"
+  content="Optimize your distribution network with ERPNext. Vigisolvo specializes in ERP implementations that improve logistics, inventory control, and supply chain management for distribution businesses. Discover our distribution ERP solutions."
+/>
+{% endblock %}
+
+<body id="bg">
+  {% block content %}
+  {% include 'erp-modal.html' %}
+  <section class="section dash-section dash-sec-1">
+    <div class="container dash-container">
+      <div>
+        <div id="dashHeading" data-track="Distribution">
+          <h1>
+            <span class="dash-manufacture">ERPNext</span> Implementation for
+            Distribution Industry
+          </h1>
+        </div>
+        <div>
+          <hr class="dash-hr-line" />
+        </div>
+        <div class="dash-content">
+          <div class="dash-head-heading">
+            <span>
+              Optimize your distribution business with ERPNext, a solution that
+              is 10X more powerful than any traditional ERP.
+            </span>
+          </div>
+          <div>
+            <i
+              class="fa fa-check-circle"
+              aria-hidden="true"
+              style="color: #045de9; font-size: 25px"
+            ></i>
+            <p>
+              <b>Integrated Modules:</b> Manage all aspects of your distribution
+              operations – Inventory, Sales, Purchase, Accounting, and more – in
+              one unified platform.
+            </p>
+          </div>
+          <div>
+            <i
+              class="fa fa-check-circle"
+              aria-hidden="true"
+              style="color: #045de9; font-size: 25px"
+            ></i>
+            <p>
+              <b> Cost-Effective: </b> Open-source solution with flexible
+              pricing options to suit your budget.
+            </p>
+          </div>
+          <div>
+            <i
+              class="fa fa-check-circle"
+              aria-hidden="true"
+              style="color: #045de9; font-size: 25px"
+            ></i>
+            <p>
+              <b>Scalability:</b> Grow seamlessly as your distribution network
+              expands.
+            </p>
+          </div>
+          <div>
+            <i
+              class="fa fa-check-circle"
+              aria-hidden="true"
+              style="color: #045de9; font-size: 25px"
+            ></i>
+            <p>
+              <b>Customization:</b> Tailor ERPNext to your specific needs and
+              workflows.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="overlay-form">{% include "erp-quote-form.html" %}</div>
+    </div>
+  </section>
+
+  <section class="dash-sec-3 dash-section">
+    <div class="container dash-sec2">
+      <div class="dash-sec2-head dash-sec3-head">
+        <h2>Explore the <span> ERPNext </span> Software Suite</h2>
+      </div>
+      <div class="dash-sec3-head-p">
+        <p>
+          ERPNext is full of features that help you manage inventory, create and
+          track documents and streamline production.
+        </p>
+      </div>
+      <div class="dash-sec3-items">
+        <div class="das-sub-item-container dash-manufacturing">
+          <div>
+            <img
+              src="{% static 'assets/images/industry/distribution/Knowwhereyourbusinessis.png' %}"
+            />
+          </div>
+          <div>
+            <span>Know Where Your Business Is</span>
+            <p>
+              Tracks locations and manages warehouses or distribution centers
+              within your network.
+            </p>
+            <div class="dash-sec3-sub-items">
+              <div>
+                <i
+                  class="fa fa-check-circle"
+                  aria-hidden="true"
+                  style="color: #045de9; font-size: 25px"
+                ></i>
+                <p>
+                  <b>Location Management</b>
+                </p>
+              </div>
+              <div>
+                <i
+                  class="fa fa-check-circle"
+                  aria-hidden="true"
+                  style="color: #045de9; font-size: 25px"
+                ></i>
+                <p>
+                  <b>Stock Visibility</b>
+                </p>
+              </div>
+              <div>
+                <i
+                  class="fa fa-check-circle"
+                  aria-hidden="true"
+                  style="color: #045de9; font-size: 25px"
+                ></i>
+                <p>
+                  <b>Inter-Warehouse Transfers</b>
+                </p>
+              </div>
+              <div>
+                <i
+                  class="fa fa-check-circle"
+                  aria-hidden="true"
+                  style="color: #045de9; font-size: 25px"
+                ></i>
+                <p>
+                  <b>Improved Inventory Management</b>
+                </p>
+              </div>
+              <div>
+                <i
+                  class="fa fa-check-circle"
+                  aria-hidden="true"
+                  style="color: #045de9; font-size: 25px"
+                ></i>
+                <p>
+                  <b>Optimized Distribution</b>
+                </p>
+              </div>
+              <div>
+                <i
+                  class="fa fa-check-circle"
+                  aria-hidden="true"
+                  style="color: #045de9; font-size: 25px"
+                ></i>
+                <p>
+                  <b>Reduced Stockouts</b>
+                </p>
+              </div>
+              <div>
+                <i
+                  class="fa fa-check-circle"
+                  aria-hidden="true"
+                  style="color: #045de9; font-size: 25px"
+                ></i>
+                <p>
+                  <b>Enhanced Order Fulfillment</b>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="das-sub-item-container dash-account">
+          <div>
+            <span>Stock</span>
+            <p>
+              Manages your entire inventory of products, including tracking
+              stock levels, variants, and movements.
+            </p>
+            <div class="dash-sec3-sub-items">
+              <div>
+                <i
+                  class="fa fa-check-circle"
+                  aria-hidden="true"
+                  style="color: #045de9; font-size: 25px"
+                ></i>
+                <p>
+                  <b>Item Creation</b>
+                </p>
+              </div>
+              <div>
+                <i
+                  class="fa fa-check-circle"
+                  aria-hidden="true"
+                  style="color: #045de9; font-size: 25px"
+                ></i>
+                <p>
+                  <b>Stock Levels</b>
+                </p>
+              </div>
+              <div>
+                <i
+                  class="fa fa-check-circle"
+                  aria-hidden="true"
+                  style="color: #045de9; font-size: 25px"
+                ></i>
+                <p>
+                  <b>Batch & Serial Tracking</b>
+                </p>
+              </div>
+              <div>
+                <i
+                  class="fa fa-check-circle"
+                  aria-hidden="true"
+                  style="color: #045de9; font-size: 25px"
+                ></i>
+                <p>
+                  <b>Inventory Valuation</b>
+                </p>
+              </div>
+              <div>
+                <i
+                  class="fa fa-check-circle"
+                  aria-hidden="true"
+                  style="color: #045de9; font-size: 25px"
+                ></i>
+                <p>
+                  <b>Accurate Inventory Control</b>
+                </p>
+              </div>
+              <div>
+                <i
+                  class="fa fa-check-circle"
+                  aria-hidden="true"
+                  style="color: #045de9; font-size: 25px"
+                ></i>
+                <p>
+                  <b>Improved Demand Forecasting</b>
+                </p>
+              </div>
+              <div>
+                <i
+                  class="fa fa-check-circle"
+                  aria-hidden="true"
+                  style="color: #045de9; font-size: 25px"
+                ></i>
+                <p>
+                  <b>Reduced Inventory Carrying Costs</b>
+                </p>
+              </div>
+              <div>
+                <i
+                  class="fa fa-check-circle"
+                  aria-hidden="true"
+                  style="color: #045de9; font-size: 25px"
+                ></i>
+                <p>
+                  <b>Enhanced Inventory Planning and Purchasing</b>
+                </p>
+              </div>
+            </div>
+          </div>
+          <div>
+            <img
+              src="{% static 'assets/images/industry/distribution/Stock.png' %}"
+            />
+          </div>
+        </div>
+        <div class="das-sub-item-container dash-sale">
+          <div>
+            <img
+              src="{% static 'assets/images/industry/distribution/Multi-storemanagement.png' %}"
+            />
+          </div>
+          <div>
+            <span>Multi-Store Management</span>
+            <p>
+              Manages multiple retail stores or sales channels within a single
+              system, streamlining operations.
+            </p>
+            <div class="dash-sec3-sub-items">
+              <div>
+                <i
+                  class="fa fa-check-circle"
+                  aria-hidden="true"
+                  style="color: #045de9; font-size: 25px"
+                ></i>
+                <p>
+                  <b>Store Creation</b>
+                </p>
+              </div>
+              <div>
+                <i
+                  class="fa fa-check-circle"
+                  aria-hidden="true"
+                  style="color: #045de9; font-size: 25px"
+                ></i>
+                <p>
+                  <b>Centralized Inventory Management</b>
+                </p>
+              </div>
+              <div>
+                <i
+                  class="fa fa-check-circle"
+                  aria-hidden="true"
+                  style="color: #045de9; font-size: 25px"
+                ></i>
+                <p>
+                  <b>Point-of-Sale (POS) Integration</b>
+                </p>
+              </div>
+              <div>
+                <i
+                  class="fa fa-check-circle"
+                  aria-hidden="true"
+                  style="color: #045de9; font-size: 25px"
+                ></i>
+                <p>
+                  <b>Sales Reporting</b>
+                </p>
+              </div>
+              <div>
+                <i
+                  class="fa fa-check-circle"
+                  aria-hidden="true"
+                  style="color: #045de9; font-size: 25px"
+                ></i>
+                <p>
+                  <b>Centralized Control and Visibility</b>
+                </p>
+              </div>
+              <div>
+                <i
+                  class="fa fa-check-circle"
+                  aria-hidden="true"
+                  style="color: #045de9; font-size: 25px"
+                ></i>
+                <p>
+                  <b> Improved Stock Management</b>
+                </p>
+              </div>
+              <div>
+                <i
+                  class="fa fa-check-circle"
+                  aria-hidden="true"
+                  style="color: #045de9; font-size: 25px"
+                ></i>
+                <p>
+                  <b> Enhanced Decision-Making</b>
+                </p>
+              </div>
+              <div>
+                <i
+                  class="fa fa-check-circle"
+                  aria-hidden="true"
+                  style="color: #045de9; font-size: 25px"
+                ></i>
+                <p>
+                  <b> Streamlined Sales Operations</b>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="das-sub-item-container dash-purchase">
+          <div>
+            <span>Item Variants</span>
+            <p>
+              Defines and manages product variations based on different
+              attributes (e.g., size, color, brand), streamlining product
+              management.
+            </p>
+            <div class="dash-sec3-sub-items">
+              <div>
+                <i
+                  class="fa fa-check-circle"
+                  aria-hidden="true"
+                  style="color: #045de9; font-size: 25px"
+                ></i>
+                <p>
+                  <b>Variant Creation</b>
+                </p>
+              </div>
+              <div>
+                <i
+                  class="fa fa-check-circle"
+                  aria-hidden="true"
+                  style="color: #045de9; font-size: 25px"
+                ></i>
+                <p>
+                  <b>Stock Tracking for Variants</b>
+                </p>
+              </div>
+              <div>
+                <i
+                  class="fa fa-check-circle"
+                  aria-hidden="true"
+                  style="color: #045de9; font-size: 25px"
+                ></i>
+                <p>
+                  <b>Variant Pricing</b>
+                </p>
+              </div>
+              <div>
+                <i
+                  class="fa fa-check-circle"
+                  aria-hidden="true"
+                  style="color: #045de9; font-size: 25px"
+                ></i>
+                <p>
+                  <b>Simplified Product Management</b>
+                </p>
+              </div>
+              <div>
+                <i
+                  class="fa fa-check-circle"
+                  aria-hidden="true"
+                  style="color: #045de9; font-size: 25px"
+                ></i>
+                <p>
+                  <b>Improved Inventory Control</b>
+                </p>
+              </div>
+              <div>
+                <i
+                  class="fa fa-check-circle"
+                  aria-hidden="true"
+                  style="color: #045de9; font-size: 25px"
+                ></i>
+                <p>
+                  <b>Enhanced Product Offering</b>
+                </p>
+              </div>
+              <div>
+                <i
+                  class="fa fa-check-circle"
+                  aria-hidden="true"
+                  style="color: #045de9; font-size: 25px"
+                ></i>
+                <p>
+                  <b>Accurate Sales Reporting</b>
+                </p>
+              </div>
+            </div>
+          </div>
+          <div>
+            <img
+              src="{% static 'assets/images/industry/distribution/Itemvariants.png' %}"
+            />
+          </div>
+        </div>
+        <div class="das-sub-item-container dash-inventory">
+          <div>
+            <img
+              src="{% static 'assets/images/industry/distribution/Promotionalschemes.png' %}"
+            />
+          </div>
+          <div>
+            <span>Promotional Schemes</span>
+            <p>
+              Securely stores and manages all patient medical records
+              electronically, ensuring easy retrieval and access control.
+            </p>
+            <div class="dash-sec3-sub-items">
+              <div>
+                <i
+                  class="fa fa-check-circle"
+                  aria-hidden="true"
+                  style="color: #045de9; font-size: 25px"
+                ></i>
+                <p>
+                  <b
+                    >Creates and manages promotional offers and discounts to
+                    attract customers and boost sales.</b
+                  >
+                </p>
+              </div>
+              <div>
+                <i
+                  class="fa fa-check-circle"
+                  aria-hidden="true"
+                  style="color: #045de9; font-size: 25px"
+                ></i>
+                <p>
+                  <b>Discount Types</b>
+                </p>
+              </div>
+              <div>
+                <i
+                  class="fa fa-check-circle"
+                  aria-hidden="true"
+                  style="color: #045de9; font-size: 25px"
+                ></i>
+                <p>
+                  <b>Coupon Codes</b>
+                </p>
+              </div>
+              <div>
+                <i
+                  class="fa fa-check-circle"
+                  aria-hidden="true"
+                  style="color: #045de9; font-size: 25px"
+                ></i>
+                <p>
+                  <b>Item or Category Targeting</b>
+                </p>
+              </div>
+              <div>
+                <i
+                  class="fa fa-check-circle"
+                  aria-hidden="true"
+                  style="color: #045de9; font-size: 25px"
+                ></i>
+                <p>
+                  <b>Automatic Application</b>
+                </p>
+              </div>
+              <div>
+                <i
+                  class="fa fa-check-circle"
+                  aria-hidden="true"
+                  style="color: #045de9; font-size: 25px"
+                ></i>
+                <p>
+                  <b>Increased Sales</b>
+                </p>
+              </div>
+              <div>
+                <i
+                  class="fa fa-check-circle"
+                  aria-hidden="true"
+                  style="color: #045de9; font-size: 25px"
+                ></i>
+                <p>
+                  <b>Improved Customer Engagement</b>
+                </p>
+              </div>
+              <div>
+                <i
+                  class="fa fa-check-circle"
+                  aria-hidden="true"
+                  style="color: #045de9; font-size: 25px"
+                ></i>
+                <p>
+                  <b>Targeted Promotions</b>
+                </p>
+              </div>
+              <div>
+                <i
+                  class="fa fa-check-circle"
+                  aria-hidden="true"
+                  style="color: #045de9; font-size: 25px"
+                ></i>
+                <p>
+                  <b>Enhanced Marketing Efforts</b>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="das-sub-item-container dash-payroll">
+          <div>
+            <span>Automate Stock Replenishment</span>
+            <p>
+              Analyzes sales data and automatically generates purchase orders to
+              maintain optimal stock levels and avoid stockouts.
+            </p>
+            <div class="dash-sec3-sub-items">
+              <div>
+                <i
+                  class="fa fa-check-circle"
+                  aria-hidden="true"
+                  style="color: #045de9; font-size: 25px"
+                ></i>
+                <p>
+                  <b>Sales Data Analysis</b>
+                </p>
+              </div>
+              <div>
+                <i
+                  class="fa fa-check-circle"
+                  aria-hidden="true"
+                  style="color: #045de9; font-size: 25px"
+                ></i>
+                <p>
+                  <b>Minimum Stock Levels</b>
+                </p>
+              </div>
+              <div>
+                <i
+                  class="fa fa-check-circle"
+                  aria-hidden="true"
+                  style="color: #045de9; font-size: 25px"
+                ></i>
+                <p>
+                  <b>Supplier Integration</b>
+                </p>
+              </div>
+              <div>
+                <i
+                  class="fa fa-check-circle"
+                  aria-hidden="true"
+                  style="color: #045de9; font-size: 25px"
+                ></i>
+                <p>
+                  <b>Increased Efficiency</b>
+                </p>
+              </div>
+              <div>
+                <i
+                  class="fa fa-check-circle"
+                  aria-hidden="true"
+                  style="color: #045de9; font-size: 25px"
+                ></i>
+                <p>
+                  <b>Data-Driven Inventory Management</b>
+                </p>
+              </div>
+              <div>
+                <i
+                  class="fa fa-check-circle"
+                  aria-hidden="true"
+                  style="color: #045de9; font-size: 25px"
+                ></i>
+                <p>
+                  <b>Reduced Stockouts</b>
+                </p>
+              </div>
+            </div>
+          </div>
+          <div>
+            <img
+              src="{% static 'assets/images/industry/distribution/Automatestockreplenishment.png' %}"
+            />
+          </div>
+        </div>
+        <div class="das-sub-item-container dash-crm">
+          <div>
+            <img
+              src="{% static 'assets/images/industry/distribution/Multi-currencyaccounting.png' %}"
+            />
+          </div>
+          <div>
+            <span>Multi-Currency Accounting</span>
+            <p>
+              Manages financial transactions in multiple currencies, simplifying
+              accounting for international businesses.
+            </p>
+            <div class="dash-sec3-sub-items">
+              <div>
+                <i
+                  class="fa fa-check-circle"
+                  aria-hidden="true"
+                  style="color: #045de9; font-size: 25px"
+                ></i>
+                <p>
+                  <b>Multi-Currency Support</b>
+                </p>
+              </div>
+              <div>
+                <i
+                  class="fa fa-check-circle"
+                  aria-hidden="true"
+                  style="color: #045de9; font-size: 25px"
+                ></i>
+                <p>
+                  <b>Multi-Currency Invoicing</b>
+                </p>
+              </div>
+              <div>
+                <i
+                  class="fa fa-check-circle"
+                  aria-hidden="true"
+                  style="color: #045de9; font-size: 25px"
+                ></i>
+                <p>
+                  <b>Automatic Currency Conversion</b>
+                </p>
+              </div>
+              <div>
+                <i
+                  class="fa fa-check-circle"
+                  aria-hidden="true"
+                  style="color: #045de9; font-size: 25px"
+                ></i>
+                <p>
+                  <b>Multi-Currency Reporting</b>
+                </p>
+              </div>
+              <div>
+                <i
+                  class="fa fa-check-circle"
+                  aria-hidden="true"
+                  style="color: #045de9; font-size: 25px"
+                ></i>
+                <p>
+                  <b>Simplified International Accounting</b>
+                </p>
+              </div>
+              <div>
+                <i
+                  class="fa fa-check-circle"
+                  aria-hidden="true"
+                  style="color: #045de9; font-size: 25px"
+                ></i>
+                <p>
+                  <b>Improved Accuracy</b>
+                </p>
+              </div>
+              <div>
+                <i
+                  class="fa fa-check-circle"
+                  aria-hidden="true"
+                  style="color: #045de9; font-size: 25px"
+                ></i>
+                <p>
+                  <b>Enhanced Visibility</b>
+                </p>
+              </div>
+              <div>
+                <i
+                  class="fa fa-check-circle"
+                  aria-hidden="true"
+                  style="color: #045de9; font-size: 25px"
+                ></i>
+                <p>
+                  <b>Better Decision Making</b>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="das-sub-item-container dash-project">
+          <div>
+            <span>Billing and Pricing</span>
+            <p>
+              Defines pricing strategies for products and services, automates
+              invoice generation, and streamlines the billing process
+            </p>
+            <div class="dash-sec3-sub-items">
+              <div>
+                <i
+                  class="fa fa-check-circle"
+                  aria-hidden="true"
+                  style="color: #045de9; font-size: 25px"
+                ></i>
+                <p>
+                  <b>Pricing Rules</b>
+                </p>
+              </div>
+              <div>
+                <i
+                  class="fa fa-check-circle"
+                  aria-hidden="true"
+                  style="color: #045de9; font-size: 25px"
+                ></i>
+                <p>
+                  <b>Tax Management</b>
+                </p>
+              </div>
+              <div>
+                <i
+                  class="fa fa-check-circle"
+                  aria-hidden="true"
+                  style="color: #045de9; font-size: 25px"
+                ></i>
+                <p>
+                  <b>Invoice Generation</b>
+                </p>
+              </div>
+              <div>
+                <i
+                  class="fa fa-check-circle"
+                  aria-hidden="true"
+                  style="color: #045de9; font-size: 25px"
+                ></i>
+                <p>
+                  <b>Payment Processing Integration</b>
+                </p>
+              </div>
+              <div>
+                <i
+                  class="fa fa-check-circle"
+                  aria-hidden="true"
+                  style="color: #045de9; font-size: 25px"
+                ></i>
+                <p>
+                  <b>Efficient Billing Process</b>
+                </p>
+              </div>
+              <div>
+                <i
+                  class="fa fa-check-circle"
+                  aria-hidden="true"
+                  style="color: #045de9; font-size: 25px"
+                ></i>
+                <p>
+                  <b>Accurate Pricing</b>
+                </p>
+              </div>
+              <div>
+                <i
+                  class="fa fa-check-circle"
+                  aria-hidden="true"
+                  style="color: #045de9; font-size: 25px"
+                ></i>
+                <p>
+                  <b>Improved Cash Flow</b>
+                </p>
+              </div>
+              <div>
+                <i
+                  class="fa fa-check-circle"
+                  aria-hidden="true"
+                  style="color: #045de9; font-size: 25px"
+                ></i>
+                <p>
+                  <b>Enhanced Customer Experience</b>
+                </p>
+              </div>
+            </div>
+          </div>
+          <div>
+            <img
+              src="{% static 'assets/images/industry/distribution/BillingAndPricing.png' %}"
+            />
+          </div>
+        </div>
+        <div class="das-sub-item-container dash-project">
+          <div>
+            <img
+              src="{% static 'assets/images/industry/distribution/Creditsandreceivables.png' %}"
+            />
+          </div>
+          <div>
+            <span>Credits & Receivables</span>
+            <p>
+              Manages customer credit limits, tracks outstanding payments
+              (accounts receivable), and facilitates debt collection.
+            </p>
+            <div class="dash-sec3-sub-items">
+              <div>
+                <i
+                  class="fa fa-check-circle"
+                  aria-hidden="true"
+                  style="color: #045de9; font-size: 25px"
+                ></i>
+                <p>
+                  <b>Customer Credit Limits</b>
+                </p>
+              </div>
+              <div>
+                <i
+                  class="fa fa-check-circle"
+                  aria-hidden="true"
+                  style="color: #045de9; font-size: 25px"
+                ></i>
+                <p>
+                  <b>Accounts Receivable Tracking</b>
+                </p>
+              </div>
+              <div>
+                <i
+                  class="fa fa-check-circle"
+                  aria-hidden="true"
+                  style="color: #045de9; font-size: 25px"
+                ></i>
+                <p>
+                  <b>Payment Reminders</b>
+                </p>
+              </div>
+              <div>
+                <i
+                  class="fa fa-check-circle"
+                  aria-hidden="true"
+                  style="color: #045de9; font-size: 25px"
+                ></i>
+                <p>
+                  <b>Debt Collection Tools</b>
+                </p>
+              </div>
+              <div>
+                <i
+                  class="fa fa-check-circle"
+                  aria-hidden="true"
+                  style="color: #045de9; font-size: 25px"
+                ></i>
+                <p>
+                  <b>Reduced Credit Risks</b>
+                </p>
+              </div>
+              <div>
+                <i
+                  class="fa fa-check-circle"
+                  aria-hidden="true"
+                  style="color: #045de9; font-size: 25px"
+                ></i>
+                <p>
+                  <b>Improved Cash Flow</b>
+                </p>
+              </div>
+              <div>
+                <i
+                  class="fa fa-check-circle"
+                  aria-hidden="true"
+                  style="color: #045de9; font-size: 25px"
+                ></i>
+                <p>
+                  <b>Enhanced Customer Relationships</b>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Explore section for mobile view -->
+      <div class="dash-sec3-items-mobile">
+        <div>
+          <img
+            src="{% static 'assets/images/industry/distribution/Knowwhereyourbusinessis.png' %}"
+          />
+        </div>
+        <div>
+          <span>Know Where Your Business Is</span>
+          <p>
+            Tracks locations and manages warehouses or distribution centers
+            within your network.
+          </p>
+          <div class="dash-sec3-sub-items">
+            <div>
+              <i
+                class="fa fa-check-circle"
+                aria-hidden="true"
+                style="color: #045de9; font-size: 25px"
+              ></i>
+              <p>
+                <b>Location Management</b>
+              </p>
+            </div>
+            <div>
+              <i
+                class="fa fa-check-circle"
+                aria-hidden="true"
+                style="color: #045de9; font-size: 25px"
+              ></i>
+              <p>
+                <b>Stock Visibility</b>
+              </p>
+            </div>
+            <div>
+              <i
+                class="fa fa-check-circle"
+                aria-hidden="true"
+                style="color: #045de9; font-size: 25px"
+              ></i>
+              <p>
+                <b>Inter-Warehouse Transfers</b>
+              </p>
+            </div>
+            <div>
+              <i
+                class="fa fa-check-circle"
+                aria-hidden="true"
+                style="color: #045de9; font-size: 25px"
+              ></i>
+              <p>
+                <b>Improved Inventory Management</b>
+              </p>
+            </div>
+            <div>
+              <i
+                class="fa fa-check-circle"
+                aria-hidden="true"
+                style="color: #045de9; font-size: 25px"
+              ></i>
+              <p>
+                <b>Optimized Distribution</b>
+              </p>
+            </div>
+            <div>
+              <i
+                class="fa fa-check-circle"
+                aria-hidden="true"
+                style="color: #045de9; font-size: 25px"
+              ></i>
+              <p>
+                <b>Reduced Stockouts</b>
+              </p>
+            </div>
+            <div>
+              <i
+                class="fa fa-check-circle"
+                aria-hidden="true"
+                style="color: #045de9; font-size: 25px"
+              ></i>
+              <p>
+                <b>Enhanced Order Fulfillment</b>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <img
+            src="{% static 'assets/images/industry/distribution/Stock.png' %}"
+          />
+        </div>
+        <div>
+          <span>Stock</span>
+          <p>
+            Manages your entire inventory of products, including tracking stock
+            levels, variants, and movements.
+          </p>
+          <div class="dash-sec3-sub-items">
+            <div>
+              <i
+                class="fa fa-check-circle"
+                aria-hidden="true"
+                style="color: #045de9; font-size: 25px"
+              ></i>
+              <p>
+                <b>Item Creation</b>
+              </p>
+            </div>
+            <div>
+              <i
+                class="fa fa-check-circle"
+                aria-hidden="true"
+                style="color: #045de9; font-size: 25px"
+              ></i>
+              <p>
+                <b>Stock Levels</b>
+              </p>
+            </div>
+            <div>
+              <i
+                class="fa fa-check-circle"
+                aria-hidden="true"
+                style="color: #045de9; font-size: 25px"
+              ></i>
+              <p>
+                <b>Batch & Serial Tracking</b>
+              </p>
+            </div>
+            <div>
+              <i
+                class="fa fa-check-circle"
+                aria-hidden="true"
+                style="color: #045de9; font-size: 25px"
+              ></i>
+              <p>
+                <b>Inventory Valuation</b>
+              </p>
+            </div>
+            <div>
+              <i
+                class="fa fa-check-circle"
+                aria-hidden="true"
+                style="color: #045de9; font-size: 25px"
+              ></i>
+              <p>
+                <b>Accurate Inventory Control</b>
+              </p>
+            </div>
+            <div>
+              <i
+                class="fa fa-check-circle"
+                aria-hidden="true"
+                style="color: #045de9; font-size: 25px"
+              ></i>
+              <p>
+                <b>Improved Demand Forecasting</b>
+              </p>
+            </div>
+            <div>
+              <i
+                class="fa fa-check-circle"
+                aria-hidden="true"
+                style="color: #045de9; font-size: 25px"
+              ></i>
+              <p>
+                <b>Reduced Inventory Carrying Costs</b>
+              </p>
+            </div>
+            <div>
+              <i
+                class="fa fa-check-circle"
+                aria-hidden="true"
+                style="color: #045de9; font-size: 25px"
+              ></i>
+              <p>
+                <b>Enhanced Inventory Planning and Purchasing</b>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <img
+            src="{% static 'assets/images/industry/distribution/Multi-storemanagement.png' %}"
+          />
+        </div>
+        <div>
+          <span>Multi-Store Management</span>
+          <p>
+            Manages multiple retail stores or sales channels within a single
+            system, streamlining operations.
+          </p>
+          <div class="dash-sec3-sub-items">
+            <div>
+              <i
+                class="fa fa-check-circle"
+                aria-hidden="true"
+                style="color: #045de9; font-size: 25px"
+              ></i>
+              <p>
+                <b>Store Creation</b>
+              </p>
+            </div>
+            <div>
+              <i
+                class="fa fa-check-circle"
+                aria-hidden="true"
+                style="color: #045de9; font-size: 25px"
+              ></i>
+              <p>
+                <b>Centralized Inventory Management</b>
+              </p>
+            </div>
+            <div>
+              <i
+                class="fa fa-check-circle"
+                aria-hidden="true"
+                style="color: #045de9; font-size: 25px"
+              ></i>
+              <p>
+                <b>Point-of-Sale (POS) Integration</b>
+              </p>
+            </div>
+            <div>
+              <i
+                class="fa fa-check-circle"
+                aria-hidden="true"
+                style="color: #045de9; font-size: 25px"
+              ></i>
+              <p>
+                <b>Sales Reporting</b>
+              </p>
+            </div>
+            <div>
+              <i
+                class="fa fa-check-circle"
+                aria-hidden="true"
+                style="color: #045de9; font-size: 25px"
+              ></i>
+              <p>
+                <b>Centralized Control and Visibility</b>
+              </p>
+            </div>
+            <div>
+              <i
+                class="fa fa-check-circle"
+                aria-hidden="true"
+                style="color: #045de9; font-size: 25px"
+              ></i>
+              <p>
+                <b> Improved Stock Management</b>
+              </p>
+            </div>
+            <div>
+              <i
+                class="fa fa-check-circle"
+                aria-hidden="true"
+                style="color: #045de9; font-size: 25px"
+              ></i>
+              <p>
+                <b> Enhanced Decision-Making</b>
+              </p>
+            </div>
+            <div>
+              <i
+                class="fa fa-check-circle"
+                aria-hidden="true"
+                style="color: #045de9; font-size: 25px"
+              ></i>
+              <p>
+                <b> Streamlined Sales Operations</b>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <img
+            src="{% static 'assets/images/industry/distribution/Itemvariants.png' %}"
+          />
+        </div>
+        <div>
+          <span>Item Variants</span>
+          <p>
+            Defines and manages product variations based on different attributes
+            (e.g., size, color, brand), streamlining product management.
+          </p>
+          <div class="dash-sec3-sub-items">
+            <div>
+              <i
+                class="fa fa-check-circle"
+                aria-hidden="true"
+                style="color: #045de9; font-size: 25px"
+              ></i>
+              <p>
+                <b>Variant Creation</b>
+              </p>
+            </div>
+            <div>
+              <i
+                class="fa fa-check-circle"
+                aria-hidden="true"
+                style="color: #045de9; font-size: 25px"
+              ></i>
+              <p>
+                <b>Stock Tracking for Variants</b>
+              </p>
+            </div>
+            <div>
+              <i
+                class="fa fa-check-circle"
+                aria-hidden="true"
+                style="color: #045de9; font-size: 25px"
+              ></i>
+              <p>
+                <b>Variant Pricing</b>
+              </p>
+            </div>
+            <div>
+              <i
+                class="fa fa-check-circle"
+                aria-hidden="true"
+                style="color: #045de9; font-size: 25px"
+              ></i>
+              <p>
+                <b>Simplified Product Management</b>
+              </p>
+            </div>
+            <div>
+              <i
+                class="fa fa-check-circle"
+                aria-hidden="true"
+                style="color: #045de9; font-size: 25px"
+              ></i>
+              <p>
+                <b>Improved Inventory Control</b>
+              </p>
+            </div>
+            <div>
+              <i
+                class="fa fa-check-circle"
+                aria-hidden="true"
+                style="color: #045de9; font-size: 25px"
+              ></i>
+              <p>
+                <b>Enhanced Product Offering</b>
+              </p>
+            </div>
+            <div>
+              <i
+                class="fa fa-check-circle"
+                aria-hidden="true"
+                style="color: #045de9; font-size: 25px"
+              ></i>
+              <p>
+                <b>Accurate Sales Reporting</b>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <img
+            src="{% static 'assets/images/industry/distribution/Promotionalschemes.png' %}"
+          />
+        </div>
+        <div>
+          <span>Promotional Schemes</span>
+          <p>
+            Securely stores and manages all patient medical records
+            electronically, ensuring easy retrieval and access control.
+          </p>
+          <div class="dash-sec3-sub-items">
+            <div>
+              <i
+                class="fa fa-check-circle"
+                aria-hidden="true"
+                style="color: #045de9; font-size: 25px"
+              ></i>
+              <p>
+                <b
+                  >Creates and manages promotional offers and discounts to
+                  attract customers and boost sales.</b
+                >
+              </p>
+            </div>
+            <div>
+              <i
+                class="fa fa-check-circle"
+                aria-hidden="true"
+                style="color: #045de9; font-size: 25px"
+              ></i>
+              <p>
+                <b>Discount Types</b>
+              </p>
+            </div>
+            <div>
+              <i
+                class="fa fa-check-circle"
+                aria-hidden="true"
+                style="color: #045de9; font-size: 25px"
+              ></i>
+              <p>
+                <b>Coupon Codes</b>
+              </p>
+            </div>
+            <div>
+              <i
+                class="fa fa-check-circle"
+                aria-hidden="true"
+                style="color: #045de9; font-size: 25px"
+              ></i>
+              <p>
+                <b>Item or Category Targeting</b>
+              </p>
+            </div>
+            <div>
+              <i
+                class="fa fa-check-circle"
+                aria-hidden="true"
+                style="color: #045de9; font-size: 25px"
+              ></i>
+              <p>
+                <b>Automatic Application</b>
+              </p>
+            </div>
+            <div>
+              <i
+                class="fa fa-check-circle"
+                aria-hidden="true"
+                style="color: #045de9; font-size: 25px"
+              ></i>
+              <p>
+                <b>Increased Sales</b>
+              </p>
+            </div>
+            <div>
+              <i
+                class="fa fa-check-circle"
+                aria-hidden="true"
+                style="color: #045de9; font-size: 25px"
+              ></i>
+              <p>
+                <b>Improved Customer Engagement</b>
+              </p>
+            </div>
+            <div>
+              <i
+                class="fa fa-check-circle"
+                aria-hidden="true"
+                style="color: #045de9; font-size: 25px"
+              ></i>
+              <p>
+                <b>Targeted Promotions</b>
+              </p>
+            </div>
+            <div>
+              <i
+                class="fa fa-check-circle"
+                aria-hidden="true"
+                style="color: #045de9; font-size: 25px"
+              ></i>
+              <p>
+                <b>Enhanced Marketing Efforts</b>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <img
+            src="{% static 'assets/images/industry/distribution/Automatestockreplenishment.png' %}"
+          />
+        </div>
+        <div>
+          <span>Automate Stock Replenishment</span>
+          <p>
+            Analyzes sales data and automatically generates purchase orders to
+            maintain optimal stock levels and avoid stockouts.
+          </p>
+          <div class="dash-sec3-sub-items">
+            <div>
+              <i
+                class="fa fa-check-circle"
+                aria-hidden="true"
+                style="color: #045de9; font-size: 25px"
+              ></i>
+              <p>
+                <b>Sales Data Analysis</b>
+              </p>
+            </div>
+            <div>
+              <i
+                class="fa fa-check-circle"
+                aria-hidden="true"
+                style="color: #045de9; font-size: 25px"
+              ></i>
+              <p>
+                <b>Minimum Stock Levels</b>
+              </p>
+            </div>
+            <div>
+              <i
+                class="fa fa-check-circle"
+                aria-hidden="true"
+                style="color: #045de9; font-size: 25px"
+              ></i>
+              <p>
+                <b>Supplier Integration</b>
+              </p>
+            </div>
+            <div>
+              <i
+                class="fa fa-check-circle"
+                aria-hidden="true"
+                style="color: #045de9; font-size: 25px"
+              ></i>
+              <p>
+                <b>Increased Efficiency</b>
+              </p>
+            </div>
+            <div>
+              <i
+                class="fa fa-check-circle"
+                aria-hidden="true"
+                style="color: #045de9; font-size: 25px"
+              ></i>
+              <p>
+                <b>Data-Driven Inventory Management</b>
+              </p>
+            </div>
+            <div>
+              <i
+                class="fa fa-check-circle"
+                aria-hidden="true"
+                style="color: #045de9; font-size: 25px"
+              ></i>
+              <p>
+                <b>Reduced Stockouts</b>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <img
+            src="{% static 'assets/images/industry/distribution/Multi-currencyaccounting.png' %}"
+          />
+        </div>
+        <div>
+          <span>Multi-Currency Accounting</span>
+          <p>
+            Manages financial transactions in multiple currencies, simplifying
+            accounting for international businesses.
+          </p>
+          <div class="dash-sec3-sub-items">
+            <div>
+              <i
+                class="fa fa-check-circle"
+                aria-hidden="true"
+                style="color: #045de9; font-size: 25px"
+              ></i>
+              <p>
+                <b>Multi-Currency Support</b>
+              </p>
+            </div>
+            <div>
+              <i
+                class="fa fa-check-circle"
+                aria-hidden="true"
+                style="color: #045de9; font-size: 25px"
+              ></i>
+              <p>
+                <b>Multi-Currency Invoicing</b>
+              </p>
+            </div>
+            <div>
+              <i
+                class="fa fa-check-circle"
+                aria-hidden="true"
+                style="color: #045de9; font-size: 25px"
+              ></i>
+              <p>
+                <b>Automatic Currency Conversion</b>
+              </p>
+            </div>
+            <div>
+              <i
+                class="fa fa-check-circle"
+                aria-hidden="true"
+                style="color: #045de9; font-size: 25px"
+              ></i>
+              <p>
+                <b>Multi-Currency Reporting</b>
+              </p>
+            </div>
+            <div>
+              <i
+                class="fa fa-check-circle"
+                aria-hidden="true"
+                style="color: #045de9; font-size: 25px"
+              ></i>
+              <p>
+                <b>Simplified International Accounting</b>
+              </p>
+            </div>
+            <div>
+              <i
+                class="fa fa-check-circle"
+                aria-hidden="true"
+                style="color: #045de9; font-size: 25px"
+              ></i>
+              <p>
+                <b>Improved Accuracy</b>
+              </p>
+            </div>
+            <div>
+              <i
+                class="fa fa-check-circle"
+                aria-hidden="true"
+                style="color: #045de9; font-size: 25px"
+              ></i>
+              <p>
+                <b>Enhanced Visibility</b>
+              </p>
+            </div>
+            <div>
+              <i
+                class="fa fa-check-circle"
+                aria-hidden="true"
+                style="color: #045de9; font-size: 25px"
+              ></i>
+              <p>
+                <b>Better Decision Making</b>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <img
+            src="{% static 'assets/images/industry/distribution/BillingAndPricing.png' %}"
+          />
+        </div>
+        <div>
+          <span>Billing and Pricing</span>
+          <p>
+            Defines pricing strategies for products and services, automates
+            invoice generation, and streamlines the billing process
+          </p>
+          <div class="dash-sec3-sub-items">
+            <div>
+              <i
+                class="fa fa-check-circle"
+                aria-hidden="true"
+                style="color: #045de9; font-size: 25px"
+              ></i>
+              <p>
+                <b>Pricing Rules</b>
+              </p>
+            </div>
+            <div>
+              <i
+                class="fa fa-check-circle"
+                aria-hidden="true"
+                style="color: #045de9; font-size: 25px"
+              ></i>
+              <p>
+                <b>Tax Management</b>
+              </p>
+            </div>
+            <div>
+              <i
+                class="fa fa-check-circle"
+                aria-hidden="true"
+                style="color: #045de9; font-size: 25px"
+              ></i>
+              <p>
+                <b>Invoice Generation</b>
+              </p>
+            </div>
+            <div>
+              <i
+                class="fa fa-check-circle"
+                aria-hidden="true"
+                style="color: #045de9; font-size: 25px"
+              ></i>
+              <p>
+                <b>Payment Processing Integration</b>
+              </p>
+            </div>
+            <div>
+              <i
+                class="fa fa-check-circle"
+                aria-hidden="true"
+                style="color: #045de9; font-size: 25px"
+              ></i>
+              <p>
+                <b>Efficient Billing Process</b>
+              </p>
+            </div>
+            <div>
+              <i
+                class="fa fa-check-circle"
+                aria-hidden="true"
+                style="color: #045de9; font-size: 25px"
+              ></i>
+              <p>
+                <b>Accurate Pricing</b>
+              </p>
+            </div>
+            <div>
+              <i
+                class="fa fa-check-circle"
+                aria-hidden="true"
+                style="color: #045de9; font-size: 25px"
+              ></i>
+              <p>
+                <b>Improved Cash Flow</b>
+              </p>
+            </div>
+            <div>
+              <i
+                class="fa fa-check-circle"
+                aria-hidden="true"
+                style="color: #045de9; font-size: 25px"
+              ></i>
+              <p>
+                <b>Enhanced Customer Experience</b>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <img
+            src="{% static 'assets/images/industry/distribution/Creditsandreceivables.png' %}"
+          />
+        </div>
+        <div>
+          <span>Credits & Receivables</span>
+          <p>
+            Manages customer credit limits, tracks outstanding payments
+            (accounts receivable), and facilitates debt collection.
+          </p>
+          <div class="dash-sec3-sub-items">
+            <div>
+              <i
+                class="fa fa-check-circle"
+                aria-hidden="true"
+                style="color: #045de9; font-size: 25px"
+              ></i>
+              <p>
+                <b>Customer Credit Limits</b>
+              </p>
+            </div>
+            <div>
+              <i
+                class="fa fa-check-circle"
+                aria-hidden="true"
+                style="color: #045de9; font-size: 25px"
+              ></i>
+              <p>
+                <b>Accounts Receivable Tracking</b>
+              </p>
+            </div>
+            <div>
+              <i
+                class="fa fa-check-circle"
+                aria-hidden="true"
+                style="color: #045de9; font-size: 25px"
+              ></i>
+              <p>
+                <b>Payment Reminders</b>
+              </p>
+            </div>
+            <div>
+              <i
+                class="fa fa-check-circle"
+                aria-hidden="true"
+                style="color: #045de9; font-size: 25px"
+              ></i>
+              <p>
+                <b>Debt Collection Tools</b>
+              </p>
+            </div>
+            <div>
+              <i
+                class="fa fa-check-circle"
+                aria-hidden="true"
+                style="color: #045de9; font-size: 25px"
+              ></i>
+              <p>
+                <b>Reduced Credit Risks</b>
+              </p>
+            </div>
+            <div>
+              <i
+                class="fa fa-check-circle"
+                aria-hidden="true"
+                style="color: #045de9; font-size: 25px"
+              ></i>
+              <p>
+                <b>Improved Cash Flow</b>
+              </p>
+            </div>
+            <div>
+              <i
+                class="fa fa-check-circle"
+                aria-hidden="true"
+                style="color: #045de9; font-size: 25px"
+              ></i>
+              <p>
+                <b>Enhanced Customer Relationships</b>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="dash-sec2-signup">
+        <span aria-haspopup="true" class="wsshopmyaccount">
+          <span class="wsmenu-click"></span>
+          <a href="" class="gettouch">Signup For Free!</a>
+        </span>
+      </div>
+    </div>
+  </section>
+  <section class="dash-section">
+    <div class="container dash-sec2 dash-sec4">
+      <h4>Trusted by over 10,000+ Distribution Industry</h4>
+      <!-- </div> -->
+      <div class="slider">
+        <div class="slider-inner">
+          <div class="slide">
+            <img src="{% static 'assets/images/erpclients/apnaklub.svg' %}" />
+          </div>
+          <div class="slide">
+            <img src="{% static 'assets/images/erpclients/blinkit.svg' %}" />
+          </div>
+          <div class="slide">
+            <img src="{% static 'assets/images/erpclients/chopserve.svg' %}" />
+          </div>
+          <div class="slide">
+            <img src="{% static 'assets/images/erpclients/cloudextel.svg' %}" />
+          </div>
+          <div class="slide">
+            <img src="{% static 'assets/images/erpclients/crisp.svg' %}" />
+          </div>
+          <div class="slide">
+            <img src="{% static 'assets/images/erpclients/dfm.svg' %}" />
+          </div>
+          <div class="slide">
+            <img src="{% static 'assets/images/erpclients/elasticrun.svg' %}" />
+          </div>
+          <div class="slide">
+            <img src="{% static 'assets/images/erpclients/gurukrupa.svg' %}" />
+          </div>
+          <div class="slide">
+            <img src="{% static 'assets/images/erpclients/hotset.svg' %}" />
+          </div>
+          <div class="slide">
+            <img src="{% static 'assets/images/erpclients/iftas.svg' %}" />
+          </div>
+          <div class="slide">
+            <img src="{% static 'assets/images/erpclients/innoterra.svg' %}" />
+          </div>
+          <div class="slide">
+            <img src="{% static 'assets/images/erpclients/iskcon.svg' %}" />
+          </div>
+          <div class="slide">
+            <img src="{% static 'assets/images/erpclients/jiva.svg' %}" />
+          </div>
+          <div class="slide">
+            <img src="{% static 'assets/images/erpclients/lifelong.svg' %}" />
+          </div>
+          <div class="slide">
+            <img src="{% static 'assets/images/erpclients/magic.svg' %}" />
+          </div>
+          <div class="slide">
+            <img src="{% static 'assets/images/erpclients/micro.svg' %}" />
+          </div>
+          <div class="slide">
+            <img src="{% static 'assets/images/erpclients/strategic.svg' %}" />
+          </div>
+          <div class="slide">
+            <img src="{% static 'assets/images/erpclients/vikram.svg' %}" />
+          </div>
+          <div class="slide">
+            <img src="{% static 'assets/images/erpclients/zerodha.svg' %}" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="section dash-section">
+    <div class="container dash-sec2">
+      <div class="dash-sec2-head">
+        <h2>Why Our Customers Use <span>ERPNext ?</span></h2>
+      </div>
+      <div class="dash-sec2-content">
+        <div class="dash-sec2-items">
+          <img src="{% static 'assets/images/team/comprehensive.svg' %}" />
+          <h4>Comprehensive Solution</h4>
+          <p>
+            ERPNext's comprehensive platform manages finance, inventory,
+            manufacturing, sales, and more.
+          </p>
+        </div>
+        <div class="dash-sec2-items">
+          <img src="{% static 'assets/images/team/customization.svg' %}" />
+          <h4>Customization</h4>
+          <p>
+            It's highly customizable, allowing businesses to tailor the system
+            to their specific needs and workflows.
+          </p>
+        </div>
+        <div class="dash-sec2-items">
+          <!-- <i class="fa fa-shield" aria-hidden="true" style="color: #b006f3; background-color: #cf77f18f;"></i> -->
+          <img src="{% static 'assets/images/team/affordability.svg' %}" />
+          <h4>Affordability</h4>
+          <p>
+            ERPNext tends to be more affordable, making it accessible to SMEs
+            with limited budgets.
+          </p>
+        </div>
+        <div class="dash-sec2-items">
+          <!-- <i class="fa fa-diamond dash-icon" aria-hidden="true"></i> -->
+          <img src="{% static 'assets/images/team/opensource.svg' %}" />
+          <h4>Open Source</h4>
+          <p>
+            Open-source offers businesses source code access, enhancing software
+            control and reducing vendor lock-in.
+          </p>
+        </div>
+        <div class="dash-sec2-items">
+          <!-- <i class="fa fa-diamond dash-icon" aria-hidden="true"></i> -->
+          <img src="{% static 'assets/images/team/easeofuse.svg' %}" />
+          <h4>Ease of Use</h4>
+          <p>
+            Its user-friendly interface makes it easy for employees to learn and
+            use, minimizing training time and increasing adoption rates.
+          </p>
+        </div>
+        <div class="dash-sec2-items">
+          <!-- <i class="fa fa-diamond dash-icon" aria-hidden="true" ></i> -->
+          <img src="{% static 'assets/images/team/cloudbasedoption.svg' %}" />
+          <h4>Cloud-based Option</h4>
+          <p>
+            ERPNext enables flexible remote work through cloud-based deployment,
+            facilitating access to data from anywhere.
+          </p>
+        </div>
+        <div class="dash-sec2-items">
+          <!-- <i class="fa fa-diamond dash-icon" aria-hidden="true" ></i> -->
+          <img src="{% static 'assets/images/team/CommunitySupport.svg' %}" />
+          <h4>Community Support</h4>
+          <p>
+            ERPNext's community enhances it through valuable support and
+            resources from users and developers, fostering improvement.
+          </p>
+        </div>
+        <div class="dash-sec2-items">
+          <!-- <i class="fa fa-diamond dash-icon" aria-hidden="true" ></i> -->
+          <img src="{% static 'assets/images/team/Scalability.svg' %}" />
+          <h4>Scalability</h4>
+          <p>
+            ERPNext scales with growing businesses, handling higher data volumes
+            and complexity.
+          </p>
+        </div>
+      </div>
+      <div class="dash-sec2-signup">
+        <span aria-haspopup="true" class="wsshopmyaccount">
+          <span class="wsmenu-click"></span>
+          <a href="" class="gettouch">Signup For Free!</a>
+        </span>
+      </div>
+    </div>
+  </section>
+  <section class="dash-section" id="sec-last">
+    <div class="container dash-sec2">
+      <div class="dash-sec2-head dash-sec3-head">
+        <h2><span>Do More</span> With ERPNext</h2>
+      </div>
+      <div class="dash-sec3-head-p">
+        <p>
+          ERPNext seamlessly connects with Tally, Busy and Zoho so all your
+          accounting needs stay unaffected!
+        </p>
+      </div>
+      <div class="dash-item-container">
+        <ul class="dash-ul">
+          <li class="dash-center">
+            <img src="{% static 'assets/images/team/ERPNext.svg' %}" />
+          </li>
+          <li><img src="{% static 'assets/images/team/tally.svg' %}" /></li>
+          <li>
+            <img src="{% static 'assets/images/team/googlesheet.svg' %}" />
+          </li>
+          <li><img src="{% static 'assets/images/team/easyecom.svg' %}" /></li>
+          <li><img src="{% static 'assets/images/team/gmail.svg' %}" /></li>
+          <li><img src="{% static 'assets/images/team/busy.svg' %}" /></li>
+          <li><img src="{% static 'assets/images/team/aftership.svg' %}" /></li>
+          <li><img src="{% static 'assets/images/team/zoho.svg' %}" /></li>
+          <li><img src="{% static 'assets/images/team/watsapp.svg' %}" /></li>
+        </ul>
+      </div>
+      <div class="dash-sec2-signup">
+        <span aria-haspopup="true" class="wsshopmyaccount">
+          <span class="wsmenu-click"></span>
+          <a href="" class="gettouch">Signup For Free!</a>
+        </span>
+      </div>
+    </div>
+  </section>
+  {% include 'erp-distribution-faqs.html' %} {% include 'insight.html' %}
+  {%endblock%}
+</body>
+
+{% block scripts %}
+<script src="{% static 'assets/js/owl.carousel.min.js' %}"></script>
+<script type="text/javascript">
+  jQuery(document).ready(function () {
+    $("#Bestseller-slider2").owlCarousel({
+      loop: false,
+      nav: false,
+      autoplay: false,
+      dots: true,
+      margin: 20,
+      smartSpeed: 1000,
+      responsive: {
+        0: {
+          items: 1,
+        },
+        600: {
+          items: 1,
+        },
+        1000: {
+          items: 1,
+        },
+      },
+      navText: [
+        "<i class='fa fa-angle-left' aria-hidden='true'></i>",
+        "<i class='fa fa-angle-right' aria-hidden='true'></i>",
+      ],
+    });
+  });
+</script>
+<script type="text/javascript">
+  $(".Email_To_Vlidate").keyup(function () {
+    var regex =
+      /^([a-zA-Z0-9_\.\-\+])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+    var email = $(this).val();
+    console.log("email", email);
+    if (!regex.test(email)) {
+      $(".email_validate").html("Enter Valid Email Id!");
+    } else {
+      $(".email_validate").fadeOut(1000);
+    }
+  });
+</script>
+<script>
+  var type = 1; //circle type - 1 whole, 0.5 half, 0.25 quarter
+  var innerWidth = window.innerWidth;
+  (radius = innerWidth <= 480 ? "10em" : "14em"), //distance from center
+    (start = -90), //shift start from 0
+    (reverseOrder = false), //reverse order of items
+    ($list = $(".dash-ul")),
+    ($items = reverseOrder
+      ? $($list.children("li:not(:first-child)").get().reverse())
+      : $list.children("li:not(:first-child)")),
+    (numberOfItems = type === 1 ? $items.length : $items.length - 1), //adj for even distro of elements when not full circle
+    (slice = (360 * type) / numberOfItems),
+    (timeLine = gsap.timeline({ paused: true }));
+
+    if(innerWidth > 768){
+  $items.each(function (i) {
+    var $self = $(this),
+      rotate = slice * i + start,
+      rotateReverse = rotate * -1;
+
+    timeLine.to(
+      $self,
+      0.2,
+      {
+        opacity: 1,
+        transform:
+          "rotate(" +
+          rotate +
+          "deg) translate(" +
+          radius +
+          ") rotate(" +
+          rotateReverse +
+          "deg)",
+        ease: "Power1.in",
+      },
+      "+=0.1"
+    );
+  });
+ }
+  // Using ScrollTrigger to trigger animation when .dash-center comes into view
+  ScrollTrigger.create({
+    trigger: ".dash-center",
+    start: "top 80%", // Adjust this value based on when you want the animation to start relative to the top of the viewport
+    scrub: 1,
+    onEnter: function () {
+      timeLine.play();
+    },
+    // onLeaveBack: function () {
+    //   timeLine.reverse();
+    // },
+  });
+</script>
+
+<script>
+  const slider = document.querySelector(".slider-inner");
+  const slides = document.querySelectorAll(".slide");
+  const slideWidth = slides[0].clientWidth;
+  var innerWidth = window.innerWidth;
+  const numVisibleSlides = innerWidth > 768 ? 4 : 3;
+  let currentIndex = 0;
+
+  function nextSlide() {
+    currentIndex += numVisibleSlides;
+
+    if (currentIndex >= slides.length) {
+      currentIndex = 0;
+    }
+
+    gsap.to(slider, 3, {
+      x: -slideWidth * currentIndex,
+      delay: 0.2,
+      onComplete: nextSlide,
+    });
+  }
+  nextSlide();
+  // ScrollTrigger.create({
+  //   trigger: '.dash-sec4',
+  //   start: 'top center',
+  //   onEnter: () => {
+  //     // Start the initial slide transition when trigger area is entered
+  //     nextSlide();
+  //   }
+  // });
+</script>
+<!-- Heading animation -->
+<script>
+  let headTL = gsap.timeline();
+</script>
+<!-- explore section animation -->
+<script>
+  /*let exploreTL1 = gsap.timeline({ paused: true });
+  exploreTL1
+    .fromTo(
+      ".dash-manufacturing > div:nth-child(1)",
+      { opacity: 0, x: -100 },
+      { opacity: 1, x: 0 }
+    )
+    .fromTo(
+      [
+        ".dash-manufacturing > div:nth-child(2) > p",
+        ".dash-manufacturing > div:nth-child(2) .dash-sec3-sub-items > div",
+      ],
+      { opacity: 0, x: 100 },
+      { opacity: 1, x: 0, stagger: 0.2 },
+      0
+    );
+  // Using ScrollTrigger to trigger animation when .dash-center comes into view
+  ScrollTrigger.create({
+    trigger: ".dash-manufacturing",
+    start: "top 50%",
+    scrub: 1,
+    onEnter: function () {
+      exploreTL1.play();
+    },
+  });
+
+  let exploreTL2 = gsap.timeline({ paused: true });
+  exploreTL2
+    .fromTo(
+      ".dash-account > div:nth-child(2)",
+      { opacity: 0, x: 100 },
+      { opacity: 1, x: 0 }
+    )
+    .fromTo(
+      [
+        ".dash-account > div:nth-child(1) > p",
+        ".dash-account > div:nth-child(1) .dash-sec3-sub-items > div",
+      ],
+      { opacity: 0, x: -100 },
+      { opacity: 1, x: 0, stagger: 0.2 },
+      0
+    );
+  // Using ScrollTrigger to trigger animation when .dash-center comes into view
+  ScrollTrigger.create({
+    trigger: ".dash-account",
+    start: "top 80%",
+    scrub: 1,
+    onEnter: function () {
+      exploreTL2.play();
+    },
+  });
+  let exploreTL3 = gsap.timeline({ paused: true });
+  exploreTL3
+    .fromTo(
+      ".dash-sale > div:nth-child(1)",
+      { opacity: 0, x: -100 },
+      { opacity: 1, x: 0 }
+    )
+    .fromTo(
+      [
+        ".dash-sale > div:nth-child(2) > p",
+        ".dash-sale > div:nth-child(2) .dash-sec3-sub-items > div",
+      ],
+      { opacity: 0, x: 100 },
+      { opacity: 1, x: 0, stagger: 0.2 },
+      0
+    );
+  // Using ScrollTrigger to trigger animation when .dash-center comes into view
+  ScrollTrigger.create({
+    trigger: ".dash-sale",
+    start: "top 80%",
+    scrub: 1,
+    onEnter: function () {
+      exploreTL3.play();
+    },
+  });
+
+  let exploreTL4 = gsap.timeline({ paused: true });
+  exploreTL4
+    .fromTo(
+      ".dash-purchase > div:nth-child(2)",
+      { opacity: 0, x: 100 },
+      { opacity: 1, x: 0 }
+    )
+    .fromTo(
+      [
+        ".dash-purchase > div:nth-child(1) > p",
+        ".dash-purchase > div:nth-child(1) .dash-sec3-sub-items > div",
+      ],
+      { opacity: 0, x: -100 },
+      { opacity: 1, x: 0, stagger: 0.2 },
+      0
+    );
+  // Using ScrollTrigger to trigger animation when .dash-center comes into view
+  ScrollTrigger.create({
+    trigger: ".dash-purchase",
+    start: "top 80%",
+    scrub: 1,
+    onEnter: function () {
+      exploreTL4.play();
+    },
+  });
+  let exploreTL5 = gsap.timeline({ paused: true });
+  exploreTL5
+    .fromTo(
+      ".dash-inventory > div:nth-child(1)",
+      { opacity: 0, x: -100 },
+      { opacity: 1, x: 0 }
+    )
+    .fromTo(
+      [
+        ".dash-inventory > div:nth-child(2) > p",
+        ".dash-inventory > div:nth-child(2) .dash-sec3-sub-items > div",
+      ],
+      { opacity: 0, x: 100 },
+      { opacity: 1, x: 0, stagger: 0.2 },
+      0
+    );
+  // Using ScrollTrigger to trigger animation when .dash-center comes into view
+  ScrollTrigger.create({
+    trigger: ".dash-inventory",
+    start: "top 80%",
+    scrub: 1,
+    onEnter: function () {
+      exploreTL5.play();
+    },
+  });
+
+  let exploreTL6 = gsap.timeline({ paused: true });
+  exploreTL6
+    .fromTo(
+      ".dash-payroll > div:nth-child(2)",
+      { opacity: 0, x: 100 },
+      { opacity: 1, x: 0 }
+    )
+    .fromTo(
+      [
+        ".dash-payroll > div:nth-child(1) > p",
+        ".dash-payroll > div:nth-child(1) .dash-sec3-sub-items > div",
+      ],
+      { opacity: 0, x: -100 },
+      { opacity: 1, x: 0, stagger: 0.2 },
+      0
+    );
+  // Using ScrollTrigger to trigger animation when .dash-center comes into view
+  ScrollTrigger.create({
+    trigger: ".dash-payroll",
+    start: "top 80%",
+    scrub: 1,
+    onEnter: function () {
+      exploreTL6.play();
+    },
+  });
+  let exploreTL7 = gsap.timeline({ paused: true });
+  exploreTL7
+    .fromTo(
+      ".dash-crm > div:nth-child(1)",
+      { opacity: 0, x: -100 },
+      { opacity: 1, x: 0 }
+    )
+    .fromTo(
+      [
+        ".dash-crm > div:nth-child(2) > p",
+        ".dash-crm > div:nth-child(2) .dash-sec3-sub-items > div",
+      ],
+      { opacity: 0, x: 100 },
+      { opacity: 1, x: 0, stagger: 0.2 },
+      0
+    );
+  // Using ScrollTrigger to trigger animation when .dash-center comes into view
+  ScrollTrigger.create({
+    trigger: ".dash-crm",
+    start: "top 80%",
+    scrub: 1,
+    onEnter: function () {
+      exploreTL7.play();
+    },
+  });
+
+  let exploreTL8 = gsap.timeline({ paused: true });
+  exploreTL8
+    .fromTo(
+      ".dash-project > div:nth-child(2)",
+      { opacity: 0, x: 100 },
+      { opacity: 1, x: 0 }
+    )
+    .fromTo(
+      [
+        ".dash-project > div:nth-child(1) > p",
+        ".dash-project > div:nth-child(1) .dash-sec3-sub-items > div",
+      ],
+      { opacity: 0, x: -100 },
+      { opacity: 1, x: 0, stagger: 0.2 },
+      0
+    );
+  // Using ScrollTrigger to trigger animation when .dash-center comes into view
+  ScrollTrigger.create({
+    trigger: ".dash-project",
+    start: "top 80%",
+    scrub: 1,
+    onEnter: function () {
+      exploreTL8.play();
+    },
+  });*/
+</script>
+{% endblock scripts %}

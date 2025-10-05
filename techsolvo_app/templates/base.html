@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<head>
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      window.onload = function() {
+          var preloader = document.getElementById('preloader');
+          preloader.style.display = 'none';
+
+          var content = document.getElementById('main-content');
+          content.style.display = 'block';
+      };
+    });
+  </script>
+
+  {% block head %}
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta name="description" content="Vigisolvo Private Limited is a leading ERPNext and Frappe development company providing end-to-end ERP solutions for manufacturing businesses, healthcare organizations, HRMS and CRM automation. We specialize in ERPNext customization, integration, implementation, and support—helping companies streamline operations and accelerate growth through digital transformation.">
+
+    <meta name="keywords" content="ERPNext Implementation, Frappe Development, ERP for Manufacturing, ERP for Healthcare, HRMS Software, CRM Software, Custom ERP Development, ERPNext Customization, ERPNext Integration, ERPNext Consultant, ERPNext Company, ERPNext Support, ERPNext Hosting, Frappe Framework, Vigisolvo ERP Solutions">
+
+    <meta name="author" content="Vigisolvo Private Limited">
+  {% endblock %}
+
+
+  {% block title %}
+    <title>{{ page_title }}</title>
+  {% endblock %}
+
+  <link rel="icon" type="image/x-icon" href="{% static 'assets/images/favi1.png' %}">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css" integrity="sha512-jnSuA4Ss2PkkikSOLtYs8BlYIeeIK1h99ty4YfvRPAlzr377vr3CXDb7sb7eEEBYjDtcYj+AjBH3FLv5uSJuXg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link id="effect" rel="stylesheet" type="text/css" media="all" href="{% static 'assets/css/fade-down.css' %}" />
+  <link rel="stylesheet" type="text/css" media="all" href="{% static 'assets/css/webslidemenu.css' %}" />
+  <link rel='stylesheet' href="{% static 'assets/css/style.css' %}" type='text/css' media='all'/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.3/tiny-slider.css">
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+<body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript>
+    <iframe
+      src="https://www.googletagmanager.com/ns.html?id=GTM-THLB4FX"
+      height="0"
+      width="0"
+      style="display:none;visibility:hidden"
+    ></iframe>
+  </noscript>
+  <!-- End Google Tag Manager (noscript) -->
+  <div id="preloader">
+    <div class="col-md-2 loader5">
+      <div class="loader-wrapper d-flex justify-content-center align-items-center">
+        <div class="loader">
+          <div class="ball-scale-multiple">
+            <div></div>
+            <div></div>
+            <div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <section class="section" id="main-content">
+    <header class="main-header" id="wsactive-header">
+      <!-- Mobile Header -->
+      <div class="wsmobileheader clearfix">
+        <a id="wsnavtoggle" class="wsanimated-arrow"><span></span></a>
+        <span class="smllogo">
+          <a href="{% url 'index'%}">
+            <img src="{% static 'assets/images/techsolvoNew3.webp' %}" width="130" alt="techsolvo logo" loading="lazy"/>
+          </a>
+        </span>
+      </div>
+      <!-- Mobile Header -->
+      <div class="top-nav">
+        <div>
+          <ul>
+            <li>
+              <a href="tel:+917987768061" style="display: flex;">
+                <i class="fa fa-phone" aria-hidden="true"></i>
+                <span>Talk to sales</span>
+              </a>
+            </li>
+            <li>
+              <a href="mailto:sales@vigisolvo.com">
+                <i class="fa fa-envelope-o" aria-hidden="true"></i>
+                <span>sales@vigisolvo.com</span>
+              </a>
+            </li>
+            <li>
+              <a href="https://www.upwork.com/agencies/~0124fa10ff8da146c0/">
+                <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                <span> Hire at Upwork</span>
+              </a>
+            </li>
+          </ul>
+          <ul >
+            <li>
+              <a href="https://emp.techsolvo.com/">
+                <i class="fa fa-heart" aria-hidden="true"></i>
+                <span>Hiring Now</span>
+              </a>
+            </li>
+            <li>
+              <a href="/contact-us">
+                <i class="fa fa-comment" aria-hidden="true"></i>
+                <span>
+                  Contact Us
+                </span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="headerfull">
+        <div class="wsmain clearfix">
+          <div class="smllogo"><a href="{% url 'index'%}"><img src="{% static 'assets/images/techsolvoNew3.webp' %}" alt="techsolvo small logo" width="100%" loading="lazy"></a></div>
+          <nav class="wsmenu clearfix">
+            <div class="overlapblackbg"></div>
+            <ul class="wsmenu-list" id="hide-ul">
+              <li aria-haspopup="true"><span class="wsmenu-click"></span><a href="#" class="navtext"><span>Why Vigisolvo<i class="fa fa-angle-down" aria-hidden="true"></i></span></a>
+                <div class="wsmegamenu clearfix" style="width: 100%;">
+                  <div class="container-fluid clearfix-fluid">
+                    <div class="row row-why">
+                      <div class="col-lg-3 col-md-12 techsolvo-detail">
+                        <ul class="wstliststy02 clearfix">
+                          <li class="wstheading clearfix">Why Vigisolvo</li>
+                          <li><a href="{% url 'about' %}"><i class="fa fa-user-o" aria-hidden="true"></i>About Us</a> </li>
+                          <li><a href="{% url 'team' %}"><i class="fa fa-users" aria-hidden="true"></i>Team</a></li>
+                          <li><a href="https://emp.techsolvo.com/"><i class="fa fa-briefcase" aria-hidden="true"></i>Career with us</a></li>
+                          <li><a href="{% url 'faqs' %}"><i class="fa fa-comments" aria-hidden="true"></i>FAQs</a></li>
+                          <li><a href="{% url 'privacy_policy' %}"><i class="fa fa-shield" aria-hidden="true"></i>Privacy Policy</a></li>
+                        </ul>
+                      </div>
+                      <div class="col-lg-4 col-md-12 col-contact">
+                        <ul class="wstliststy02 clearfix  wscontact-us" style="padding: 5px 0px 0px 30px;">
+                          <li class="wstheading clearfix contact-cont">
+                            Contact Us!
+                          </li>
+                          <li class="talk-container">
+                            <a href="{% url 'contact' %}">Lets Talk!</a>
+                            <p>Whether You Have Specific Needs Or Just Want To Say Hello, Feel Free To Send Us A Message Or Give Us A Call.</p>
+                            <a href="#" class=" text-lowercase"><i class="fa fa-envelope-o" aria-hidden="true"></i>info@vigisolvo.com</a>
+                            <a href="tel:+917987768061"><i class="fa fa-volume-control-phone" aria-hidden="true"></i>+91 798-776-8061</a>
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="col-lg-4 col-md-12 social-links">
+                        <ul class="wstliststy02 clearfix socila-cion " id="connect-with-us">
+                          {% for socials in social_links %}
+                            <li>
+                              <a href={{socials.link}} target="_blank" class="site-button circle ">
+                                <i> <img src="{{socials.logo.url}}" width="100%" alt="logo" loading="lazy"/></i>
+                              </a>
+                            </li>
+                          {% endfor %}
+                        </ul>
+                        <p style="width: 103%;">Subscribe to our Newsletter!</p>
+                        <a href="{% url 'contact' %}" class="site-button custm-btn1" style="width: 113%;margin-bottom: 51px;">Contact Us</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+
+              <li aria-haspopup="true"><span class="wsmenu-click"></span><a href="#" class="navtext"><span> Services <i class="fa fa-angle-down" aria-hidden="true"></i></span></a>
+                <div class="wsshoptabing wtsdepartmentmenu clearfix">
+                  <div class="wsshopwp clearfix" style="height: auto;">
+                    <ul class="wstabitem clearfix">
+                      {% for cat in service_category %}
+                        <li class="wsshoplink-active">
+                          <span class="wsmenu-click02">
+                            <i class="wsmenu-arrow"></i>
+                          </span>
+                          <a href="#">
+                            {% if cat.logo %}
+                              <img src="{{cat.logo.url}}" class="category_url" alt="logo" width="100%" loading="lazy"/>
+                            {% else %}
+                              <i class="fa fa-life-ring" aria-hidden="true"></i>
+                            {% endif %}
+                            {{ cat.name }}
+                          </a>
+                          <div class="wstitemright clearfix" style="height: auto;">
+                            <div class="container-fluid">
+                              <div class="wstheading clearfix">{{ cat.name }}</div>
+                              <div class="row">
+                                <div class="col-lg-7 col-md-12 clearfix">
+                                  <ul class="wstliststy02 clearfix wslist-items">
+                                    {% for each in services %}
+                                      {% for type in each.service_category.all %}
+                                        {% if cat.name == type.name %}
+                                          <li>
+                                            <a href="{%url 'services' each.slug %}">{{each.name}}</a>
+                                          </li>
+                                        {% endif %}
+                                      {% endfor %}
+                                    {% endfor %}
+                                  </ul>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </li>
+                      {% endfor %}
+                    </ul>
+                    <div class="hire-developer">
+                      <a href="{% url 'service_category' %}" class= "hire-developer-see-more"> SEE MORE </a>
+                    </div>
+                  </div>
+                </div>
+              </li>
+
+              <!--<li aria-haspopup="true"><span class="wsmenu-click"></span><a href="#" class="navtext"><span> Hire Remote Developers<i class="fa fa-angle-down" aria-hidden="true"></i></span></a>
+                <div class="wsshoptabing wtsdepartmentmenu clearfix">
+                  <div class="wsshopwp clearfix" style="height: auto;">
+                    <ul class="wstabitem clearfix">
+                      <li>
+                        <div class="container" style ="padding-top: 1rem; columns: 290px;">
+                          <div class="row" >
+                            {% for cat in developer_category %}
+                              <h4  style="padding-left: 25px;padding-top: 9px; font-size: 0.83rem; white-space: pre-wrap; color: black;">{{ cat.name }}</h4>
+                              <ul style = "font-size: 13px; padding-left:27px;display: flex;flex-direction: column;">
+                                {% for each in developer_type %}
+                                      {% for type in each.developer_category.all %}
+                                        {% if cat.name == type.name %}
+                                          <li style="padding-top: 8px;flex-direction: row;">
+                                            <a href="{%url 'hire_developer' each.slug %}" style="color: #596273;"><h6 style="font-size: 0.85rem;">{{each.name}}</h6></a>
+                                          </li>
+                                        {% endif %}
+                                      {% endfor %}
+                                    {% endfor %}
+                              </ul><br>
+                            {% endfor %}
+                          </div>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </li>-->
+
+              <!-- style="background-color:white; padding: 10Px; border-radius: 1px;" -->
+              <li aria-haspopup="true"><span class="wsmenu-click"></span><a href="#" class="navtext"><span> ERP Next Solution <i class="fa fa-angle-down" aria-hidden="true"></i></span></a>
+                <div class="wsshoptabing wtsdepartmentmenu clearfix">
+                  <div class="wsshopwp clearfix" style="height: 400px;">
+                    <ul class="industry-list">
+                      <li>
+                        <img src="{% static 'assets/images/industry/manufacturing.png' %}" class="industry-img" width="100%" alt="manufacturing" loading="lazy"/>
+                        <a href="{% url 'erp-manufacturing' %}">Manufacturing Industry</a>
+                      </li>
+                      <li>
+                        <img src="{% static 'assets/images/industry/Healthcare.png' %}" class="industry-img" width="100%" alt="Healthcare" loading="lazy"/>
+                        <a href="{% url 'erp-healthcare' %}">Healthcare Industry</a>
+                      </li>
+                      <li>
+                        <img src="{% static 'assets/images/industry/distribution.png' %}" class="industry-img" width="100%" alt="distribution" loading="lazy"/>
+                        <a href="{% url 'erp-dist' %}">Distribution Industry</a>
+                      </li>
+                      <li>
+                        <img src="{% static 'assets/images/industry/education.png' %}" class="industry-img" width="100%" alt="education" loading="lazy"/>
+                        <a href="{% url 'erp-education' %}">Education Industry</a>
+                      </li>
+                      <li>
+                        <img src="{% static 'assets/images/industry/retail.png' %}" class="industry-img" width="100%" alt="retail" loading="lazy"/>
+                        <a href="{% url 'erp-retail' %}">Retail Industry</a>
+                      </li>
+                      <li>
+                        <img src="{% static 'assets/images/industry/services.png' %}" class="industry-img" width="100%" alt="services" loading="lazy"/>
+                        <a href="{% url 'erp-services' %}">Services Industry</a>
+                      </li>
+
+                        <li>
+                        <img src="{% static 'assets/images/industry/erp-next.avif' %}" class="Erpnext-img" width="100%" alt="Developer" loading="lazy" style="border-radius: 5px;"/>
+                        <a href="{% url 'frappe-hrms-solutions'%}">Frappe HRMS</a>
+                      </li>
+                      <li>
+                    </ul>
+                  </div>
+                </div>
+              </li>
+
+<!-- Hire Developer -->
+ 
+              <li aria-haspopup="true"><span class="wsmenu-click"></span><a href="#" class="navtext"><span> Hire Developer<i class="fa fa-angle-down" aria-hidden="true"></i></span></a>
+                <div class="wsshoptabing wtsdepartmentmenu clearfix">
+                  <div class="wsshopwp clearfix" style="height: 400px;">
+                    <ul class="industry-list">
+                      <li>
+                        <img src="{% static 'assets/images/industry/hire-remote-front-img.png' %}" class="Erpnext-img" width="100%" alt="Developer" loading="lazy" style="border-radius: 5px; height: 74%;"/>
+                        <a href="{% url 'hire_remote_erpnext_developer' %}">Hire Remote ERPNext Developer</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </li>
+
+              <!-- <li aria-haspopup="true"><a href="{% url 'frappe-hrms-solutions'%}" class="navtext"> <span>Frappe HRMS</span></a></li> -->
+              <li aria-haspopup="true"><a href="{% url 'blog'%}" class="navtext"> <span>Blogs</span></a></li>
+              
+              <li aria-haspopup="true" class="wsshopmyaccount"><span class="wsmenu-click"></span>
+                <a href="{% url 'contact' %}" class="gettouch">Get In Touch</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </header>
+    <!-- ==========HEADER END=========== -->
+    {% include 'Modal.html' %}
+    <!-- ==========HEADER END=========== -->
+    {% block content %}
+    {% endblock %}
+
+    <footer class="site-footer text-uppercase">
+      <div class="footer-top bg-primary">
+        <div class="container wow fadeIn" data-wow-delay="0.5s">
+          <div class="row">
+            <div class=" col-lg-3 col-md-6 col-sm-6 footer-col-4">
+                <div class="widget widget_services border-0">
+                  <h5 class="m-b30 text-white">Why Vigisolvo </h5>
+                  <ul>
+                      <li><a href="{% url 'about' %}">About Us </a></li>
+                      <li><a href="https://emp.techsolvo.com/">Career With Us </a></li>
+                      <li><a href="{% url 'faqs' %}">FAQ</a></li>
+                      <li><a href="{% url 'blog'%}">Blogs</a></li>
+                      <li><a href="{% url 'contact' %}">Contact Us</a></li>
+                      <li><a href="{% url 'privacy_policy' %}">Privacy Policy</a></li>
+                  </ul>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-6 footer-col-4">
+              <div class="widget widget_services border-0 footer-hire-remote">
+                <h5 class="m-b30 text-white">Services</h5>
+                <ul>
+                  {% for cat in service_category %}
+                  <li>
+                    <a data-bs-toggle="collapse" href="#serv{{cat.id}}" class="collapsed" data-parent="#serv{{cat.id}}">{{cat.name}}</a>
+                    <div id="serv{{cat.id}}" class="acod-body collapse">
+                      <ul>
+                        {% for each in services %}
+                          {% for type in each.service_category.all %}
+                            {% if cat.name == type.name %}
+                              <li><a href="{% url 'services' each.slug %}">{{each.name}}</a></li>
+                            {% endif %}
+                          {% endfor %}
+                        {% endfor %}
+                      </ul>
+                    </div>
+                  </li>
+                  {% endfor %}
+                </ul>
+              </div>
+            </div>
+            <div class="col-lg-2 col-md-6 col-sm-6 footer-col-4 addmediamt">
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-6 footer-col-4">
+              <div class="widget widget_services border-0">
+                <h5 class="m-b30 text-white">ERP Solutions </h5>
+                <ul>
+                  <li><a href="{% url 'erp-manufacturing' %}">Manufacturing Industry</a></li>
+                  <li><a href="{% url 'erp-healthcare' %}">Healthcare Industry</a></li>
+                  <li><a href="{% url 'erp-dist' %}">Distribution Industry</a></li>
+                  <li><a href="{% url 'erp-education' %}">Education Industry</a></li>
+                  <li><a href="{% url 'erp-retail' %}">Retail Industry</a></li>
+                  <li><a href="{% url 'erp-services' %}">Services Industry</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-6 footer-col-4">
+              <div class="widget widget_getintuch">
+                <h5 class="m-b30 text-white ">Contact us</h5>
+                <ul>
+                    <li>
+                      <a href="tel:+917987768061">
+                      <strong><i class="fa fa-phone"  style="margin-right: 6px;"></i>Sales Inquiry</strong>+91 798-776-8061 </a>
+                    </li>
+                    <li>
+                      <a href="tel:+919669384334">
+                      <strong><i class="fa fa-phone" style="margin-right: 6px;"></i>HR Inquiry</strong>+91 966-938-4334 </a>
+                    </li>
+                    <li class="text-lowercase">
+                      <strong>email</strong>
+                      <a href="mailto:info@vigisolvo.com">info@vigisolvo.com</a><br>
+                      <a href="mailto:hr@vigisolvo.com">hr@vigisolvo.com </a><br>
+                    </li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-6 footer-col-4">
+              <div class="widget widget_getintuch">
+                <h5 class="m-b60 text-white "></h5>
+                <ul>
+                  <li>
+                    <a href="https://g.page/techsolvo-indore?share" target="_blank">
+                      <strong>address- 1</strong>
+                      203, 5A Ratlam Kothi, Geeta Bhavan, Indore, Madhya Pradesh 452001
+                    </a>
+                  </li>
+                  
+                </ul>
+              </div>
+            </div>
+            <div class="col-lg-5 col-md-6 col-sm-6 footer-col-4 ">
+              <div class="widget">
+                <h5 class="m-b30 text-white">Subscribe To Our Newsletter</h5>
+                <p class="text-capitalize m-b20" style="text-transform:initial !important;">If you have any questions, you can contact with us so that we can give you a satisfying answer. Subscribe to our newsletter to get our latest products.</p>
+                <div class="subscribe-form m-b20">
+                  <form class="dzSubscribe" action="{% url 'newsletter' %}" method="post" name="newsletter-form" id="newsletter-form">
+                    <div class="dzSubscribeMsg"></div>
+                    <div class="input-group" id="placeColor">
+                      <input name="email" id="email" required="required" class="form-control colorCp" placeholder="Your Email Id" type="email">
+                      <button name="submit" value="Submit" type="submit" class="site-button buttonSMT" style="background-color:#397EFA !important">Subscribe</button>
+                    </div>
+                  </form>
+                </div>
+                <ul class="list-inline m-a0">
+                  {% for socials in social_links %}
+                    <li>
+                      <a href={{socials.link}} target="_blank" class="site-button circle ">
+                        <i> <img src="{{socials.logo.url}}" width="100%" alt="logo" loading="lazy"/></i>
+                      </a>
+                    </li>
+                  {% endfor %}
+                </ul>
+              </div>
+            </div>
+          </div>
+      </div>
+      </div>
+
+      <!-- footer bottom part -->
+      <div class="footer-bottom bg-primary">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-6 col-md-6 col-sm-6 text-left "> <span class="footerColor1">Copyright © 2025 Vigisolvo Private Limited</span> </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </section>
+
+  {% include 'scripts.html' %}
+  {% block scripts %}
+  {% endblock scripts%}
+</body>
+</html>

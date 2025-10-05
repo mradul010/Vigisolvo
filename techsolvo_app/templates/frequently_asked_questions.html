@@ -1,0 +1,34 @@
+{% if frequently_asked_questions %}
+<div class="faq">
+    <div class="container">
+        <div class="section-heading center-holder text-center">
+            <h2>Frequently Asked Questions</h2>
+        </div>
+        <div class="row mt-5">
+            <div class="col-md-12">
+                <div class="faq-contnet">
+
+                    {% for faq in frequently_asked_questions %}
+                    <div class="dlab-accordion faq-1 box-sort-in m-b30" id="accordion{{faq.id}}">
+                        <div class="panel">
+                            <div class="acod-head">
+                                <h6 class="acod-title">
+                                    <a data-bs-toggle="collapse" href="#faq{{faq.id}}" class="collapsed" data-parent="#faq{{faq.id}}" aria-expanded="false">
+                                    {{ faq.question }}
+                                    </a>
+                                </h6>
+                            </div>
+                            <div id="faq{{faq.id}}" class="acod-body collapse" style="">
+                                <div class="acod-content">
+                                    {{ faq.answers | safe }}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endif %}

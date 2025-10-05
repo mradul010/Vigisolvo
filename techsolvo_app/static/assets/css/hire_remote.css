@@ -1,0 +1,162 @@
+/* Who Should Hire?  section */
+
+/* Container Section Padding */
+.NewPtoTB {
+  padding: 60px 0;
+}
+
+/* Box Wrapper Styling */
+.icon-bx-wraper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  text-align: center;
+  padding: 30px;
+  height: 100%;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+  transition: all 0.4s ease;
+}
+
+/* Hover Effect */
+.icon-bx-wraper:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* Box Style 1 Width */
+.icon-bx-wraper.bx-style-1 {
+  width: 100%;
+}
+
+/* Image/Icon Styling */
+.icon-xl img {
+  max-width: 80px;
+  height: auto;
+  transition: transform 0.3s ease;
+  display: block;
+  margin: 0 auto;
+}
+
+/* Image Hover Effect */
+.icon-bx-wraper:hover .icon-xl img {
+  transform: scale(1.05);
+}
+
+/* Title/Heading Styling */
+.icon-content h5 {
+  font-size: 15px;
+  font-weight: 500;
+  margin-top: 15px;
+  color: #222;
+  line-height: 1.5;
+  word-break: break-word;
+  text-align: center;
+}
+
+/* Full Height Columns */
+.col-lg-4,
+.col-md-4,
+.col-sm-6 {
+  display: flex;
+  align-items: stretch;
+}
+
+/* Responsive: Tablets and Below */
+@media (max-width: 991px) {
+  .icon-bx-wraper {
+    padding: 25px;
+  }
+
+  .icon-xl img {
+    max-width: 80px;
+  }
+
+  .icon-content h5 {
+    font-size: 15px;
+  }
+}
+
+/* Responsive: Mobile Devices */
+@media (max-width: 767px) {
+  .icon-bx-wraper {
+    padding: 30px;
+  }
+
+  .icon-xl img {
+    max-width: 60px;
+  }
+
+  .icon-content h5 {
+    font-size: 15px;
+  }
+}
+
+/* Responsive: Extra Small Devices */
+@media (max-width: 426px) {
+  .icon-bx-wraper.bx-style-1.p-a30.center.fly-box-ho {
+    margin-left: 29px;
+    width: 100% !important;
+    margin: 20 auto !important;
+  }
+}
+
+
+
+
+
+/* Expertise You Can Rely On  section */
+
+
+.expertise-section {
+  background-color: #f9fafc;
+  padding: 60px 20px;
+  text-align: center;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.expertise-heading {
+  font-size: 2rem;
+  color: #222;
+  margin-bottom: 40px;
+}
+
+.expertise-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 25px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.expertise-box {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+  padding: 30px 25px;
+  flex: 1 1 260px;
+  max-width: 300px;
+  text-align: left;
+  transition: all 0.3s ease;
+}
+
+.expertise-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+.expertise-box p {
+  margin: 0;
+  font-size: 1.05rem;
+  color: #333;
+}
+
+.check-icon {
+  color: #28a745;
+  margin-right: 8px;
+}

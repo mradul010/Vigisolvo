@@ -1,0 +1,405 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}
+      <title>{{ each_service.meta_title }}</title>
+{% endblock %}
+
+{% block head %}
+  <meta charset="utf-8">
+  <meta name="description" content="{{ each_service.meta_desc }}">
+  <meta name="title" content="{{ each_service.meta_title }}">
+  <meta name="keywords" content="{{ each_service.meta_keyword }}">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel='stylesheet' href="{% static 'assets/css/owl.carousel.min.css' %}" type='text/css' media='all'/>
+{% endblock %}
+
+<body id="bg">
+{% block content %}
+  <div class="page-wraper">
+    <div id="loading-area">
+      <div class="la-anim-10"></div>
+    </div>
+    <!-- Content -->
+    <div class="page-content bg-white">
+      <!-- inner page banner -->
+      <div id="overlay-with-form-id">
+        <div class="dlab-bnr-inr overlay-primary overlay-with-form">
+          <div class="container " id="get-touch-form">
+            <div class="dlab-bnr-inr-entry enter2wap">
+              <h1 class="text-white">{{ each_service.name }}</h1>
+              <p>{{ each_service.description | safe }}</p>
+            </div>
+          </div>
+        </div>
+        <div class="overlay-form">
+          {% include 'Modal2.html' %}
+        </div>
+      </div>
+      <div class="content-block">
+        <!-- Our Services -->
+          <div class="process">
+            <div class="container">
+              <div class="section-heading center-holder text-center">
+                <h2>{{ section_topic }}</h2>
+              </div>
+              <div class= "row">
+                {% for section in service_section %}
+                  {% if each_service.section_heading == section_topic %}
+                    <div class="col-lg-3 col-md-6 wow fadeInUp rec-img col-rec" data-wow-delay="0.2s">
+                      <div class="services-block-three services-block">
+                        <span>
+                          <div class="padding-15px-bottom">
+                            <img src={{section.logo.url}} alt="logo"/>
+                          </div>
+                          <div>
+                            <p class="rating-heading rec-heading"><b style="font-size: 20px">{{section.name}}</b></p>
+                            <div class="rating-heading rec-heading">
+                              <span>
+                                {{section.description | safe}}
+                              </span>
+                            </div>
+                          </div>
+                        </span>
+                      </div>
+                    </div>
+                  {% endif %}
+                {% endfor %}
+              </div>
+            </div>
+          </div>
+        {% comment %} {% endfor %} {% endcomment %}
+
+        <!-- About Us -->
+        <div class="consulting">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-6 why-hiring">
+                <div class="consult">
+                  <h6>{{each_service.service_title}}</h6>
+                  {{ each_service.detail | safe }}
+                  <div class="get-wap">
+                    <a href="#" class="touch" data-toggle="modal" data-target="#exampleModal">Talk to our consultant</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Why Chose Us End -->
+        {% if platform %}
+          <div class="platform">
+            <div class="container">
+              <div class="section-heading center-holder text-center">
+                <h2>{{each_service}} Platforms</h2>
+              </div>
+              <div class="row first-wap mt-5">
+                {% for each in platform %}
+                <div class="col-md-3">
+                  <div class="blockchain-logomain">
+                    {% if each.page_link %}
+                      <a href="{% url 'singleblog' each.page_link.category.slug each.page_link.slug %}">
+                        <img src={{each.logo.url}} alt="logo">
+                        <h6>{{each.name}}<br></h6>
+                      </a>
+                    {% else %}
+                      <a href="{% url 'hire_developer' each.developer.slug %}">
+                        <img src={{each.logo.url}} alt="logo">
+                        <h6>{{each.name}}<br></h6>
+                      </a>
+                    {% endif %}
+                  </div>
+                </div>
+                {% endfor %}
+              </div>
+            </div>
+          </div>
+        {% endif %}
+        <!-- Mission And Vision END -->
+        <div class="section-full content-inner bg-white NewPtoTB">
+          <div class="container">
+            <div class="section-head text-black text-center">
+              <h2 class="box-title m-tb0">Our Core Business Areas<span class="bg-primary"></span></h2>
+            </div>
+            <div class="row">
+              {% for each in buisness_areas %}
+              <div class="col-lg-4 col-md-4 col-sm-6 m-b30 wow fadeInUp" data-wow-delay="0.3s"
+                style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInUp;">
+                <div class="icon-bx-wraper bx-style-1 p-a30 center fly-box-ho">
+                  <div class="icon-xl">
+                    <a href="#" class="icon-cell">
+                      {% comment %} <i class="fa fa-clock-o" aria-hidden="true"> {% endcomment %}
+                      <i>
+                        <img src={{each.logo.url}} alt="logo">
+                      </i>
+                    </a>
+                  </div>
+                  <div class="icon-content">
+                    <h5 class="dlab-tilte text-uppercase">{{each.short_desc}}</h5>
+                  </div>
+                </div>
+              </div>
+              {% endfor %}
+            </div>
+          </div>
+        </div>
+
+        <!-- Company Stats -->
+        {% include 'frequently_asked_questions.html' %}
+
+        <!-- ==========Insights start=========== -->
+        {% include 'insight.html' %}
+        <!-- ==========Insights End=========== -->
+
+        {% include 'our-clients.html' %}
+
+        <!-- ==========testimonials Start=========== -->
+        {% include 'testimonials1.html' %}
+        <!-- ==========testimonials end=========== -->
+
+        <div class="section-full overlay-primary-dark bg-img-fix letstouch">
+          <div class="container">
+            <div class="let-top">
+              <h2 class="box-title m-b15">Let's get in touch<span class="bg-primary"></span></h2>
+              <p class="font-16 op8">Give us a call or drop by anytime, we endeavour to answer all enquiries within 24
+                hours
+                on
+                business days.</p>
+            </div>
+            <div class="row">
+              <div class="col-lg-5 col-md-5 chosesus-content text-white bx-style-1 extraPadding">
+
+                <div class="col-lg-12 col-md-12  col-sm-12 m-b30 wow fadeIn" data-wow-delay="0.4s">
+                  <div class="icon-bx-wraper bx-style-1 radius-sm">
+                    <div class="icon-content">
+                      <h5 class="dlab-tilte">
+                        <span class="icon-sm text-primary text-left"><i class="fa fa-envelope-o"
+                            aria-hidden="true"></i></span>
+                        E-mail
+                      </h5>
+                      <p class="m-b0"><a href="mailto:info@vigisolvo.com">info@vigisolvo.com</a></p>
+                      <p class="m-b0"><a href="mailto:hr@vigisolvo.com">hr@vigisolvo.com</a></p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-12 col-md-12  col-sm-12 m-b30 wow fadeIn" data-wow-delay="0.8s"
+                  style="visibility: visible; animation-delay: 0.8s; animation-name: fadeIn;">
+                  <div class="icon-bx-wraper bx-style-1 radius-sm">
+                    <div class="icon-content mt-3">
+                      <h5 class="dlab-tilte">
+                        <span class="icon-sm text-primary text-left"><i class="fa fa-volume-control-phone"
+                            aria-hidden="true"></i></span>
+                        Phone Number
+                      </h5>
+                      <p><a href="tel:+917987768061">+91 798-776-8061</a></p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-12 col-md-12  col-sm-12 m-b30 wow fadeIn" data-wow-delay="0.8s"
+                  style="visibility: visible; animation-delay: 0.8s; animation-name: fadeIn;">
+                  <div class="icon-bx-wraper bx-style-1 radius-sm">
+                    <div class="icon-content mt-3">
+                      <h5 class="dlab-tilte">
+                        <span class="icon-sm text-primary text-left"><i class="fa fa-telegram"
+                            aria-hidden="true"></i></span>
+                        Telegram
+                      </h5>
+                      <p><a href="https://t.me/mradul010" target="_blank">+91 8859994143</a></p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-12 col-md-12  col-sm-12 m-b30 wow fadeIn" data-wow-delay="0.8s"
+                  style="visibility: visible; animation-delay: 0.8s; animation-name: fadeIn;">
+                  <div class="icon-bx-wraper bx-style-1 radius-sm">
+                    <div class="icon-content mt-3">
+                      <h5 class="dlab-tilte">
+                        <span class="icon-sm text-primary text-left"><i class="fa fa-telegram"
+                            aria-hidden="true"></i></span>
+                        Skype
+                      </h5>
+                      <p><a href="skype:techsolvo05?chat" target="_blank">techsolvo05</a></p>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+              <div class="col-lg-7 col-md-7  m-b30">
+                {% include 'pagecontact.html' %}
+
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  </diV>
+  <!-- contact area END -->
+  </div>
+  <!-- Footer -->
+  <!-- Modal -->
+  {% include 'Modal.html' %}
+  <!-- Footer END-->
+  </div>
+</body>
+{% endblock%}
+
+{% block scripts %}
+
+<script>
+  var pageform = $('#quoteForm'); 
+  pageform.submit(function (e) {
+    e.preventDefault();  
+    $('#submitquote').html("<div class='quoteloader'></div>"); 
+    
+    $.ajax({
+     type: pageform.attr('method'),
+     url: pageform.attr('action'),
+     data: $(pageform).serialize(),
+     success: function(response) {
+        
+        $('#Succcessmsg').html(`<div class="successmessage">${response.message}</div>`).fadeIn(10);
+        setTimeout(function() {
+          $('#submitquote').html("Submit");  
+          $('#quoteForm')[0].reset();  
+          $('#Succcessmsg').fadeOut(3000);  
+          grecaptcha.reset();  
+        }, 1000);  
+        if (response.status === 'success') {
+          $('#Succcessmsg').html(`<div class="successmessage">${response.message}</div>`).fadeIn(10);
+        } else {
+          swal("Error", "There was an issue with your submission. Please try again.", "error");  
+        }
+      },
+      error: function(error) {
+        
+        setTimeout(function() {
+          $('#submitquote').html("Submit");  
+        }, 10);
+        swal("Error", "There was an issue with the submission. Please try again.", "error");  
+        console.log(error);  
+      }
+    });
+  });
+</script>
+<script src="{% static 'assets/js/owl.carousel.min.js' %}"></script>
+
+  {% comment %} <script type="text/javascript">
+    $(".Email_To_Vlidate").keyup(function(){
+      var regex = /^([a-zA-Z0-9_\.\-\+])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+      var email = $(this).val();
+      console.log('email', email)
+      if (!regex.test(email)) {
+          $(".email_validate").html("Enter Valid Email Id!")
+      } else{
+          $(".email_validate").fadeOut(1000)
+      }
+    });
+  </script>
+  <script type="text/javascript">
+    jQuery(document).ready(function(){
+    $('#Bestseller-slider2').owlCarousel({
+      loop:false,
+      nav:false,
+      autoplay:false,
+      dots:true,
+      margin:20,
+      smartSpeed: 1000,
+      responsive:{
+          0:{
+              items:1
+          },
+          600:{
+              items:1
+          },
+          1000:{
+              items:1
+          }
+      },navText: ["<i class='fa fa-angle-left' aria-hidden='true'></i>","<i class='fa fa-angle-right' aria-hidden='true'></i>"]
+    });
+  });
+  </script>
+
+  <script>
+    var pageform = $('#contactForm');
+    pageform.submit(function (e) {
+      e.preventDefault();
+      $('#contactFormSubmit').html("<div class='quoteloader'></div>");
+      $.ajax({
+        type: pageform.attr('method'),
+        url: pageform.attr('action'),
+        data: $(pageform).serialize(),
+        success: function(res) {
+          if (res.status == 1){
+            swal("Thank You!", "for reaching out to us! We appreciate your interest and will get back to you as soon as possible.", "success");
+            $('#contactForm').trigger("reset");
+            $('#contactFormSubmit').html("Submit");
+          } else {
+            swal("Error","Please complete the reCAPTCHA","error")
+            $('#contactFormSubmit').html("Submit");
+          };
+        },
+        error: function(error) {
+          swal("Error","Enter the correct value","error")
+          $('#contactFormSubmit').html("Submit");
+          console.log(error);
+        }
+      });
+    });
+  </script>
+  <script>
+    var contactform = $('#quoteForm');
+    contactform.submit(function (e) {
+      e.preventDefault();
+      $('#submitquote').html("<div class='quoteloader'></div>");
+      $.ajax({
+        type: contactform.attr('method'),
+        url: contactform.attr('action'),
+        data: $(contactform).serialize(),
+        success: function(res) {
+          if (res.status == 1){
+              swal("Thank You!", "for reaching out to us! We appreciate your interest and will get back to you as soon as possible.", "success");
+              $('#quoteForm').trigger("reset");
+              $('#submitquote').html("Submit");
+          };
+        },
+        error: function(error) {
+          swal("Error","Enter the correct value","error")
+          $('#submitquote').html("Submit");
+          console.log(error);
+        },
+        complete: function() {
+          $('#submitquote').html("Submit");
+        }
+      });
+    });
+  </script>
+  <script type="text/javascript">
+    jQuery(document).ready(function($) {
+      "use strict";
+      $('#Bestseller-slider2').owlCarousel({
+          loop: true,
+          center: true,
+          items: 3,
+          margin: 0,
+          autoplay: true,
+          dots:true,
+          autoplayTimeout: 8500,
+          smartSpeed: 450,
+          responsive: {
+            0: {
+              items: 1
+            },
+            768: {
+              items: 1
+            },
+            1170: {
+              items: 1
+            }
+          }
+      });
+    });
+  </script> {% endcomment %}
+{% endblock scripts %}

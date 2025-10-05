@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thank You for Applying</title>
+    <style>
+      /* CSS Styles */
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f5f5f5;
+        margin: 0;
+        padding: 0;
+      }
+      .container {
+        width: 100%;
+        max-width: 600px;
+        margin: 0 auto;
+        padding: 20px;
+        background-color: #09c6f9;
+        border: 1px solid #e0e0e0;
+        border-radius: 5px;
+        box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+        background-image: linear-gradient(315deg, #09c6f9 0, #045de9 74%)
+      }
+      h1 {
+        color: #ffffff;
+        text-align: center;
+        font-size: 32px;
+        margin-top: 0;
+      }
+      p {
+        color: #ffffff;
+        font-size: 18px;
+        line-height: 1.5;
+        margin-bottom: 20px;
+      }
+      /* Media Queries */
+      @media only screen and (max-width: 500px) {
+        h1 {
+          font-size: 28px;
+        }
+        p {
+          font-size: 16px;
+        }
+      }
+      @media only screen and (max-width: 400px) {
+        .container {
+          padding: 10px;
+        }
+        h1 {
+          font-size: 24px;
+        }
+        p {
+          font-size: 14px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <p>
+       {{name|title}},
+      <br>
+      <br>
+
+        Thanks for taking the time to apply for the position. We appreciate your interest in Techsolvo.
+      <br>
+      <br>
+        
+        We're currently in the process of taking applications for this position. We will begin taking interviews in the next two weeks. If you are selected to continue to the interview process, our human resources department will be in contact with you soon.
+      <br> 
+      <br> 
+
+        Thank you,
+      <br> 
+        Techsolvo LLP
+      </p>
+    </div>
+  </body>
+</html>

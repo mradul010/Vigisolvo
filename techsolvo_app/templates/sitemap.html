@@ -1,0 +1,176 @@
+{% extends "base.html" %}
+{% load static %}
+{% block extra_head %}
+        <meta name="description" content="{{ thisblog.short_desc }}">
+        <meta name="keywords" content="{{ thisblog.tags }}">
+{% endblock %}
+{% block title %}
+      <title>SITEMAP | Vigisolvo</title>
+{% endblock %}
+
+<body id="bg">
+<div class="page-wraper">
+<div id="loading-area"><div class="la-anim-10"></div></div>
+{% block content %}
+    <!-- inner page banner -->
+    <div class="dlab-bnr-inr overlay-primary">
+        <div class="container">
+            <div class="dlab-bnr-inr-entry enter2wap">
+                <h1 class="text-white">SITEMAP</h1>
+            </div>
+        </div>
+    </div>
+    <div class="main-sitemap"> 
+        
+
+    <div class="container-fluid">
+        <div class="wstheading clearfix">HOME</div>
+            <div class="row">
+                <div class="col-lg-3">
+                    <ul class="wstliststy01 clearfix">
+                        <li><a href="{% url 'about' %}">About Us </a></li>
+                        <li><a href="{% url 'career' %}">Career With Us </a></li>
+                        <li><a href="{% url 'faqs' %}">FAQ</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3">
+                    <ul class="wstliststy01 clearfix">
+                        <li><a href="#">Insights</a></li>
+                    <li><a href="{% url 'contact' %}">Contact Us</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+   
+
+    <div class="container-fluid">
+        <div class="wstheading clearfix">BLOCKCHAIN DEVELOPMENT</div>
+            <div class="row">
+                <div class="col-lg-3">
+                    <ul class="wstliststy01 clearfix">
+                        <li><a href="{%url 'blockchain_development' %}">Blockchain Development</a></li>
+                        <li><a href="{% url 'solana_development' %}">Solana Blockchain Development</a></li>
+                        <li><a href="{%url 'polygon_development' %}">Polygon Blockchain Development</a> </li>
+                        <li><a href="{%url 'ethereum_development' %}">Ethereum Blockchain Development</a> </li>
+                        <li><a href="{%url 'metaicblockchain_development' %}">Matic Blockchain Development</a> </li>
+                        <li><a href="{%url 'algorand_development' %}">Algorand Blockchain Development</a></li>
+                        <li><a href="{% url 'cardano_development' %}">Cardano Blockchain Development</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3">
+                    <ul class="wstliststy01 clearfix">
+                        <li><a href="{% url 'stellar_development' %}">Stellar Blockchain Development</a> </li>
+                        <li><a href="{% url 'hedera_development' %}">Hedera Hashgraph Blockchain Development</a></li>
+                        <li><a href="{%url 'binance_development' %}">Binance Blockchain Development</a> </li>
+                        <li><a href="{%url 'avalanche_development' %}">Avalanche Blockchain Development</a></li>
+                        <li><a href="{%url 'solidity_development' %}">Solidity Blockchain Development</a> </li>
+                        <li><a href="{% url 'hyperledger_development' %}">Hyperledger Blockchain Development</a> </li>
+                        <li><a href="{% url 'tezos_development' %}">Tezos Blockchain Development</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3">
+                    <ul class="wstliststy01 clearfix">
+                        <li><a href="{% url 'polkadot_development' %}">Polkadot Blockchain Development </a> </li>
+                        <li><a href="{% url 'tron_development' %}">Tron Blockchain Development</a></li>
+                        <li><a href="{%url 'quorum_development' %}">Quorum Blockchain Development</a> </li>
+                        <li><a href="{%url 'veChain_development' %}">Vechain Blockchain Development</a></li>
+                        <li><a href="{%url 'fantom_development' %}">Fantom Blockchain Development</a> </li>
+                        <li><a href="{% url 'klaytn_development' %}">Klaytn Blockchain Development</a> </li>
+                        <li><a href="{% url 'neo_development' %}">NEO Blockchain Development</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3">
+                    <ul class="wstliststy01 clearfix">
+                        <li><a href="{% url 'helium_development' %}">Helium Blockchain Development</a> </li>
+                        <li><a href="{% url 'altcoin_development' %}">Altcoin Blockchain Development</a></li>
+                        <li><a href="{%url 'chinlink_development' %}">Chainlink Blockchain Development</a> </li>
+                        <li><a href="{%url 'terra_development' %}">Terra Blockchain Development</a></li>
+                        <li><a href="{%url 'flow_development' %}">Flow Blockchain Development</a> </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+    <div class="container-fluid">
+        <div class="wstheading clearfix">DATA SCIENCE</div>
+            <div class="row">
+                <div class="col-lg-3">
+                    <ul class="wstliststy01 clearfix">
+                        <li> <a href="{% url 'artificial' %}">Artificial Intelligence</a></li>
+                        <li> <a href="{% url 'machine' %}">Machine Learning</a></li>
+                        <li><a href="{% url 'natural' %}">Natural Language Processing</a></li>
+                        <li><a href="{% url 'augmented' %}">Augmented Reality And Virtual Reality</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+    <div class="container-fluid">
+        <div class="wstheading clearfix">QA/TESTING</div>
+            <div class="row">
+                <div class="col-lg-3">
+                    <ul class="wstliststy01 clearfix">
+                        <li> <a href="{% url 'qa_testing' %}">QA & SOFTWARE TESTING</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+    <div class="container-fluid">
+        <div class="wstheading clearfix">SOFTWARE DEVELOPMENT</div>
+            <div class="row">
+                <div class="col-lg-3">
+                    <ul class="wstliststy01 clearfix">
+                        <li><a href="{% url 'enterprise' %}">Enterprise Web Development</a></li>
+                        <li><a href="{% url 'software' %}">Software Development</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+    <div class="container-fluid">
+        <div class="wstheading clearfix">MOBILE AAPLICATION</div>
+            <div class="row">
+                <div class="col-lg-3">
+                    <ul class="wstliststy01 clearfix">
+                        <li><a href="{%url 'reactnative_development' %}">React Native Development</a></li>
+                        <li><a href="{%url 'flutter_development' %}">Flutter Development</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    <div class="container-fluid">
+        <div class="wstheading clearfix">SCRAPING</div>
+            <div class="row">
+                <div class="col-lg-3">
+                    <ul class="wstliststy01 clearfix">
+                        <li><a href="{% url 'scraping' %}">Scraping</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+    <div class="container-fluid">
+        <div class="wstheading clearfix">INSIGHTS</div>
+            <div class="row">
+                <div class="col-lg-3">
+                    <ul class="wstliststy01 clearfix">
+                        <li><a href="{% url 'blog' %}">View all insights</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+    <div class="container-fluid">
+        <div class="wstheading clearfix">CONTACT</div>
+            <div class="row">
+                <div class="col-lg-3">
+                    <ul class="wstliststy01 clearfix">
+                        <li><a href="{% url 'contact' %}">Lets Talk!</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+</div>
+        
+{% endblock content %}

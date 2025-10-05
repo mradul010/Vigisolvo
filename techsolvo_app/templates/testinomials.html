@@ -1,0 +1,105 @@
+{% load static %}
+<head>
+	<link rel='stylesheet' href="{% static 'assets/css/bootstrap.min.css' %}" type='text/css' media='all'/>
+</head>
+
+<section class="testimonials">
+  <div class="container">
+    <div class="section-heading center-holder text-center">
+      <h2>Our Testimonials</h2>
+      <p>The experts at Vigisolvo have provided intensive web solutions for a variety of business clients over the years. Here are some of the things our past customers have to say about our service.</p>
+    </div>
+    <div class="row mt-5">
+      <div class="col-sm-12">
+        <div id="customers-testimonials" class="owl-carousel">
+          <!--TESTIMONIAL 5 -->
+          <div class="item">
+            <div class="shadow-effect">
+              <img class="img-circle" src="/static/images/team/clint2.jfif" alt="">
+              <p>Where do I start? I have worked with several good companies throughout my career, but Vigisolvo has been the only one who has surpassed my expectations. Why? Because he took two hours of his time on a phone call to fully understand my requirements ; to me that sets him apart! But wait, there is more! On top of his listening skills, his great English skills, Manal is second to none when it comes to programming, he is truly the real deal, I highly recommend him! You will not be disappointed.</p>
+              <div class="testimonial-name">Julia Rivera</div>
+            </div>
+         </div>
+          <!--END OF TESTIMONIAL 5 -->
+
+          <!--TESTIMONIAL 1 -->
+          <div class="item">
+            <div class="shadow-effect">
+              <img class="img-circle" src="/static/images/team/parihoxha.jfif" alt="">
+              <p>"Vigisolvo is very responsible, knowledgeable, and very talented team. They are responsive and has resources for various aspects of the project."</p>
+               <div class="testimonial-name">pari hoxha</div>
+            </div>
+           
+          </div>
+          <!--END OF TESTIMONIAL 1 -->
+          <!--TESTIMONIAL 2 -->
+          <div class="item">
+            <div class="shadow-effect">
+              <img class="img-circle" src="/static/images/team/CatYung.jfif" alt="">
+              <p>"Have been working with Manal for a long time. We built a good business relationship and thanks for the help.Will definitely refer him to my friend"</p>
+              <div class="testimonial-name">Cat Yung</div>
+            </div>
+            
+          </div>
+          <!--END OF TESTIMONIAL 2 -->
+          <!--TESTIMONIAL 3 -->
+          
+          <!--END OF TESTIMONIAL 3 -->
+          <!--TESTIMONIAL 4 -->
+          <div class="item">
+            <div class="shadow-effect">
+              <img class="img-circle" src="/static/images/team/ali.png" alt="">
+              <p>Very good job, gladly again.</p>
+               <div class="testimonial-name">Ali Gharibzadeh</div>
+            </div>
+          </div>
+          <!--END OF TESTIMONIAL 4 -->
+           <div class="item">
+            <div class="shadow-effect">
+              <img class="img-circle" src="/static/images/team/clint3.jfif" alt="">
+              <p>Very good professional, solved my problem, communication is very good, I would hire again!</p>
+               <div class="testimonial-name">Flavio reveria</div>
+            </div>
+          </div>
+          <!--END OF TESTIMONIAL 4 -->
+          <div class="item">
+            <div class="shadow-effect">
+              <img class="img-circle" src="/static/images/team/rajubahi.jfif" alt="">
+              <p>My experience with Manal and his team was very good.We had number of huddles/blockers to build this new website but they have a attitude to never give up which is very rare quality.They give you multiple options based on your requirement and in my case we had to re do the entire project again half way through. (This saved me lot of money on monthly subscription plan).I have requested Manal to take up my other projects as well.Hope he will continue his good work.</p>
+              <div class="testimonial-name">raja Kishore</div>
+            </div>
+            
+          </div>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+ <script type="text/javascript">
+    jQuery(document).ready(function($) {
+            "use strict";
+            //  TESTIMONIALS CAROUSEL HOOK
+            $('#customers-testimonials').owlCarousel({
+                loop: true,
+                center: true,
+                items: 3,
+                margin: 0,
+                autoplay: true,
+                dots:true,
+                autoplayTimeout: 8500,
+                smartSpeed: 450,
+                responsive: {
+                  0: {
+                    items: 1
+                  },
+                  768: {
+                    items: 2
+                  },
+                  1170: {
+                    items: 3
+                  }
+                }
+            });
+          });
+  </script>

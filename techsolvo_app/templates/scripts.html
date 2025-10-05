@@ -1,0 +1,125 @@
+{% load static %}
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src='https://www.google.com/recaptcha/api.js'></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.min.js" integrity="sha512-ykZ1QQr0Jy/4ZkvKuqWn4iF3lqPZyij9iRv6sGqLRdTPkY69YX6+7wvVGmsdBbiIfN/8OdsI7HABjvEok6ZopQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script type="text/javascript" src="{% static 'assets/js/webslidemenu.js' %}"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.3/min/tiny-slider.js"></script>
+
+<!-- Google Tag Manager -->
+<script>
+    (
+        function(w,d,s,l,i){
+        w[l]=w[l]||[];w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});
+        var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';
+        j.async=true;j.src= 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        }
+    )
+    (window,document,'script','dataLayer','GTM-THLB4FX');
+</script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-7PQGBNJ3VJ');
+</script>
+<!--Start of Chatbot Script-->
+<script id="messenger-widget-b" src="https://cdn.botpenguin.com/website-bot.js" defer>686275c5a306b60e5056d04c,6862759d7a64029325e39321</script>
+<!--End of Chatbot Script-->
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const newsletterForm = document.getElementById('newsletter-form');
+
+        newsletterForm.addEventListener('submit', async function (e) {
+            e.preventDefault();
+
+            try {
+                const response = await fetch(newsletterForm.getAttribute('action'), {
+                    method: newsletterForm.getAttribute('method'),
+                    body: new FormData(newsletterForm)
+                });
+
+                if (response.ok) {
+                    const data = await response.json();
+                    if (data.status === 1) {
+                        Swal.fire("Thank You!", "for subscribing us", "success");
+                        newsletterForm.reset();
+                    } else {
+                        throw new Error("Invalid response from server");
+                    }
+                } else {
+                    throw new Error("Network response was not ok");
+                }
+            } catch (error) {
+                Swal.fire("Enter the correct value");
+                newsletterForm.reset();
+                console.error(error);
+            }
+        });
+    });
+</script>
+<!-- Modal Contact -->
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const myContactForm = document.getElementById('my_contact');
+        const modalSubmit = document.getElementById('modalsubmit');
+
+        myContactForm.addEventListener('submit', async function (e) {
+            modalSubmit.innerHTML = "<div class='quoteloader'></div>";
+            e.preventDefault();
+
+            try {
+                const response = await fetch(myContactForm.getAttribute('action'), {
+                    method: myContactForm.getAttribute('method'),
+                    body: new FormData(myContactForm)
+                });
+
+                if (response.ok) {
+                    const data = await response.json();
+                    if (data.status === 1) {
+                        Swal.fire("Thank You!", "for reaching out to us! We appreciate your interest and will get back to you as soon as possible.", "success");
+                        myContactForm.reset();
+                        modalSubmit.innerHTML = "<span>Get A Free Quote!</span>";
+                    } else {
+                        throw new Error("Invalid response from server");
+                    }
+                } else {
+                    throw new Error("Network response was not ok");
+                }
+            } catch (error) {
+                Swal.fire("Enter the correct value");
+                modalSubmit.innerHTML = "<span>Get A Free Quote!</span>";
+                console.error(error);
+            }
+        });
+    });
+</script>
+<!-- PageContact -->
+<script type='text/javascript'>
+    $(document).ready(function () {
+        $("a[data-theme]").click(function () {
+        $("head link#theme").attr("href", $(this).data("theme"));
+        $(this).toggleClass('active').siblings().removeClass('active');
+        });
+        $("a[data-effect]").click(function () {
+        $("head link#effect").attr("href", $(this).data("effect"));
+        $(this).toggleClass('active').siblings().removeClass('active');
+        });
+    });
+</script>
+<script language="javascript" type="text/javascript">
+    function removeSpaces(string) {return string.split(' ').join('');}
+</script>
+<script>
+    function addCustomStyle() {
+        var targetDiv = document.getElementById('hide-ul');
+        if (targetDiv) {
+        targetDiv.style.display = (targetDiv.style.display === 'block') ? 'none' : 'block';
+        }
+    }
+    var changeStyleButton = document.getElementById('wsnavtoggle');
+    changeStyleButton.addEventListener('click', addCustomStyle);
+</script>

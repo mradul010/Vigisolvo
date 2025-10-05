@@ -1,0 +1,1055 @@
+{% extends "base.html" %}
+{% load static %}
+{% block head %}
+<meta charset="utf-8" />
+<meta name="description" content="{{page_meta_description}}" />
+<meta name="title" content="{{ page_meta_title }}" />
+<meta name="keywords" content="{{page_meta_keyword}}" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" integrity="sha384-4LISF5TTJX/fLmGSxO53rV4miRxdg84mZsxmO8Rx5jGtp/LbrixFETvWa5a6sESd" crossorigin="anonymous">
+<link href="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+
+{% endblock head %}
+{% block title %}
+<title>{{ page_meta_title }}</title>
+{% endblock title %}
+<body>
+    <!-- ==========banner start=========== -->
+    {% block content %}
+
+    <div id="demoModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="demoModalLabel" aria-hidden="true">
+      <div class="modal-dialog customdilog" role="document">
+         <div class="modal-content" >
+            <div class="modal-header model-title">
+               <h2 class="text-white fontstylenew">Transform Your Business with ERP</h2>
+               <button type="button" class="close" data-dismiss="modal" aria-label="Close" id="closeModal">
+                  <span aria-hidden="true">&times;</span>
+               </button>
+            </div>
+            <form id="demo-form" method="POST" action="{%url 'request_quote'%}">
+               <div class="modal-body p-4">
+                  <div class="new-form-row">
+                     <div class="col-lg-6 new-col-lg-6">
+                        <div class="form-group">
+                           <div class="input-group">
+                              <span class="input-group-text"><i class="fa fa-user" aria-hidden="true"></i></span>
+                              <input name="dzName" type="text" required="" title="Enter full name" class="form-control" placeholder="Full Name">
+                           </div>
+                        </div>
+                     </div>
+                     <div class="col-lg-6 new-col-lg-6">
+                        <div class="form-group">
+                           <div class="input-group">
+                              <span class="input-group-text"><i class="fa fa-envelope-o" aria-hidden="true"></i></span>
+                              <input name="dzEmail" type="email" class="form-control" required="" placeholder="Your Email Id">
+                           </div>
+                        </div>
+                     </div>
+                     <div class="col-lg-6 new-col-lg-6">
+                        <div class="form-group">
+                           <div class="input-group">
+                              <span class="input-group-text"><i class="fa fa-mobile" aria-hidden="true"></i></span>
+                              <input name="dzOther[Phone]" type="text" required="" maxlength=15 pattern="[0-9]{10-15}" class="form-control" oninvalid="this.setCustomValidity('Please enter valid phone number')" oninput="this.setCustomValidity('')" placeholder="Phone">
+                           </div>
+                        </div>
+                     </div>
+                     <div class="col-lg-12">
+                        <div class="form-group">
+                           <div class="input-group">
+                              <span class="input-group-text"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></span>
+                              <textarea name="dzMessage" rows="4" class="form-control" required="" placeholder="Message"></textarea>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="col-lg-12 text-center mt-4">
+                        <button class="site-button button-lg submitquote" id="submitquote" name="submit" type="submit" value="Submit" > <span>Get A Free Demo!</span> </button>
+                     </div>
+                  </div>
+               </form>
+            </div>
+         </div>
+      </div>
+    </div>
+    <div class="welcome-area bg-gradient">
+      <!-- Background Shape -->
+      <div class="background-shape">
+        <div class="circle1 wow fadeInRightBig" data-wow-duration="4000ms" style="visibility: visible; animation-duration: 4000ms; animation-name: fadeInRightBig;"></div>
+        <div class="circle2 wow fadeInRightBig" data-wow-duration="4000ms" style="visibility: visible; animation-duration: 4000ms; animation-name: fadeInRightBig;"></div>
+        <div class="circle3 wow fadeInRightBig" data-wow-duration="4000ms" style="visibility: visible; animation-duration: 4000ms; animation-name: fadeInRightBig;"></div>
+        <div class="circle4 wow fadeInRightBig" data-wow-duration="4000ms" style="visibility: visible; animation-duration: 4000ms; animation-name: fadeInRightBig;"></div>
+      </div>
+      <!-- Background Animation -->
+      <div class="background-animation">
+        <div class="item1"></div>
+        <div class="item2"></div>
+        <div class="item3"></div>
+        <div class="item4"></div>
+        <div class="item5"></div>
+      </div>
+      <div class="container h-100">
+        <div class="row h-100 align-items-center justify-content-between">
+          <!-- Welcome Content -->
+          <div class="col-12 col-sm-10 col-md-6">
+            <div class="welcome-content">
+              <ul class="mb-0 ps-1 d-flex align-items-center wow fadeInUp" style="visibility: visible; animation-duration: 1s; animation-delay: 200ms;">
+                <li>Idea</li>
+                <li>Development</li>
+                <li>Branding</li>
+              </ul>
+              <h2 class="wow fadeInUp" style="visibility: visible; animation-duration: 1s; animation-delay: 300ms;">Custom<br> ERP Solutions.</h2>
+              <p class="mb-4 wow fadeInUp" style="visibility: visible; animation-duration: 1s; animation-delay: 400ms;">Streamline operations, boost efficiency, and achieve your business goals with our comprehensive ERP systems.</p>
+              <div class="hero-btn-group wow fadeInUp" style="visibility: visible; animation-duration: 1s; animation-delay: 500ms;"><button class="book-demo btn btn-warning mt-3 me-3">Get a Call</button><a class="btn btn-light mt-3" href="{% url 'erp-manufacturing' %}">See More</a></div>
+            </div>
+          </div>
+          <!-- Welcome Thumb -->
+          <div class="col-12 col-sm-9 col-md-6">
+            <div class="welcome-thumb ms-xl-5 wow fadeInUp" style="visibility: visible; animation-duration: 1s; animation-delay: 1s;"><img src="{% static 'assets/images/hero-3.png' %}" alt=""></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    {% include 'marquee.html' %}
+    <div class="mb-120 d-block"></div>
+    {% include 'industries.html' %}
+
+    <section class="process-area4 space background-image" id="process-sec2">
+        <div class="container th-container4">
+           <div class="title-area text-center">
+              <span class="sub-title text-white">
+                 <div class="icon-masking me-2"><img src="{% static 'assets/images/shape/title_shape_4.1.svg' %}" alt="shape"></div>
+                 Working PROCESS
+              </span>
+              <h2 class="sec-title text-white">Our ERP Implementation Process</h2>
+           </div>
+           <div class="process-card-area">
+            <div class="row gy-40" style="row-gap: 40px;">
+              <div class="col-md-6 col-lg-3 process-card2-wrap">
+                <div class="process-card2">
+                  <div class="process-card2_number">01</div>
+                  <div class="process-card2_icon">
+                    <img src="{% static 'assets/images/icons/process_1_1.svg' %}" alt="icon">
+                  </div>
+                  <h2 class="box-title">Analysis</h2>
+                  <p class="process-card2_text">Conduct a thorough assessment of current business processes and needs for ERP alignment.</p>
+                </div>
+              </div>
+              <div class="col-md-6 col-lg-3 process-card2-wrap">
+                <div class="process-card2">
+                  <div class="process-card2_number">02</div>
+                  <div class="process-card2_icon">
+                    <img src="{% static 'assets/images/icons/process_1_2.svg' %}" alt="icon">
+                  </div>
+                  <h2 class="box-title">Design</h2>
+                  <p class="process-card2_text">Develop a customized ERP system blueprint that fits your specific organizational requirements.</p>
+                </div>
+              </div>
+              <div class="col-md-6 col-lg-3 process-card2-wrap">
+                <div class="process-card2">
+                  <div class="process-card2_number">03</div>
+                  <div class="process-card2_icon">
+                    <img src="{% static 'assets/images/icons/process_1_3.svg' %}" alt="icon">
+                  </div>
+                  <h2 class="box-title">Implementation</h2>
+                  <p class="process-card2_text">Install and configure the ERP software, integrating it with existing systems and processes.</p>
+                </div>
+              </div>
+              <div class="col-md-6 col-lg-3 process-card2-wrap">
+                <div class="process-card2">
+                  <div class="process-card2_number">04</div>
+                  <div class="process-card2_icon">
+                    <img src="{% static 'assets/images/icons/process_1_4.svg' %}" alt="icon">
+                  </div>
+                  <h2 class="box-title">Deployment</h2>
+                  <p class="process-card2_text">Launch the ERP solution across the organization, ensuring seamless operational transition.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+    </section>
+    <div class="mb-120 d-block"></div>
+    <section class="cta-area7 position-relative overflow-hidden z-index-3">
+      <div class="container th-container4">
+         <div class="cta-sec6 background-image bg-theme">
+            <div class="cta-content">
+               <div class="cta-wrapper">
+                  <div class="cta-icon"><a href="tel:+917987768061"><img src="{% static 'assets/images/call.svg' %}" alt=""></a></div>
+                  <div class="media-body">
+                     <span class="header-info_label text-white">Call For More Info</span>
+                     <p class="header-info_link"><a href="tel:+917987768061">798-776-8061</a></p>
+                  </div>
+               </div>
+               <div class="title-area mb-0">
+                  <h4 class="sec-title text-white">Book A Free ERP Consultation For Your Business</h4>
+               </div>
+               <div class="cta-group"><a href="{% url 'contact' %}" class="th-btn th-border style-radius">Contact Us</a></div>
+            </div>
+         </div>
+      </div>
+    </section>
+    <div class="mb-120 d-block"></div>
+
+    <!--<section class="process-area5 background-image" id="process-sec" style="margin-top: -276px;">
+        <div class="container th-container4">
+            <div class="title-area text-center">
+                <span class="sub-title sub-title2">PROCESS</span>
+                <h2 class="sec-title">Our ERP Implementation Process</h2>
+            </div>
+            <div class="process-tabs-wrapper shape-mockup-wrap">
+                <div class="nav nav-tabs process-tabs-tabs" id="nav-tab" role="tablist">
+                    <button class="nav-link active" id="nav-step1-tab" data-bs-toggle="tab" data-bs-target="#nav-step1" type="button">
+                        <span class="step">STEP-01</span>
+                        <span class="title">Analysis</span>
+                    </button>
+                    <button class="nav-link" id="nav-step2-tab" data-bs-toggle="tab" data-bs-target="#nav-step2" type="button">
+                        <span class="step">STEP-02</span>
+                        <span class="title">Design</span>
+                    </button>
+                    <button class="nav-link" id="nav-step3-tab" data-bs-toggle="tab" data-bs-target="#nav-step3" type="button">
+                        <span class="step">STEP-03</span>
+                        <span class="title">Implementation</span>
+                    </button>
+                    <button class="nav-link" id="nav-step4-tab" data-bs-toggle="tab" data-bs-target="#nav-step4" type="button">
+                        <span class="step">STEP-04</span>
+                        <span class="title">Deployment</span>
+                    </button>
+                </div>
+                <div class="tab-content" id="nav-tabContent">
+                    <div class="tab-pane fade show active" id="nav-step1" role="tabpanel">
+                        <div class="process-wrapper">
+                            <div class="process-content">
+                                <div class="title-area mb-15">
+                                    <h5 class="box-title">Analysis Phase</h5>
+                                    <p class="box-text">In the Analysis Phase, we conduct a thorough examination of your business processes and identify the specific needs for the ERP solution.</p>
+                                </div>
+                                <div class="checklist">
+                                    <ul>
+                                        <li><i class="far fa-check-circle text-body"></i>Business Process Review</li>
+                                        <li><i class="far fa-check-circle text-body"></i>Requirements Gathering</li>
+                                        <li><i class="far fa-check-circle text-body"></i>Feasibility Study</li>
+                                    </ul>
+                                </div>
+                                <a href="{% url 'erp-manufacturing' %}" class="th-btn style-radius">Get Started</a>
+                            </div>
+                            <div class="process-image th-anim" style="transform: translate(0px, 0px); opacity: 1; visibility: inherit;">
+                                <img src="{% static 'assets/images/normal/process_img_1.jpg' %}" alt="ERP Analysis" style="transform: translate(0px, 0px);">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="nav-step2" role="tabpanel">
+                        <div class="process-wrapper">
+                            <div class="process-content">
+                                <div class="title-area mb-15">
+                                    <h5 class="box-title">Design Phase</h5>
+                                    <p class="box-text">During the Design Phase, we create a detailed plan and architecture for your ERP solution, aligning it with your business objectives.</p>
+                                </div>
+                                <div class="checklist">
+                                    <ul>
+                                        <li><i class="far fa-check-circle text-body"></i>System Architecture Design</li>
+                                        <li><i class="far fa-check-circle text-body"></i>Module Customization Planning</li>
+                                        <li><i class="far fa-check-circle text-body"></i>User Interface Prototyping</li>
+                                    </ul>
+                                </div>
+                                <a href="{% url 'erp-manufacturing' %}" class="th-btn style-radius">Get Started</a>
+                            </div>
+                            <div class="process-image th-anim" style="transform: translate(0px, 0px); opacity: 1; visibility: inherit;">
+                                <img src="{% static 'assets/images/normal/process_img_2.jpg' %}" alt="ERP Design" style="transform: translate(0px, 0px);">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="nav-step3" role="tabpanel">
+                        <div class="process-wrapper">
+                            <div class="process-content">
+                                <div class="title-area mb-15">
+                                    <h5 class="box-title">Implementation Phase</h5>
+                                    <p class="box-text">Our team works on implementing the ERP solution, integrating it seamlessly into your business operations.</p>
+                                </div>
+                                <div class="checklist">
+                                    <ul>
+                                        <li><i class="far fa-check-circle text-body"></i>Software Installation</li>
+                                        <li><i class="far fa-check-circle text-body"></i>Data Migration</li>
+                                        <li><i class="far fa-check-circle text-body"></i>System Configuration</li>
+                                    </ul>
+                                </div>
+                                <a href="{% url 'erp-manufacturing' %}" class="th-btn style-radius">Get Started</a>
+                            </div>
+                            <div class="process-image th-anim" style="transform: translate(0px, 0px); opacity: 1; visibility: inherit;">
+                                <img src="{% static 'assets/images/normal/process_img_3.jpg' %}" alt="ERP Implementation" style="transform: translate(0px, 0px);">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="nav-step4" role="tabpanel">
+                        <div class="process-wrapper">
+                            <div class="process-content">
+                                <div class="title-area mb-15">
+                                    <h5 class="box-title">Deployment Phase</h5>
+                                    <p class="box-text">We deploy the ERP solution, ensuring it runs smoothly and effectively supports your business operations.</p>
+                                </div>
+                                <div class="checklist">
+                                    <ul>
+                                        <li><i class="far fa-check-circle text-body"></i>System Testing</li>
+                                        <li><i class="far fa-check-circle text-body"></i>User Training</li>
+                                        <li><i class="far fa-check-circle text-body"></i>Go-Live Support</li>
+                                    </ul>
+                                </div>
+                                <a href="{% url 'erp-manufacturing' %}" class="th-btn style-radius">Get Started</a>
+                            </div>
+                            <div class="process-image th-anim" style="transform: translate(0px, 0px); opacity: 1; visibility: inherit;">
+                                <img src="{% static 'assets/images/normal/process_img_4.jpg' %}" alt="ERP Deployment" style="transform: translate(0px, 0px);">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="shape-mockup d-none d-xxl-block" style="top: -7.9%; right: 29.5%;">
+                    <img src="{% static 'assets/images/shape/star-1.png' %}" alt="shape">
+                </div>
+                <div class="shape-mockup d-none d-xxl-block" style="right: 29.5%; bottom: -12.1%;">
+                    <img src="{% static 'assets/images/shape/star-2.png' %}" alt="shape">
+                </div>
+                <div class="shape-mockup z-index-3 d-none d-xl-block" style="top: 13%; left: 35.5%;">
+                    <img src="{% static 'assets/images/shape/line-3.png' %}" alt="shape">
+                </div>
+            </div>
+        </div>
+    </section>-->
+    <div class="mb-120 d-block"></div>
+    <div class="about-area">
+      <div class="container">
+        <div class="row align-items-center justify-content-between g-5">
+          <!-- About Content Area -->
+          <div class="col-12 col-lg-7">
+            <div class="about-content">
+              <div class="row g-4 g-xl-5">
+                <!-- Single About Area -->
+                <div class="col-12 col-sm-6">
+                  <div class="card about-card">
+                    <div class="card-body">
+                      <div class="about-icon">
+                        <svg class="bi bi-app-indicator" xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" viewBox="0 0 16 16">
+                          <path d="M5.5 2A3.5 3.5 0 0 0 2 5.5v5A3.5 3.5 0 0 0 5.5 14h5a3.5 3.5 0 0 0 3.5-3.5V8a.5.5 0 0 1 1 0v2.5a4.5 4.5 0 0 1-4.5 4.5h-5A4.5 4.5 0 0 1 1 10.5v-5A4.5 4.5 0 0 1 5.5 1H8a.5.5 0 0 1 0 1H5.5z"></path>
+                          <path d="M16 3a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"></path>
+                        </svg>
+                      </div>
+                      <h5 class="mb-3">Expertise</h5>
+                      <p class="mb-0">Leverage our deep industry knowledge to implement ERP solutions that meet your unique business needs.</p>
+                    </div>
+                  </div>
+                </div>
+                <!-- Single About Area -->
+                <div class="col-12 col-sm-6">
+                  <div class="card about-card">
+                    <div class="card-body">
+                      <div class="about-icon bg-success">
+                        <svg class="bi bi-lightbulb" xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" viewBox="0 0 16 16">
+                          <path d="M2 6a6 6 0 1 1 10.174 4.31c-.203.196-.359.4-.453.619l-.762 1.769A.5.5 0 0 1 10.5 13a.5.5 0 0 1 0 1 .5.5 0 0 1 0 1l-.224.447a1 1 0 0 1-.894.553H6.618a1 1 0 0 1-.894-.553L5.5 15a.5.5 0 0 1 0-1 .5.5 0 0 1 0-1 .5.5 0 0 1-.46-.302l-.761-1.77a1.964 1.964 0 0 0-.453-.618A5.984 5.984 0 0 1 2 6zm6-5a5 5 0 0 0-3.479 8.592c.263.254.514.564.676.941L5.83 12h4.342l.632-1.467c.162-.377.413-.687.676-.941A5 5 0 0 0 8 1z"></path>
+                        </svg>
+                      </div>
+                      <h5 class="mb-3">Innovation</h5>
+                      <p class="mb-0">Experience cutting-edge technology that streamlines operations and enhances productivity across all sectors.</p>
+                    </div>
+                  </div>
+                </div>
+                <!-- Single About Area -->
+                <div class="col-12 col-sm-6">
+                  <div class="card about-card">
+                    <div class="card-body">
+                      <div class="about-icon bg-warning">
+                        <svg class="bi bi-bar-chart" xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" viewBox="0 0 16 16">
+                          <path d="M4 11H2v3h2v-3zm5-4H7v7h2V7zm5-5v12h-2V2h2zm-2-1a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h2a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1h-2zM6 7a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v7a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1V7zm-5 4a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1v-3z"></path>
+                        </svg>
+                      </div>
+                      <h5 class="mb-3">Commitment</h5>
+                      <p class="mb-0">Benefit from our unwavering dedication to driving growth and achieving excellence in every project we undertake.</p>
+                    </div>
+                  </div>
+                </div>
+                <!-- Single About Area -->
+                <div class="col-12 col-sm-6">
+                  <div class="card about-card border-0 bg-primary">
+                    <div class="card-body">
+                      <div class="about-icon bg-info">
+                        <svg class="bi bi-basket" xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" viewBox="0 0 16 16">
+                          <path d="M5.757 1.071a.5.5 0 0 1 .172.686L3.383 6h9.234L10.07 1.757a.5.5 0 1 1 .858-.514L13.783 6H15a1 1 0 0 1 1 1v1a1 1 0 0 1-1 1v4.5a2.5 2.5 0 0 1-2.5 2.5h-9A2.5 2.5 0 0 1 1 13.5V9a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h1.217L5.07 1.243a.5.5 0 0 1 .686-.172zM2 9v4.5A1.5 1.5 0 0 0 3.5 15h9a1.5 1.5 0 0 0 1.5-1.5V9H2zM1 7v1h14V7H1zm3 3a.5.5 0 0 1 .5.5v3a.5.5 0 0 1-1 0v-3A.5.5 0 0 1 4 10zm2 0a.5.5 0 0 1 .5.5v3a.5.5 0 0 1-1 0v-3A.5.5 0 0 1 6 10zm2 0a.5.5 0 0 1 .5.5v3a.5.5 0 0 1-1 0v-3A.5.5 0 0 1 8 10zm2 0a.5.5 0 0 1 .5.5v3a.5.5 0 0 1-1 0v-3a.5.5 0 0 1 .5-.5zm2 0a.5.5 0 0 1 .5.5v3a.5.5 0 0 1-1 0v-3a.5.5 0 0 1 .5-.5z"></path>
+                        </svg>
+                      </div>
+                      <h5 class="mb-3 text-white">Support</h5>
+                      <p class="mb-0 text-white-50">Rely on our exceptional customer support to guide you through every step of your ERP implementation journey.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- About Text Area -->
+          <div class="col-12 col-sm-10 col-md-9 col-lg-5">
+            <div class="section-heading mb-0 ms-xl-5">
+              <h6>Our key features</h6>
+              <h2>We focus on growth of your business.</h2>
+              <p>At Vigisolvo, we prioritize the growth and efficiency of your business. Our ERP solutions are designed to seamlessly integrate with your operations, ensuring a robust and multi-dimensional approach to managing your enterprise resources.</p>
+              <div class="about-btn-group"><a class="btn btn-primary mt-5" href="#">Discover More</a><a class="btn btn-link mt-5" href="#">Talk with us</a></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="mb-120 d-block"></div>
+    <!--
+    {% if homepage_blogs %}
+    {% for cat in categories %}
+    <section class="section sec-industries" style="margin-top: 2%; margin-bottom: 5%">
+        <div class="container">
+            <div class="section-heading center-holder text-center">
+                <h2>{{ cat.category }} Solutions</h2>
+                <p>
+                </p>
+            </div>
+            <div class="all-industry">
+                {% for blog in homepage_blogs %}
+                {% if blog.category == cat %}
+                <div class="content industry-items" onclick="location.href=`{% url 'singleblog' cat.slug blog.slug %}`">
+                    <div class="content-overlay"></div>
+                    <div class="ind-img-text ind-edu">
+                        <div class="img-container">
+                            <img src="{{blog.heading_image.url}}" alt="manufacturing"/>
+                        </div>
+                        <div class="content-details fadeIn-bottom">
+                            <h4 class="content-title single-line">{{blog.title}}</h4>
+                            <p class="content-text">
+                                {{blog.short_desc | truncatechars:90}}
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                {% endif %}
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+    {% endfor %}
+    {% endif %}
+    -->
+    <section class="section sec3" id="promise">
+        <div class="container">
+            <div class="section-heading center-holder text-center">
+                <h2 class="rec-sec">Our Recognition</h2>
+                <p class="mb-5 rec-sec">
+                    Our first priority is our clients. We would focus all our efforts and
+                    resources on making sure <br />
+                    your needs are met.
+                </p>
+            </div>
+            <div class="row">
+                <div class="col-lg-3 col-md-6 wow rec-img" data-wow-delay="0.2s">
+                    <div class="services-block-three">
+                        <span>
+                            <div class="padding-15px-bottom">
+                                <img
+                                    src="{% static 'assets/images/upwork.webp' %}"
+                                    loading="lazy"
+                                    alt="upwork"
+                                    />
+                            </div>
+                            <div>
+                                <p class="rating-heading">Rating Overview</p>
+                                <div class="rating-heading">
+                                    <span>
+                                        <p><b style="font-size: 30px">5.0</b>/5</p>
+                                    </span>
+                                </div>
+                                <div class="rating-heading">
+                                    <ul class="stars">
+                                        <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                        <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                        <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                        <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                        <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </span>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 wow rec-img" data-wow-delay="0.4s">
+                    <div class="services-block-three">
+                        <span>
+                            <div class="padding-15px-bottom">
+                                <img
+                                    src="{% static 'assets/images/a2.webp' %}"
+                                    alt="a2"
+                                    loading="lazy"
+                                    />
+                            </div>
+                            <div>
+                                <p class="rating-heading">Rating Overview</p>
+                                <div class="rating-heading">
+                                    <span>
+                                        <p><b style="font-size: 30px">5.0</b>/5</p>
+                                    </span>
+                                </div>
+                                <div class="rating-heading">
+                                    <ul class="stars">
+                                        <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                        <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                        <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                        <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                        <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </span>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 wow rec-img" data-wow-delay="0.6s">
+                    <div class="services-block-three">
+                        <span>
+                            <div class="padding-15px-bottom">
+                                <img
+                                    src="{% static 'assets/images/glassdoor.webp' %}"
+                                    alt="Glassdoor"
+                                    loading="lazy"
+                                    />
+                            </div>
+                            <div>
+                                <p class="rating-heading">Rating Overview</p>
+                                <div class="rating-heading">
+                                    <span>
+                                        <p><b style="font-size: 30px">4.8</b>/5</p>
+                                    </span>
+                                </div>
+                                <div class="rating-heading">
+                                    <ul class="stars">
+                                        <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                        <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                        <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                        <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                        <li>
+                                            <i class="fa fa-star-half-o" aria-hidden="true"></i>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </span>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 wow rec-img" data-wow-delay="0.8s">
+                    <div class="services-block-three">
+                        <span>
+                            <div class="padding-15px-bottom">
+                                <img
+                                    src="{% static 'assets/images/a8.webp' %}"
+                                    alt="a8"
+                                    loading="lazy"
+                                    />
+                            </div>
+                            <div>
+                                <p class="rating-heading">Rating Overview</p>
+                                <div class="rating-heading">
+                                    <span>
+                                        <p><b style="font-size: 30px">4.6</b>/5</p>
+                                    </span>
+                                </div>
+                                <div class="rating-heading">
+                                    <ul class="stars">
+                                        <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                        <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                        <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                        <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                        <li>
+                                            <i class="fa fa-star-half-o" aria-hidden="true"></i>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="space">
+        <div class="container th-container4">
+           <div class="row justify-content-center">
+              <div class="col-lg-5">
+                 <div class="title-area text-center">
+                    <span class="sub-title sub-title2">Our Services</span>
+                    <h2 class="sec-title text-black">The Future is Here Embrace AI Technology</h2>
+                 </div>
+              </div>
+           </div>
+           <div class="nav nav-tabs appointment-tabs" id="nav-tab" role="tablist">
+            {% for service in service_category %}
+                <button class="nav-link" onclick="window.location.href='{% url 'services' service.slug %}'">
+                    {% if service.logo %}
+                    <img src="{{service.logo.url}}" alt="logo" loading="lazy" />
+                    {% else %}
+                    <i class="fa fa-life-ring" aria-hidden="true"></i>
+                    {% endif %}
+                    {{ service.name | title }}
+                </button>
+            {% endfor %}
+           </div>
+        </div>
+    </section>
+    <!--<section class="section sec2">
+        <div class="section-block-grey">
+            <div class="container container11">
+                <div class="section-heading center-holder text-center">
+                    <h2 class="sec-title exp-sec">Our Services</h2>
+                    <p class="exp exp-sec">
+                        At Vigisolvo, we lead the way in harnessing the power of
+                        cutting-edge technologies, including AI, machine learning, ERPNext,
+                        blockchain bringing a wealth of expertise to each project and
+                        shaping innovative solutions for the future.
+                    </p>
+                </div>
+                <div class="tns-outer mt-60">
+                    <div class="tns-slider" id="services-slider">
+                        {% for service in service_category %}
+                        <div class="col-md-3 col-sm-12 col-12 wow tns-item">
+                            <a href="{% url 'services' service.slug%}">
+                                <div class="serv-section-2">
+                                    <div class="serv-section-2-icon">
+                                        {% if service.logo %}
+                                        <img src="{{service.logo.url}}" alt="logo" loading="lazy" />
+                                        {% else %}
+                                        <i class="fa fa-life-ring" aria-hidden="true"></i>
+                                        {% endif %}
+                                    </div>
+                                    <div class="serv-section-desc">
+                                        <h4>{{service.name}}</h4>
+                                    </div>
+                                    <div class="section-heading-line-left"></div>
+                                </div>
+                            </a>
+                        </div>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>-->
+    {% include 'why-choose-us.html' %}
+    <div class="mb-120 d-block"></div>
+    <section class="section sec7">
+        <div class="container">
+            <div class="row border-bottom">
+                <div class="col-md-6 col-arcives">
+                    <div class="arcives">
+                        <h4>Our achievements speak for themselves</h4>
+                    </div>
+                </div>
+            </div>
+            <div class="row achievement mt-4">
+                <div class="col-md-12">
+                    <div class="right-count">
+                        <div class="row">
+                            <div class="col-md-3">
+                                <div class="counters">
+                                    <h6>
+                                        <span class="ach-num count">350</span>+<i
+                                            class="fa fa-rocket wow pulse animated"
+                                            data-wow-iteration="infinite"
+                                            data-wow-duration="500ms"
+                                            ></i>
+                                    </h6>
+                                    <p>Successful projects</p>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="counters">
+                                    <h6>$<span class="ach-num count">500</span>M+</h6>
+                                    <p>Raised via the solutions we’ve built</p>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="counters">
+                                    <h6 class="ach-num-small count">
+                                        5<i
+                                            class="fa fa-user-plus wow pulse animated"
+                                            data-wow-iteration="infinite"
+                                            data-wow-duration="500ms"
+                                            ></i>
+                                    </h6>
+                                    <p>Years of handling clients’ challenges</p>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="counters">
+                                    <h6><span class="ach-num count">150</span> M+</h6>
+                                    <p>End users engaged</p>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="counters">
+                                    <h6><span class="ach-num-small count">2</span>+</h6>
+                                    <p>Unicorns captured(Projects valued over $1 billion)</p>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="counters">
+                                    <h6><span class="ach-num-small count">50</span>+</h6>
+                                    <p>Qualified specialists</p>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="counters">
+                                    <h6><span class="ach-num-small count">12</span>+</h6>
+                                    <p>Countries using our products</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="mb-120 d-block"></div>
+    <section class="section sec8" id="maping">
+        <div class="container-fluid">
+            <div class="section-heading center-holder text-center wow">
+                <h2>Countries We Served</h2>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="counters-name">
+                        <h6>Vigisolvo global presence</h6>
+                        <p>
+                            As a Leading company we provide the services in many countries
+                            across the world listed below :
+                        </p>
+                        <ul>
+                            <li class="country-name">USA</li>
+                            <li class="country-name">UK</li>
+                            <li class="country-name">Canada</li>
+                            <li class="country-name">Europe</li>
+                            <li class="country-name">Australia</li>
+                            <li class="country-name">Germany</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="NetworkImage">
+                        <img
+                            src="{% static 'assets/images/MicrosoftTeams-image.webp' %}"
+                            width="75%"
+                            loading="lazy"
+                            alt="Microsoft Teams"
+                            />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Our Clients -->
+    {% include 'our-clients.html' %}
+    <!-- ==========testimonials=========== -->
+    {% include 'testimonials1.html' %}
+    <!-- ==========get-touch start=========== -->
+    <div class="section-full overlay-primary-dark bg-img-fix letstouch">
+        <div class="container">
+            <div class="let-top section sec10">
+                <h2 class="box-title m-b15">
+                    Let's get in touch<span class="bg-primary"></span>
+                </h2>
+                <p class="font-16 op8">
+                    Give us a call or drop by anytime, we endeavour to answer all
+                    enquiries within 24 hours on business days.
+                </p>
+            </div>
+            <div class="row">
+                <div
+                    class="col-lg-5 col-md-5 chosesus-content text-white bx-style-1 extraPadding section sec10"
+                    >
+                    <div
+                        class="col-lg-12 col-md-12 col-sm-12 m-b30 wow fadeIn"
+                        data-wow-delay="0.4s"
+                        >
+                        <div class="icon-bx-wraper bx-style-1 radius-sm">
+                            <div class="icon-content">
+                                <h5 class="dlab-tilte">
+                                    <span class="icon-sm text-primary text-left"
+                                        ><i class="fa fa-envelope-o" aria-hidden="true"></i
+                                        ></span>
+                                    E-mail
+                                </h5>
+                                <p class="m-b0">
+                                    <a href="mailto:info@vigisolvo.com">info@vigisolvo.com</a>
+                                </p>
+                                <p class="m-b0">
+                                    <a href="mailto:hr@vigisolvo.com">hr@vigisolvo.com</a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div
+                        class="col-lg-12 col-md-12 col-sm-12 m-b30 wow fadeIn"
+                        data-wow-delay="0.8s"
+                        style="
+                        visibility: visible;
+                        animation-delay: 0.8s;
+                        animation-name: fadeIn;
+                        "
+                        >
+                        <div class="icon-bx-wraper bx-style-1 radius-sm">
+                            <div class="icon-content mt-3">
+                                <h5 class="dlab-tilte">
+                                    <span class="icon-sm text-primary text-left"
+                                        ><i
+                                        class="fa fa-volume-control-phone"
+                                        aria-hidden="true"
+                                        ></i
+                                        ></span>
+                                    Phone Number
+                                </h5>
+                                <p><a href="tel:+917987768061">+91 798-776-8061</a></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div
+                        class="col-lg-12 col-md-12 col-sm-12 m-b30 wow fadeIn"
+                        data-wow-delay="0.8s"
+                        style="
+                        visibility: visible;
+                        animation-delay: 0.8s;
+                        animation-name: fadeIn;
+                        "
+                        >
+                        <div class="icon-bx-wraper bx-style-1 radius-sm">
+                            <div class="icon-content mt-3">
+                                <h5 class="dlab-tilte">
+                                    <span class="icon-sm text-primary text-left"
+                                        ><i class="fa fa-telegram" aria-hidden="true"></i
+                                        ></span>
+                                    Telegram
+                                </h5>
+                                <p>
+                                    <a href="https://t.me/mradul010" target="_blank"
+                                        >+91 798-776-8061</a
+                                        >
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div
+                        class="col-lg-12 col-md-12 col-sm-12 m-b30 wow fadeIn"
+                        data-wow-delay="0.8s"
+                        style="
+                        visibility: visible;
+                        animation-delay: 0.8s;
+                        animation-name: fadeIn;
+                        "
+                        >
+                        <div class="icon-bx-wraper bx-style-1 radius-sm">
+                            <div class="icon-content mt-3">
+                                <h5 class="dlab-tilte">
+                                    <span class="icon-sm text-primary text-left"
+                                        ><i class="fa fa-telegram" aria-hidden="true"></i
+                                        ></span>
+                                    Skype
+                                </h5>
+                                <p>
+                                    <a href="skype:techsolvo05?chat" target="_blank"
+                                        >techsolvo05</a
+                                        >
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-7 col-md-7 m-b30 section sec11">
+                    {% include 'pagecontact.html' %}
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section class="section sec9">{% include 'insight.html' %}</section>
+</body>
+{% endblock content %}
+{% block scripts %}
+<script>
+    var pageform = $("#contactForm");
+    pageform.submit(function (e) {
+      e.preventDefault();
+      $("#contactFormSubmit").html("<div class='quoteloader'></div>");
+      $.ajax({
+        type: pageform.attr("method"),
+        url: pageform.attr("action"),
+        data: $(pageform).serialize(),
+        success: function (res) {
+          if (res.status == 1) {
+            swal(
+              "Thank You!",
+              "for reaching out to us! We appreciate your interest and will get back to you as soon as possible.",
+              "success"
+            );
+            $("#contactForm").trigger("reset");
+            $("#contactFormSubmit").html("Submit");
+          } else {
+            swal("Error", "Please complete the reCAPTCHA", "error");
+            $("#contactFormSubmit").html("Submit");
+          }
+        },
+        error: function (error) {
+          swal("Error", "Enter the correct value", "error");
+          $("#contactFormSubmit").html("Submit");
+          console.log(error);
+        },
+      });
+    });
+</script>
+<!-- Modal2 Contact -->
+<script>
+    var contactform = $("#demoForm");
+    contactform.submit(function (e) {
+      e.preventDefault();
+      $("#submitquote").html("<div class='quoteloader'></div>");
+      $.ajax({
+        type: contactform.attr("method"),
+        url: contactform.attr("action"),
+        data: $(contactform).serialize(),
+        success: function (res) {
+          if (res.status == 1) {
+            swal(
+              "Thank You!",
+              "for reaching out to us! We appreciate your interest and will get back to you as soon as possible.",
+              "success"
+            );
+            $("#demoForm").trigger("reset");
+            $("#submitquote").html("Submit");
+          }
+        },
+        error: function (error) {
+          swal("Error", "Enter the correct value", "error");
+          $("#submitquote").html("Submit");
+          console.log(error);
+        },
+        complete: function () {
+          $("#submitquote").html("Submit");
+        },
+      });
+    });
+</script>
+<!-- Banner-icon animation -->
+<script>
+    let newTL = gsap.timeline();
+    newTL.fromTo(
+      ".banner-icons",
+      { opacity: 0, y: 100 },
+      { opacity: 1, y: 0, stagger: 0.3 }
+    );
+</script>
+<!-- Recognition section animation -->
+<script>
+    let recTL = gsap.timeline({ paused: true });
+    let viewport22 = window.innerWidth
+
+    if(viewport22 > 768){
+      recTL.fromTo(
+        ".rec-img:nth-of-type(odd)",
+        { opacity: 0, y: -150 },
+        { opacity: 1, y: 0, duration: 1.2 }
+      );
+      recTL.fromTo(
+        ".rec-img:nth-of-type(even)",
+        { opacity: 0, y: 150 },
+        { opacity: 1, y: 0, duration: 1.2 },
+        0
+      );
+
+    }
+
+
+      // Using ScrollTrigger to trigger animation when .dash-center comes into view
+      ScrollTrigger.create({
+        trigger: "#promise",
+        start: "top 50%", // Adjust this value based on when you want the animation to start relative to the top of the viewport
+        scrub: 1,
+        onEnter: function () {
+          recTL.play();
+        },
+        // onLeaveBack: function () {
+        //   tl.reverse();
+        // },
+      });
+</script>
+<!-- counter animation for achievement section -->
+<script>
+    let countTL = gsap.timeline({ paused: true });
+    let viewport1 = window.innerWidth;
+    const items = document.querySelectorAll(".count");
+    if(viewport1 > 768){
+
+      countTL.from(items, {
+        textContent: 0,
+        duration: 1,
+        ease: Power1.easeIn,
+        snap: { textContent: 1 }
+      });
+    }
+
+    ScrollTrigger.create({
+      trigger: ".arcives",
+      start: "top 50%", // Adjust this value based on when you want the animation to start relative to the top of the viewport
+      scrub: 1,
+      onEnter: function () {
+        countTL.play();
+      },
+    });
+</script>
+<script>
+    $(document).ready(function() {
+       var hasShownPopup = false;
+
+       function showDemoPopup() {
+         $('#demoModal').modal('show');
+         hasShownPopup = true;
+       }
+
+       function handleFormSubmission(event) {
+         event.preventDefault();
+
+         var form = $('#demo-form')[0];
+         if (!form.checkValidity()) {
+           $('<div class="alert alert-danger">Please fill out all the required fields.</div>')
+             .insertBefore('#demoModal .modal-body')
+             .delay(3000)
+             .fadeOut();
+           return false;
+         }
+
+         var formData = new FormData(form);
+         formData.append('page_path', document.location.pathname);
+         $.ajax({
+           url: "{% url 'request_quote' %}",
+           type: 'POST',
+           data: formData,
+           processData: false,
+           contentType: false
+         }).then(function(response) {
+           $('#demoModal').modal('hide');
+           if (response.status) {
+             Swal.fire("Success!", "Your ENQUIRY has been received successfully. We will connect with you shortly.", "success");
+           } else {
+             Swal.fire("Error!", "Something went wrong. Please try again later.", "error");
+           }
+         }).fail(function(xhr, status, error) {
+           $('#demoModal').modal('hide');
+           Swal.fire("Error!", "Something went wrong. Please try again later.", "error");
+         });
+       }
+
+       // Ensure single event binding
+       $(document).off('submit', '#demo-form', handleFormSubmission);
+       $(document).on('submit', '#demo-form', handleFormSubmission);
+
+       $('.book-demo').on('click', function() {
+         showDemoPopup();
+       });
+
+       $('#closeModal').on('click', function() {
+         $('#demoModal').modal('hide');
+       });
+    });
+</script>
+{% endblock scripts %}

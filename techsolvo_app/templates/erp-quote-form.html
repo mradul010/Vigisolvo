@@ -1,0 +1,212 @@
+{% load static %}
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+<div class="modal-dialog customdilog" role="document">
+    <div class="modal-content" >
+       <div class="modal-header model-title">
+          <h2 class="text-white fontstylenew">Transform Your Business with ERP</h2>
+          {% comment %} <div id="commitSucccessmsg1"  style="display:none;padding: 15px;margin-top: 15px; margin-bottom: 10px; border-radius: 5px; font-size: 14px;  font-family: Arial, sans-serif; color: rgb(255 255 255); border: 2px solid rgb(58 121 221);  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); background-color: #67b267"></div> {% endcomment %}
+
+       </div>
+       <form id="quoteStaticForm" method="POST" action="{%url 'request_quote'%}">
+          <div class="modal-body">
+             <div class="new-form-row">
+                <div class="col-lg-6 new-col-lg-6">
+                   <div class="form-group">
+                      <div class="input-group">
+                         <span class="input-group-text"><i class="fa fa-user" aria-hidden="true"></i></span>
+                         <input name="dzName" type="text" required="" title="Enter full name" class="form-control" placeholder="Full Name">
+                      </div>
+                   </div>
+                </div>
+                <div class="col-lg-6 new-col-lg-6">
+                   <div class="form-group">
+                      <div class="input-group">
+                         <span class="input-group-text"><i class="fa fa-envelope-o" aria-hidden="true"></i></span>
+                         <input name="dzEmail" type="email" class="form-control" required="" placeholder="Your Email Id">
+                      </div>
+                   </div>
+                </div>
+                <div class="col-lg-6 new-col-lg-6">
+                   <div class="form-group">
+                      <div class="input-group">
+                         <span class="input-group-text"><i class="fa fa-mobile" aria-hidden="true"></i></span>
+                         <input name="dzPhone" type="text" required maxlength="15" pattern="^\d{10,15}$" class="form-control" placeholder="Phone">
+                         {% comment %} <input name="dzPhone" type="text" required="" maxlength=15 pattern="[0-9]{10-15}" class="form-control" oninvalid="this.setCustomValidity('Please enter valid phone number')" oninput="this.setCustomValidity('')" placeholder="Phone"> {% endcomment %}
+                      </div>
+                   </div>
+                </div>
+                <div class="col-lg-12">
+                   <div class="form-group">
+                      <div class="input-group">
+                         <span class="input-group-text"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></span>
+                         <textarea name="dzMessage" rows="4" class="form-control" required="" placeholder="Message"></textarea>
+                      </div>
+                   </div>
+                </div>
+                <input type="text" name="city" style="display:none;">
+                <div class="col-lg-12" style="justify-items:center;">
+                    <div class="form-group">
+                       <div class="input-group">
+                          <div class="g-recaptcha" data-sitekey="6LfF8NUqAAAAAIlII_bmEg2UzNCCuC_mp1Kkij7n"></div>
+                       </div>
+                    </div>
+                 </div>                  
+                <div class="col-lg-12 text-center mt-4">
+                   <button class="site-button button-lg submitquote" id="submitquote" name="submit" type="submit" value="Submit" > <span>Get A Free Demo!</span> </button>
+                </div>
+             </div>
+       </form>
+       </div>
+    </div>
+ </div>
+ {% block scripts %}
+<!-- Book a Demo -->
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    const requestQuoteForm = document.getElementById('quoteStaticForm');
+    const submitButton = document.getElementById('submitquote');
+
+    requestQuoteForm.addEventListener('submit', async function (e) {
+        e.preventDefault();
+
+        submitButton.innerHTML = "<div class='submitquote'></div>";
+        submitButton.disabled = true;
+         
+        setTimeout(() => {
+         Swal.fire({
+             title: "Processing...",
+             text: "Please wait while we submit your request.",
+             allowOutsideClick: false,
+             didOpen: () => {
+                 Swal.showLoading();
+             }
+         });
+      }, 100);
+
+        try {
+            const response = await fetch(requestQuoteForm.getAttribute('action'), {
+                method: requestQuoteForm.getAttribute('method'),
+                body: new FormData(requestQuoteForm)
+            });
+
+            const data = await response.json();
+            submitButton.innerHTML = "Submit";
+            submitButton.disabled = false;
+
+            let industryType = document.getElementById("dashHeading")?.getAttribute("data-track") || "Default";
+            let messages = {
+                "Manufacturing": "Your request for ERPNext solutions in Manufacturing Industry has been received. Our experts will contact you shortly.",
+                "Healthcare": "Your inquiry for ERPNext solutions in Healthcare Industry has been received. Our specialists will reach out to you soon.",
+                "Education": "We have received your request for ERPNext solutions in Education Industry. Our team will connect with you shortly.",
+                "Retail": "Your request for Retail Industry ERPNext solutions has been submitted. We will reach out to you soon.",
+                "Services": "Your request for ERPNext solutions in the Services Industry has been received. We will reach out to you soon.",
+                "Distribution": "Your request for ERPNext solutions in the Distribution Industry has been received. Our team will connect with you shortly.",
+                "Frappe_HRMS": "Your request for Frappe HRMS solutions has been received. Our team will connect with you shortly."
+            };
+
+            if (response.ok && data.status === "success") {
+                Swal.fire({
+                    title: "Thank You!",
+                    text: messages[industryType] || "Your request has been received. Our team will get in touch with you soon.",
+                    icon: "success",
+                    timer: 10000
+                });
+
+                requestQuoteForm.reset();
+               
+                if (typeof grecaptcha !== "undefined") {
+                    grecaptcha.reset();
+                }
+            } else if (data.error === "Spam detected!") {
+                Swal.fire({
+                    title: "Spam Detected!",
+                    text: "Your request was flagged as spam.",
+                    icon: "error",
+                    timer: 5000
+                });
+            } else {
+                Swal.fire("Error", "There was an issue with your submission. Please try again.", "error");
+            }
+        } catch (error) {
+            submitButton.innerHTML = "Submit";
+            submitButton.disabled = false;
+            Swal.fire("Error", "There was an issue with your submission. Please try again.", "error");
+            console.error(error);
+        }
+    });
+});
+</script>
+{% comment %} <script>
+   document.addEventListener('DOMContentLoaded', function () {
+      const requestQuoteForm = document.getElementById('quoteStaticForm');
+      const submitButton = document.getElementById('submitquote');
+  
+      requestQuoteForm.addEventListener('submit', async function (e) {
+          e.preventDefault();
+  
+          submitButton.innerHTML = "<div class='submitquote'></div>";
+          submitButton.disabled = true; 
+
+        
+        setTimeout(() => {
+            Swal.fire({
+                title: "Processing...",
+                text: "Please wait while we submit your request.",
+                allowOutsideClick: false,
+                didOpen: () => {
+                    Swal.showLoading();
+                }
+            });
+        }, 100);
+  
+          try {
+              const response = await fetch(requestQuoteForm.getAttribute('action'), {
+                  method: requestQuoteForm.getAttribute('method'),
+                  body: new FormData(requestQuoteForm)
+              });
+  
+              if (response.ok) {
+                  const data = await response.json();
+  
+                  setTimeout(() => {
+                      submitButton.innerHTML = "Submit";
+                      requestQuoteForm.reset();
+                      if (typeof grecaptcha !== "undefined") {
+                          grecaptcha.reset();
+                      }
+                  }, 50);
+  
+                  let industryType = document.getElementById("dashHeading")?.getAttribute("data-track") || "Default";
+                  let messages = {
+                     "Manufacturing": "Your request for ERPNext solutions in Manufacturing Industry has been recieved. Our experts will contact you shortly.",
+                     "Healthcare": "Your inquiry for ERPNext solutions in Healthcare Industry has been received. Our specialists will reach out to you soon.",
+                     "Education": "We have received your request for an ERPNext solutions in Education Industry. Our team will connect with you shortly.",
+                     "Retail": "Your request for Retail Industry ERPNext solutions has been submitted. We will reach out to you soon.",
+                     "Services": "Your request for ERPNext solutions in the Services Industry has been received. We will reach out to you soon.",
+                     "Distribution":"Your request for ERPNext solutions in the Distribution Industry has been received. Our team will connect with you shortly.",
+                     "Frappe_HRMS":"Your request for Frappe HRMS solutions has been received. Our team will connect with you shortly."
+                  };
+                  if (data.status === 'success'){
+                  Swal.fire({
+                     title: "Thank You for reaching out to us!",
+                     text: messages[industryType] || "Your request has been received. Our team will get in touch with you soon.",
+                     icon: "success",
+                     timer: 10000
+                  });
+
+                  } else {
+                      throw new Error("Invalid response from server");
+                  }
+              } else {
+                  throw new Error("Network response was not ok");
+              }
+          } catch (error) {
+              submitButton.innerHTML = "Submit";
+              Swal.fire("Error", "There was an issue with your submission. Please try again.", "error");
+              console.error(error);
+          }
+      });
+  });
+</script> {% endcomment %}
+{% endblock scripts %}

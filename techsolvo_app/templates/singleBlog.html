@@ -1,0 +1,230 @@
+{% extends "base.html" %}
+{% load static %}
+{% block head%}
+  <meta charset="utf-8">
+  <meta name="description" content="{{ thisblog.short_desc }}">
+  <meta name="keywords" content={{ thisblog.meta_keyword }}>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Facebook Meta Tags -->
+  <meta property="og:title" content="{{thisblog.title}}">
+  <meta property="og:image" content="https://vigisolvo.com{{thisblog.heading_image.url}}">
+  <meta property="og:description" content="{{ thisblog.short_desc }}">
+  <meta property="og:url" content="https://vigisolvo.com/blog/{{thisblog.category.slug}}/{{thisblog.slug}}">
+
+  <!-- Twitter Meta Tags -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta property="twitter:domain" content="vigisolvo.com">
+  <meta property="twitter:url" content="https://vigisolvo.com/blog/{{thisblog.category.slug}}/{{thisblog.slug}}">
+  <meta name="twitter:title" content="{{thisblog.title}}">
+  <meta name="twitter:description" content="{{ thisblog.short_desc }}">
+  <meta name="twitter:image" content="https://vigisolvo.com{{thisblog.heading_image.url}}">
+{%endblock%}
+
+{% block title %} <title>{{thisblog.title}}</title> {% endblock %}
+
+<body id="bg">
+    {% block content %}
+      <div class="page-content bg-white">
+        <div class="content-block">
+          <div class="blog-wap blog-wap2">
+            <div class="container-fluid">
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="blog-img-div">
+                    <div class="blog-head">
+                      <div class="container-text-center">
+                        <div class="row-nav">
+                          <div class="col-nav">
+                            <a href="/blog">Blog </a>
+                          </div>
+                          <div class="col-nav" style="margin-top: 3px;">
+                            <i class="fa fa-angle-right angle-right" aria-hidden="true"></i>
+                          </div>
+                          <div class="col-nav">
+                            <a href="{%url 'sort-blog' thisblog.category.slug%}">{{thisblog.category}} </a>
+                          </div>
+                        </div>
+                      </div>
+                      {% if thisblog.author.book_consultant_url %}
+                      <a class="custom-btn btn-11" href="{{ thisblog.author.book_consultant_url }}" target="_blank">Book a Call<div class="dot"></div></a>
+                      {% endif %}
+                    </div>
+                    {% include 'Modal.html' %}
+                    <div class="blogImg">
+                      <img src="{{thisblog.heading_image.url}}" width="100%" loading="lazy">
+                      <div class="SideSearch side-detail">
+                        <div class="SingleBlog">
+                          <div class="SingleDetails">
+                            <div class="category-head">
+                              <p>{{thisblog.date_of_creation|date:"F j, Y"}}</p>
+                              <p><i class="fa fa-eye" aria-hidden="true"></i> {{thisblog.view}} Views</p>
+                              <a href="{%url 'sort-blog' thisblog.category.slug%}">{{thisblog.category}}</a>
+                            </div>
+                            <div class="blog-title">
+                              <h1 >{{thisblog.title}}</h1>
+                            </div>
+                            <div class="blog-col">
+                              <img src="{{thisblog.author.image.url}}" class="img-fluid rounded-start" alt="..." width="100%" loading="lazy">
+                              <div class="author-container">
+                                <h5 class="author-title">{{thisblog.author.name}}</h5>
+                                <h5 class="author-designation">{{thisblog.author.designation}}</h5>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row justify-content-center single-blog-content">
+                    <div class="stick-wrapper">
+                      <div class="title-small">Table of Contents</div>
+                      <div id="toc" class="toc"></div>
+                    </div>
+                    <div class="col-md-7 col-sm-7 col-12 blog-cont" id="blog-cont">
+                      <div class="main-wap2 mani2">
+                        <div class="SingleInner">
+                          <div class="SingleBlog blog-content" id="content">
+                            <div class="SingleDetails" >
+                              <p class="justify-content-center text-dark">{{thisblog.content | safe}}</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="section-full overlay-primary-dark bg-img-fix letstouch">
+            <div class="container">
+              <div class="let-top">
+                  <h2 class="box-title m-b15" >Let's get in touch<span class="bg-primary"></span></h2>
+                  <p class="font-16 op8">Give us a call or drop by anytime, we endeavour to answer all enquiries within 24 hours on business days.</p>
+              </div>
+              <div class="row">
+                <div class="col-lg-5 col-md-5 chosesus-content text-white bx-style-1 extraPadding">
+
+                  <div class="col-lg-12 col-md-12  col-sm-12 m-b30 wow fadeIn" data-wow-delay="0.4s">
+                    <div class="icon-bx-wraper bx-style-1 radius-sm">
+                      <div class="icon-content">
+                        <h5 class="dlab-tilte">
+                          <span class="icon-sm text-primary text-left"><i class="fa fa-envelope-o" aria-hidden="true"></i></span>
+                          E-mail
+                        </h5>
+                        <p class="m-b0"><a href="mailto:info@vigisolvo.com">info@vigisolvo.com</a></p>
+                        <p class="m-b0"><a href="mailto:hr@vigisolvo.com">hr@vigisolvo.com</a></p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-12 col-md-12  col-sm-12 m-b30 wow fadeIn" data-wow-delay="0.8s" style="visibility: visible; animation-delay: 0.8s; animation-name: fadeIn;">
+                    <div class="icon-bx-wraper bx-style-1 radius-sm">
+                      <div class="icon-content mt-3">
+                        <h5 class="dlab-tilte">
+                          <span class="icon-sm text-primary text-left"><i class="fa fa-volume-control-phone" aria-hidden="true"></i></span>
+                          Phone Number
+                        </h5>
+                        <p><a href="tel:+917987768061">+91 798-776-8061</a></p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-12 col-md-12  col-sm-12 m-b30 wow fadeIn" data-wow-delay="0.8s" style="visibility: visible; animation-delay: 0.8s; animation-name: fadeIn;">
+                    <div class="icon-bx-wraper bx-style-1 radius-sm">
+                      <div class="icon-content mt-3">
+                        <h5 class="dlab-tilte">
+                          <span class="icon-sm text-primary text-left"><i class="fa fa-telegram" aria-hidden="true"></i></span>
+                          Telegram
+                        </h5>
+                        <p><a href="https://t.me/mradul010" target ="_blank">+91 8859994143</a></p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-12 col-md-12  col-sm-12 m-b30 wow fadeIn" data-wow-delay="0.8s" style="visibility: visible; animation-delay: 0.8s; animation-name: fadeIn;">
+                    <div class="icon-bx-wraper bx-style-1 radius-sm">
+                      <div class="icon-content mt-3">
+                        <h5 class="dlab-tilte">
+                          <span class="icon-sm text-primary text-left"><i class="fa fa-telegram" aria-hidden="true"></i></span>
+                          Skype
+                        </h5>
+                        <p><a href="skype:techsolvo05?chat" target ="_blank">techsolvo05</a></p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-7 col-md-7  m-b30">
+                  {% include 'pagecontact.html' %}
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {% include 'insight.html' %}
+
+        </div>
+      </div>
+    {% endblock content %}
+</body>
+
+{% block scripts %}
+    <script>
+      const observer = new IntersectionObserver(entries=>{
+        entries.forEach(entry=>{
+          const id = entry.target.getAttribute("id");
+          if (entry.isIntersecting) {
+            document.querySelectorAll(".active").forEach((z)=>{
+              z.classList.remove("active")
+            });
+            document.querySelector(`a[href="#${id}"]`).classList.add("active");
+          }
+        });
+      },{rootMargin: '0px 0px -75% 0px'});
+    </script>
+    <script>
+      var headingSelector = "h3";
+      if ("h3" != "") {
+        headingSelector = "h3";
+      }
+      document.getElementById("content").querySelectorAll(headingSelector).forEach(function(heading, i) {
+        observer.observe(heading);
+        let str = heading.innerHTML;
+        str = str.replace(/\s+/g, '-').replace(/[°&\/\\#,+()$~%.'":;*?<>{}]/g, "").toLowerCase();
+        heading.setAttribute("id", str);
+        const item = document.createElement("a");
+        item.innerHTML = heading.innerHTML;
+        (headingSelector).split(",").forEach(function(x) {
+            if (heading.tagName.toLowerCase() == x) {
+                item.classList.add("tocitem", "toc-" + x);
+            }
+        });
+        item.setAttribute("href", "#" + str);
+        document.querySelector("#toc").appendChild(item);
+      });
+    </script>
+    <script>
+      var isModalShown = false;
+      $(document).ready(function() {
+        $(document).on('scroll', function() {
+          if ($(this).scrollTop() >= 400 && !isModalShown) {
+            $('#exampleModal').modal('show');
+            isModalShown = true;
+          }
+        });
+        function reposition() {
+          var modal = $(this),
+          dialog = modal.find('.modal-content');
+          modal.css('display', 'block');
+        }
+        $('.modal').on('show.bs.modal', reposition);
+        var closeBtn = $('#myModal .close');
+        closeBtn.on('click', function() {
+          $('#myModal').modal('hide');
+          isModalShown = true;
+        });
+        $(window).on('resize', function() {
+          $('.modal:visible').each(reposition);
+        });
+      });
+    </script>
+{% endblock scripts %}

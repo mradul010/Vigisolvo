@@ -1,0 +1,318 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block head %}
+    <link rel='stylesheet' href="{% static 'assets/css/owl.carousel.min.css' %}" type='text/css' media='all'/>
+{% endblock %}
+
+<body id="bg">
+	<div class="page-wraper">
+		<div id="loading-area"><div class="la-anim-10"></div></div>
+			{% block content %}
+				<!-- Content -->
+				<div class="page-content bg-white">
+					<!-- inner page banner -->
+					<div class="dlab-bnr-inr overlay-primary">
+						<div class="container">
+							<div class="dlab-bnr-inr-entry">
+								<h1 class="text-white">Career</h1>
+							</div>
+						</div>
+					</div>
+					<!-- inner page banner END -->
+					<div class="content-block">
+						<!-- About Us -->
+						<div class="section-full content-inner">
+							<div class="container">
+								<div class="section-heading center-holder text-center"><h2>Job Openings</h2></div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="dlab-accordion faq-{{one.id}} box-sort-in m-b30 job-cards" id="accordion{{one.id}}" >
+					{%for one in job_openings%}
+						<div class="job-card-parent ">
+							<div class="job-card-head job"><h3 >{{one.position}}</h3 ></div>
+							<div class="job-card-location job">
+								<span ><i class="fa fa-map-marker" aria-hidden="true"></i>{{one.location}}</span>
+							</div>
+							<p class="job-card-description job">Job Description -- {{one.job_description}}</p>
+							<div class="job-card-detail job">
+								<p>Qualification :<b> {{one.qualification}}</b></p>
+								<p>Skills :<b> {{one.skills}}</b></p>
+								<p>Experience : <b>{{one.experience}}</b></p>
+							</div>
+							<div class="col-md-5 applyMtoTB job-apply-button job-apply-btn">
+								<a href="{%url 'apply' one.slug %}" class="btn btn-info" role="button">Apply Now</a>
+							</div>
+						</div>
+					{%endfor%}
+				</div>
+				<!-- ==========Our Culture start=========== -->
+				<div class="section-full content-inner onlyPb">
+					<div class="container">
+						<div class="section-heading center-holder text-center"><h2>Why Join Us</h2></div>
+					</div>
+				</div>
+				{% include 'why-join-us.html' %}
+				<!-- ==========Our Culture start=========== -->
+				<div class="section-full content-inner onlyPb">
+					<div class="container">
+						<div class="section-heading center-holder text-center"><h2>Our Culture & Celebration</h2></div>
+					</div>
+				</div>
+				<!-- Our Services -->
+				<!-- Tabs Start -->
+				<section class="team-wap">
+					<div class="container">
+						<div class="row mt-5">
+							<div class="col-md-12">
+								<div class="gal">
+									<div class="row">
+										<div class="col-md-4">
+											<div class="main-iamg">
+												<a href="/static/assets/images/team/team5.jpg" data-fancybox="gallery">
+													<div class="container5">
+														<img src="/static/assets/images/team/team5.jpg" alt="Avatar" class="image6" style="width:100%">
+														<div class="overlay">
+															<div class="text"><i class="fa fa-eye" aria-hidden="true"></i></div>
+														</div>
+													</div>
+												</a>
+											</div>
+										</div>
+										<div class="col-md-4">
+											<div class="main-iamg">
+												<a href="/static/assets/images/team/team15.jpg" data-fancybox="gallery">
+													<div class="container5">
+														<img src="/static/assets/images/team/team15.jpg" alt="Avatar" class="image6" style="width:100%">
+														<div class="overlay">
+															<div class="text"><i class="fa fa-eye" aria-hidden="true"></i></div>
+														</div>
+													</div>
+												</a>
+											</div>
+										</div>
+										<div class="col-md-4">
+											<div class="main-iamg">
+												<a href="/static/assets/images/team/team16.jpg" data-fancybox="gallery">
+													<div class="container5">
+														<img src="/static/assets/images/team/team16.jpg" alt="Avatar" class="image6" style="width:100%">
+														<div class="overlay">
+															<div class="text"><i class="fa fa-eye" aria-hidden="true"></i></div>
+														</div>
+													</div>
+												</a>
+											</div>
+										</div>
+										<div class="col-md-4">
+											<div class="main-iamg">
+												<a href="/static/assets/images/team/team14.jpg" data-fancybox="gallery">
+													<div class="container5">
+														<img src="/static/assets/images/team/team14.jpg" alt="Avatar" class="image6" style="width:100%">
+														<div class="overlay">
+															<div class="text"><i class="fa fa-eye" aria-hidden="true"></i></div>
+														</div>
+													</div>
+												</a>
+											</div>
+										</div>
+										<div class="col-md-4">
+											<div class="main-iamg">
+												<a href="/static/assets/images/team/team12.jpg" data-fancybox="gallery">
+													<div class="container5">
+														<img src="/static/assets/images/team/team12.jpg" alt="Avatar" class="image6" style="width:100%">
+														<div class="overlay">
+															<div class="text"><i class="fa fa-eye" aria-hidden="true"></i></div>
+														</div>
+													</div>
+												</a>
+											</div>
+										</div>
+										<div class="col-md-4">
+											<div class="main-iamg">
+												<a href="/static/assets/images/team/team13.jpg" data-fancybox="gallery">
+													<div class="container5">
+														<img src="/static/assets/images/team/team13.jpg" alt="Avatar" class="image6" style="width:100%">
+														<div class="overlay">
+															<div class="text"><i class="fa fa-eye" aria-hidden="true"></i></div>
+														</div>
+													</div>
+												</a>
+											</div>
+										</div>
+										<div class="col-md-4">
+											<div class="main-iamg">
+												<a href="/static/assets/images/team/team11.jpg" data-fancybox="gallery">
+													<div class="container5">
+														<img src="/static/assets/images/team/team11.jpg" alt="Avatar" class="image6" style="width:100%">
+														<div class="overlay">
+															<div class="text"><i class="fa fa-eye" aria-hidden="true"></i></div>
+														</div>
+													</div>
+												</a>
+											</div>
+										</div>
+										<div class="col-md-4">
+											<div class="main-iamg">
+												<a href="/static/assets/images/team/team7.jpg" data-fancybox="gallery">
+													<div class="container5">
+														<img src="/static/assets/images/team/team7.jpg" alt="Avatar" class="image6" style="width:100%">
+														<div class="overlay">
+															<div class="text"><i class="fa fa-eye" aria-hidden="true"></i></div>
+														</div>
+													</div>
+												</a>
+											</div>
+										</div>
+										<div class="col-md-4">
+											<div class="main-iamg">
+												<a href="/static/assets/images/team/team6.jpg" data-fancybox="gallery">
+													<div class="container5">
+														<img src="/static/assets/images/team/team6.jpg" alt="Avatar" class="image6" style="width:100%">
+														<div class="overlay">
+															<div class="text"><i class="fa fa-eye" aria-hidden="true"></i></div>
+														</div>
+													</div>
+												</a>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+				<!-- ==========Insights start=========== -->
+				{% include 'insight.html' %}
+				<!-- ==========testimonials start=========== -->
+				{% include 'testimonials1.html' %}
+				<div class="section-full overlay-primary-dark bg-img-fix letstouch">
+					<div class="container">
+						<div class="let-top">
+							<h2 class="box-title m-b15" >Let's get in touch<span class="bg-primary"></span></h2>
+							<p class="font-16 op8">Give us a call or drop by anytime, we endeavour to answer all enquiries within 24 hours on business days.</p>
+						</div>
+						<div class="row">
+							<div class="col-lg-5 col-md-5 chosesus-content text-white bx-style-1 extraPadding">
+								<div class="col-lg-12 col-md-12  col-sm-12 m-b30 wow fadeIn" data-wow-delay="0.4s">
+									<div class="icon-bx-wraper bx-style-1 radius-sm">
+									<div class="icon-content">
+										<h5 class="dlab-tilte">
+										<span class="icon-sm text-primary text-left"><i class="fa fa-envelope-o" aria-hidden="true"></i></span>
+										E-mail
+										</h5>
+										<p class="m-b0"><a href="mailto:info@Vigisolvo.com">info@Vigisolvo.com</a></p>
+										<p class="m-b0"><a href="mailto:hr@Vigisolvo.com">hr@Vigisolvo.com</a></p>
+									</div>
+									</div>
+								</div>
+								<div class="col-lg-12 col-md-12  col-sm-12 m-b30 wow fadeIn" data-wow-delay="0.8s" style="visibility: visible; animation-delay: 0.8s; animation-name: fadeIn;">
+									<div class="icon-bx-wraper bx-style-1 radius-sm">
+									<div class="icon-content mt-3">
+										<h5 class="dlab-tilte">
+										<span class="icon-sm text-primary text-left"><i class="fa fa-volume-control-phone" aria-hidden="true"></i></span>
+										Phone Number
+										</h5>
+										<p><a href="tel:+917987768061">+91 798-776-8061</a></p>
+									</div>
+									</div>
+								</div>
+								<div class="col-lg-12 col-md-12  col-sm-12 m-b30 wow fadeIn" data-wow-delay="0.8s" style="visibility: visible; animation-delay: 0.8s; animation-name: fadeIn;">
+									<div class="icon-bx-wraper bx-style-1 radius-sm">
+									<div class="icon-content mt-3">
+										<h5 class="dlab-tilte">
+										<span class="icon-sm text-primary text-left"><i class="fa fa-telegram" aria-hidden="true"></i></span>
+										Telegram
+										</h5>
+										<p><a href="https://t.me/mradul010" target ="_blank">+91 8859994143</a></p>
+									</div>
+									</div>
+								</div>
+								<div class="col-lg-12 col-md-12  col-sm-12 m-b30 wow fadeIn" data-wow-delay="0.8s" style="visibility: visible; animation-delay: 0.8s; animation-name: fadeIn;">
+									<div class="icon-bx-wraper bx-style-1 radius-sm">
+										<div class="icon-content mt-3">
+											<h5 class="dlab-tilte">
+												<span class="icon-sm text-primary text-left"><i class="fa fa-telegram" aria-hidden="true"></i></span>
+												Skype
+											</h5>
+											<p><a href="skype:Vigisolvo05?chat" target ="_blank">Vigisolvo05</a></p>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-lg-7 col-md-7  m-b30">
+							{% include 'pagecontact.html' %}
+							</div>
+						</div>
+					</div>
+				</div>
+			{% endblock content %}
+		</div>
+	  	</div>
+	</div>
+  	</diV>
+    </div>
+	</div>
+</body>
+
+{% block scripts %}
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
+	<script src="{% static 'assets/js/jquery-min.js' %}"></script>
+	<script src="{% static 'assets/js/owl.carousel.min.js' %}"></script>
+	<script type="text/javascript">
+		jQuery(document).ready(function(){
+		$('#Bestseller-slider2').owlCarousel({
+		loop:false,
+		nav:false,
+		autoplay:false,
+		dots:true,
+		margin:20,
+		smartSpeed: 1000,
+		responsive:{
+			0:{
+				items:1
+			},
+			600:{
+				items:1
+			},
+			1000:{
+				items:1
+			}
+		},navText: ["<i class='fa fa-angle-left' aria-hidden='true'></i>","<i class='fa fa-angle-right' aria-hidden='true'></i>"]
+		});
+	});
+	</script>
+	<script>
+		var pageform = $('#contactForm');
+		pageform.submit(function (e) {
+		  e.preventDefault();
+		  $('#contactFormSubmit').html("<div class='quoteloader'></div>");
+		  $.ajax({
+			type: pageform.attr('method'),
+			url: pageform.attr('action'),
+			data: $(pageform).serialize(),
+			success: function(res) {
+			  if (res.status == 1){
+				swal("Thank You!", "for reaching out to us! We appreciate your interest and will get back to you as soon as possible.", "success");
+				$('#contactForm').trigger("reset");
+				$('#contactFormSubmit').html("Submit");
+			  } else {
+				swal("Error","Please complete the reCAPTCHA","error")
+				$('#contactFormSubmit').html("Submit");
+			  };
+			},
+			error: function(error) {
+			  swal("Error","Enter the correct value","error")
+			  $('#contactFormSubmit').html("Submit");
+			  console.log(error);
+			}
+		  });
+		});
+	</script>
+{% endblock scripts %}
+
+
+
+
+
