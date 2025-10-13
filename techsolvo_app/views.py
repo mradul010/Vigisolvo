@@ -251,7 +251,7 @@ def contact(request):
             """
             
             from_email = settings.EMAIL_HOST_USER            
-            recipient_list = ['mradul.mishra@techsolvo.com', 'mitali.jain@techsolvo.com', 'manal.jain@techsolvo.com'] 
+            recipient_list = ['mradul.mishra@vigisolvo.com'] 
             
             send_mail(subject, body, from_email, recipient_list)
             
@@ -409,7 +409,7 @@ def request_quote(request):
             """
 
             from_email = settings.EMAIL_HOST_USER
-            recipient_list = ['mradul.mishra@techsolvo.com', 'mitali.jain@techsolvo.com', 'manal.jain@techsolvo.com']
+            recipient_list = ['mradul.mishra@vigisolvo.com']
 
             html_message = render_to_string("quote_email.html", {
                 'full_name': full_name,

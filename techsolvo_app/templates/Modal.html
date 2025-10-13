@@ -49,6 +49,13 @@
                  </div>
                </div>
              </div>
+             <div class="col-lg-12" style="margin-left: 31px;">
+                  <div class="form-group">
+                     <div class="input-group">
+                        <div class="g-recaptcha" data-sitekey="6LfLft8rAAAAAOnwErpS5z7KHp3mhr6ELcGOoAgv"></div>
+                     </div>
+                  </div>
+             </div>
              <div class="col-lg-12 text-center mt-4">
                <button name="submit" id="modalsubmit" type="submit" value="Submit" class="btn button-lg btn-primary">Get A Free Quote!</button>
              </div>
@@ -58,3 +65,44 @@
      </div>
    </div>
  </div>
+ {% block scripts %}
+<!-- Book a Demo -->
+<script>
+   var pageform = $('#quoteForm'); 
+   pageform.submit(function (e) {
+     e.preventDefault();
+
+     <!-- $('#submitquote').html("<div class='quoteloader'></div>");   -->
+     
+     $.ajax({
+       type: pageform.attr('method'),  
+       url: pageform.attr('action'),  
+       data: $(pageform).serialize(),  
+       success: function(response) {
+         
+         $('#Succcessmsg').html(`<div class="successmessage">${response.message}</div>`).fadeIn(1000);
+
+         setTimeout(function() {
+            $('#submitquote').html("Submit");  
+            $('#quoteForm').trigger("reset");  
+            $('#Succcessmsg').fadeOut(1000);  
+            grecaptcha.reset();  t
+          }, 1000);  
+          if (res.status === 'success') {
+            $('#Succcessmsg').html(`<div >${response.message}</div>`).fadeIn(1000);
+          } else {
+            swal("Error", "There was an issue with your submission. Please try again.", "error");  
+          }
+        },
+        error: function(error) {
+          
+          setTimeout(function() {
+            $('#submitquote').html("Submit");  
+          }, 1000);
+          swal("Error", "There was an issue with the submission. Please try again.", "error");  
+          console.log(error);  
+        }
+      });
+   });
+</script>
+{% endblock scripts %}
