@@ -46,37 +46,37 @@ def common_base():
 
 
 def error_404_view(request, exception):
-    page_title = "ERROR | Techsolvo"
-    data = {"name": "techsolvo.com",'page_title':page_title}
+    page_title = "ERROR | Vigisolvo"
+    data = {"name": "vigisolvo.com",'page_title':page_title}
     data.update(common_base())
     return render(request,'error_404.html', data)
 
 def about(request):
-    page_title = "About US | Techsolvo"
+    page_title = "About US | Vigisolvo"
     context={"page_title":page_title}
     context.update(common_base())
     return render(request, 'about-us.html',context)
 
 def dashboard(request):
-    page_title = "Dashboard | Techsolvo"
+    page_title = "Dashboard | Vigisolvo"
     context={"page_title":page_title}
     context.update(common_base())
     return render(request, 'dashboard.html',context)
 
 def erp_retail(request):
-    page_title = "ERPNext for Retail | TechSolvo ERP Solutions"
+    page_title = "ERPNext for Retail | Vigisolvo ERP Solutions"
     context={"page_title":page_title}
     context.update(common_base())
     return render(request, 'erp-retail.html',context)
 
 def erp_services(request):
-    page_title = "ERPNext for Service Industry | TechSolvo ERP Solutions"
+    page_title = "ERPNext for Service Industry | Vigisolvo ERP Solutions"
     context={"page_title":page_title}
     context.update(common_base())
     return render(request, 'erp-services.html',context)
 
 def erp_manufacturing(request):
-    page_title = "ERPNext for Manufacturing | TechSolvo ERP Solutions"
+    page_title = "ERPNext for Manufacturing | Vigisolvo ERP Solutions"
     context={"page_title":page_title}
     context.update(common_base())
     return render(request, 'erp-manufacturing.html',context)
@@ -88,25 +88,25 @@ def frappe_hrms(request):
     return render(request, 'frappe_hrms.html',context)
 
 def erp_dist(request):
-    page_title = "ERPNext for Distribution | TechSolvo ERP Solutions"
+    page_title = "ERPNext for Distribution | Vigisolvo ERP Solutions"
     context={"page_title":page_title}
     context.update(common_base())
     return render(request, 'erp-distribution.html',context)
 
 def erp_healthcare(request):
-    page_title = "ERPNext for Healthcare | TechSolvo ERP Solutions"
+    page_title = "ERPNext for Healthcare | Vigisolvo ERP Solutions"
     context={"page_title":page_title}
     context.update(common_base())
     return render(request, 'erp-healthcare.html',context)
 
 def erp_education(request):
-    page_title = "ERPNext for Education | TechSolvo ERP Solutions"
+    page_title = "ERPNext for Education | Vigisolvo ERP Solutions"
     context={"page_title":page_title}
     context.update(common_base())
     return render(request, 'erp-education.html',context)
 
 def privacy_policy(request):
-    page_title = "Our Privacy Policy | Techsolvo"
+    page_title = "Our Privacy Policy | Vigisolvo"
     context={"page_title":page_title}
     context.update(common_base())
     return render(request, 'privacy-policy.html',context)
@@ -191,7 +191,7 @@ def apply(request, slug):
             return JsonResponse({'status': 0, 'error': str(e)})
     else:
         job = JobOpenings.objects.filter(slug=slug).first()
-        page_title = "Apply for | Techsolvo"
+        page_title = "Apply for | Vigisolvo"
         context = {'slug': slug, 'job': job, 'page_title': page_title}
         context.update(common_base())
         return render(request, 'apply.html', context)
@@ -259,13 +259,13 @@ def contact(request):
         else:
             return JsonResponse({'error': 'Please fill all the fields and complete reCAPTCHA'})
 
-    page_title = "Contact Us | Techsolvo"
+    page_title = "Contact Us | Vigisolvo"
     context = {"page_title":page_title}
     context.update(common_base())
     return render(request, 'contact.html',context)
 
 def faqs(request):
-    page_title = "FAQ's | Techsolvo"
+    page_title = "FAQ's | Vigisolvo"
     frequently_asked_question = FrequentlyAskedQuestion.objects.filter(listing_page = "FAQ Page")
     page_content = PageContent.objects.filter(listing_page='FAQ Page')
     context = {"page_title":page_title, "frequently_asked_question":frequently_asked_question}
@@ -281,25 +281,25 @@ def faqs(request):
     return render(request, 'faqs.html',context)
 
 def iphone(request):
-    page_title = "iPhone Development Company | Techsolvo"
+    page_title = "iPhone Development Company | Vigisolvo"
     context = {"page_title":page_title}
     context.update(common_base())
     return render(request, 'iphone-app-development.html',context)
 
 def our_vision(request):
-    page_title = "Our Vision | Techsolvo"
+    page_title = "Our Vision | Vigisolvo"
     context = {"page_title":page_title}
     context.update(common_base())
     return render(request, 'our-vision-n-mission.html',context)
 
 def travel(request):
-    page_title = "Travel Development Company | Techsolvo"
+    page_title = "Travel Development Company | Vigisolvo"
     context = {"page_title":page_title}
     context.update(common_base())
     return render(request, 'travel.html',context)
 
 def teams(request):
-    page_title = "Teams | Techsolvo"
+    page_title = "Teams | Vigisolvo"
     context = {"page_title":page_title}
     context.update(common_base())
     return render(request, 'teams.html',context)
@@ -307,7 +307,7 @@ def teams(request):
 def blog(request):
     blog = Blog.objects.filter(is_industry = False).order_by('-date_of_creation')
     categories = BlogCategories.objects.all()
-    page_title = "Blogs of the Day | Techsolvo"
+    page_title = "Vigisolvo Blog – ERPNext, Frappe, and Business Automation Articles"
 
     page = request.GET.get('page', 1)
     paginator = Paginator(blog,10)
@@ -330,7 +330,7 @@ def blog(request):
 def sort_blog(request, slug):
     blog = Blog.objects.filter(category__slug=slug).filter(is_industry=False).order_by('-date_of_creation')
     categories = BlogCategories.objects.all()
-    page_title = "Blogs of the Day | Techsolvo"
+    page_title = "Vigisolvo Blog – ERPNext, Frappe, and Business Automation Articles"
 
     page = request.GET.get('page', 1)
     paginator = Paginator(blog,10)
@@ -670,7 +670,7 @@ class CompanyView(GenericAPIView):
 
 
 def hire_remote_erpnext_developer(request):
-    page_title = "Hire Remote ERPNext Developer | Techsolvo"
+    page_title = "Hire Remote ERPNext & Frappe Developer | Vigisolvo ERP Experts"
     context = {"page_title": page_title}
     context.update(common_base())
     return render(request, 'hire-remote-erpnext-developer.html', context)
